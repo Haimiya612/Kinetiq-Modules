@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": "kinetiq-custom-modules",
+  "name": "Kinetiq Custom Modules",
+  "enabled": true,
+  "modules": [
+    {
+      "moduleId": "reanime-v1",
+      "moduleFamilyId": "reanime-v1",
+      "moduleIdentity": "ReAnime Library",
+      "moduleIdentityNumber": 1,
+      "contentType": "video",
+      "version": "1.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/reanime-v1.zip",
+      "sha256": "321455e66367d896cc91b055a93415e066f11f990293cbfff70a30e39c7adbfc",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime module",
+        "language": "English"
+      }
+    }
+  ]
+}
