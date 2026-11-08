@@ -1,0 +1,44 @@
+{
+  "id": "anikoto-v4",
+  "name": "Anikoto",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "5.0.5-beta.2",
+  "moduleFamilyId": "anikoto-v3",
+  "moduleIdentity": "SP-VID-036-ANIKOTO",
+  "moduleIdentityNumber": 36,
+  "legacyModuleIds": [
+    "anikoto-v3"
+  ],
+  "releaseTrack": "beta",
+  "moduleStatus": "active",
+  "description": "Anikoto video module with validated HLS extraction from observed player hosts and bounded provider fallbacks. V4: Discovery home with curated sections and feed pagination.",
+  "presentation": {
+    "category": "Anime",
+    "purpose": "Anime",
+    "recommended": true,
+    "language": "English Sub/Dub",
+    "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikoto.png?v=20260812-2"
+  },
+  "config": {
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "supportsEpisodeMarkers": true,
+    "markerFamily": "episode",
+    "caps": {
+      "homeMaxResults": 60,
+      "maxResponseBytes": 1500000,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 4
+    },
+    "baseUrl": "https://anikototv.to",
+    "streamHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    }
+  }
+}

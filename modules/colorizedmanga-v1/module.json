@@ -1,0 +1,47 @@
+{
+  "id": "colorizedmanga-v1",
+  "name": "ColorizedManga (Aliclat)",
+  "contentType": "image",
+  "contractVersion": 4,
+  "moduleVersion": "1.0.0-beta.1",
+  "description": "Colorized Manga (Aliclat) reader with safe local search, details, chapters or volumes, ordered page images, and discovery feeds.",
+  "moduleFamilyId": "colorizedmanga",
+  "moduleIdentity": "SP-IMG-1059-COLORIZEDMANGA",
+  "moduleIdentityNumber": 1059,
+  "releaseTrack": "beta",
+  "moduleStatus": "trial",
+  "presentation": {
+    "category": "Manga",
+    "purpose": "Colorized Manga",
+    "recommended": false,
+    "language": "English",
+    "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/colorizedmanga.png"
+  },
+  "config": {
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "caps": {
+      "homeMaxResults": 24,
+      "maxResponseBytes": 5242880,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 2
+    },
+    "baseUrl": "https://colorizedmangas.com",
+    "imageHeaders": {
+      "Accept": "image/avif,image/webp,image/*,*/*",
+      "Referer": "https://colorizedmangas.com/"
+    },
+    "presentation": {
+      "category": "Manga",
+      "purpose": "Colorized Manga",
+      "recommended": false,
+      "language": "English",
+      "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/colorizedmanga.png"
+    }
+  }
+}

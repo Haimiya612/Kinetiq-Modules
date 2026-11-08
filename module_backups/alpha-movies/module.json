@@ -1,0 +1,56 @@
+{
+  "id": "alpha-movies",
+  "name": "Alpha (Beta)",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "0.2.0-beta.4",
+  "moduleFamilyId": "alpha_movies_v1",
+  "moduleIdentity": "SP-VID-079-ALPHA-MOVIES",
+  "moduleIdentityNumber": 79,
+  "releaseTrack": "beta",
+  "moduleStatus": "trial",
+  "description": "Movies & TV. Streams via MoviesAPI when available, with the original provider chain as fallback; Wikidata/TMDB catalogue.",
+  "presentation": {
+    "category": "Movies & TV",
+    "purpose": "Direct-provider movies and series",
+    "recommended": false,
+    "language": "Original audio",
+    "languages": [
+      "sub"
+    ]
+  },
+  "config": {
+    "language": "English",
+    "contentLanguage": "en",
+    "baseUrl": "https://vidrock.net/",
+    "contentType": "video",
+    "presentation": {
+      "category": "Movies & TV",
+      "purpose": "Direct-provider movies and series",
+      "recommended": false,
+      "language": "Original audio",
+      "languages": [
+        "sub"
+      ]
+    },
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "caps": {
+      "homeMaxResults": 40,
+      "maxResponseBytes": 2500000,
+      "timeoutMs": 25000,
+      "maxConcurrentRequests": 4
+    },
+    "streamHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "Referer": "https://vidrock.net/",
+      "Origin": "https://vidrock.net"
+    }
+  },
+  "version": "0.2.0-beta.4"
+}

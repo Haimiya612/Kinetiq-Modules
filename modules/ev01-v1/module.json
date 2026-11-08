@@ -1,0 +1,30 @@
+{
+  "id": "ev01-v1",
+  "name": "Ev01",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "1.0.4",
+  "description": "Movies and TV via ev01.ws (TMDB ids). Free Videasy 1080p/4K HLS + verified English subtitles via Synthetiq One proxy; LookMovie/Dulo fallbacks.",
+  "moduleFamilyId": "ev01_v1",
+  "moduleIdentity": "SP-VID-046-EV01",
+  "moduleIdentityNumber": 46,
+  "releaseTrack": "beta",
+  "moduleStatus": "trial",
+  "config": {
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "caps": {
+      "homeMaxResults": 40,
+      "maxResponseBytes": 1500000,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 2
+    },
+    "baseUrl": "https://ev01.ws",
+    "streamHeaders": {
+      "Referer": "https://ev01.ws/",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    }
+  }
+}

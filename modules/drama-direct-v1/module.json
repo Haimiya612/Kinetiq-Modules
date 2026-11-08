@@ -1,0 +1,27 @@
+{
+  "id": "drama-direct-v1",
+  "name": "Drama Direct (Private Prototype)",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "0.1.0-beta.9",
+  "moduleFamilyId": "drama_direct_v1",
+  "moduleIdentity": "SP-VID-078-DRAMA-DIRECT",
+  "moduleIdentityNumber": 78,
+  "releaseTrack": "beta",
+  "moduleStatus": "trial",
+  "description": "Private provider-direct drama research. Search, episodes and playback use the provider API without DramaCool. Original audio only; available source captions are preserved. Limited curated browsing, not a complete latest feed. Device and sustained-playback verification required.",
+  "presentation": {
+    "category": "Drama",
+    "purpose": "Provider-direct drama research",
+    "language": "Original audio / source subtitles",
+    "languages": ["sub"],
+    "recommended": false
+  },
+  "config": {
+    "runtime": {"entry": "index.js", "mode": "local"},
+    "capabilities": {"discovery_v1": true},
+    "baseUrl": "https://megavid.buzz",
+    "caps": {"homeMaxResults": 30, "maxResponseBytes": 1048576, "timeoutMs": 30000, "maxConcurrentRequests": 2},
+    "streamHeaders": {"Referer": "https://megavid.buzz/", "Origin": "https://megavid.buzz"}
+  }
+}
