@@ -10,14 +10,17 @@
       "moduleIdentity": "ReAnime Library",
       "moduleIdentityNumber": 1,
       "contentType": "video",
-      "version": "1.0.0",
-      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/reanime-v1.zip",
-      "sha256": "321455e66367d896cc91b055a93415e066f11f990293cbfff70a30e39c7adbfc",
+      "version": "1.0.1",
+      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/reanime-v1.0.1.zip",
+      "sha256": "bf4423b2eb05d4e993256d3a84decb3695d26ba5807107b6cd59092b41eaa5bd",
       "presentation": {
         "category": "Anime",
-        "purpose": "Anime module",
+        "purpose": "Experimental ReAnime source adapter",
         "language": "English"
-      }
+      },
+      "changelog": [
+        "1.0.1: Expanded FlixCloud SvelteKit data region decoding, robust response-body handling, and redacted media-probe diagnostics. Not yet confirmed with live iPhone playback."
+      ]
     }
   ]
 }
