@@ -21,6 +21,24 @@
       "changelog": [
         "1.0.1: Expanded FlixCloud SvelteKit data region decoding, robust response-body handling, and redacted media-probe diagnostics. Not yet confirmed with live iPhone playback."
       ]
+    },
+    {
+      "moduleId": "hdfilmcehennemi-v1",
+      "moduleFamilyId": "hdfilmcehennemi-v1",
+      "moduleIdentity": "HDFilmCehennemi Library",
+      "moduleIdentityNumber": 1,
+      "contentType": "video",
+      "version": "1.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/hdfilmcehennemi-v1.0.0.zip",
+      "sha256": "d7c0dcd56b6f546e78d129b4ca3bd0b1bfe34cb306d524eeaed4dd26e4f8a0a9",
+      "presentation": {
+        "category": "Movies & Series",
+        "purpose": "HD Film Cehennemi source adapter",
+        "language": "Turkish"
+      },
+      "changelog": [
+        "1.0.0: Imported existing V3 module, completed required Kinetiq manifest identity fields. Live source playback is unverified."
+      ]
     }
   ]
 }
