@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "duplicateZipIDs": [
+    {
+      "moduleId": "alpha-movies",
+      "selected": "synthetiq-player:alpha-movies",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:alpha-movies",
+          "version": "0.2.0-beta.4",
+          "sha256": "fa442fd94cb07e66d054d9ffa79dd7e569ba144e0db10ae8ab3b54fe2206f329"
+        },
+        {
+          "key": "synthetiq-player-testing:alpha-movies",
+          "version": "0.2.0-beta.4",
+          "sha256": "fa442fd94cb07e66d054d9ffa79dd7e569ba144e0db10ae8ab3b54fe2206f329"
+        }
+      ]
+    },
+    {
+      "moduleId": "an1me-v1",
+      "selected": "synthetiq-player:an1me-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:an1me-v1",
+          "version": "1.1.1",
+          "sha256": "456c6110f16b3e6c3224131f024150d6a5f5444a97481e7fc1be782ba32c06ad"
+        },
+        {
+          "key": "synthetiq-player-testing:an1me-v1",
+          "version": "1.1.1",
+          "sha256": "456c6110f16b3e6c3224131f024150d6a5f5444a97481e7fc1be782ba32c06ad"
+        }
+      ]
+    },
+    {
+      "moduleId": "anikage-v1",
+      "selected": "synthetiq-player:anikage-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:anikage-v1",
+          "version": "1.1.3",
+          "sha256": "70002c6570c46129d00e71c9cf623f7b44bc2ddea2cb559933b10ede1554fff4"
+        },
+        {
+          "key": "synthetiq-player-testing:anikage-v1",
+          "version": "1.1.3",
+          "sha256": "70002c6570c46129d00e71c9cf623f7b44bc2ddea2cb559933b10ede1554fff4"
+        }
+      ]
+    },
+    {
+      "moduleId": "anikoto-v4",
+      "selected": "synthetiq-player:anikoto-v4",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:anikoto-v4",
+          "version": "5.0.6-beta.3",
+          "sha256": "58c85822abc9bb59430ff8c9f8e6d2580973f43628a2828b50822fcc0ce72d4e"
+        },
+        {
+          "key": "synthetiq-player-testing:anikoto-v4",
+          "version": "5.0.6-beta.3",
+          "sha256": "9b8806589bf7c0f3e408088b16be218d548b2cadaed6534ec91de105dcea9a27"
+        }
+      ]
+    },
+    {
+      "moduleId": "anime-sama-v1",
+      "selected": "synthetiq-player:anime-sama-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:anime-sama-v1",
+          "version": "1.1.2",
+          "sha256": "c6f6c913e0fd015dddbb7291c695c4942fe1bb05fe90ff699b502e2ee10b675e"
+        },
+        {
+          "key": "synthetiq-player-testing:anime-sama-v1",
+          "version": "1.1.2",
+          "sha256": "c6f6c913e0fd015dddbb7291c695c4942fe1bb05fe90ff699b502e2ee10b675e"
+        }
+      ]
+    },
+    {
+      "moduleId": "anime4up-site-v1",
+      "selected": "synthetiq-player:anime4up-site-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:anime4up-site-v1",
+          "version": "1.0.0-beta.10",
+          "sha256": "3a28b4175a7030105490930820720fde63f9a49fffe1013cbc51d33c74668a2c"
+        },
+        {
+          "key": "synthetiq-player-testing:anime4up-site-v1",
+          "version": "1.0.0-beta.10",
+          "sha256": "3a28b4175a7030105490930820720fde63f9a49fffe1013cbc51d33c74668a2c"
+        }
+      ]
+    },
+    {
+      "moduleId": "animeav1-v1",
+      "selected": "synthetiq-player:animeav1-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:animeav1-v1",
+          "version": "1.3.0-beta.9",
+          "sha256": "833d9133c5ee4271092881aaa3e59ddf291e0f98a2ca542d635db3c16dfab943"
+        },
+        {
+          "key": "synthetiq-player-testing:animeav1-v1",
+          "version": "1.3.0-beta.9",
+          "sha256": "833d9133c5ee4271092881aaa3e59ddf291e0f98a2ca542d635db3c16dfab943"
+        }
+      ]
+    },
+    {
+      "moduleId": "animeheaven-v2-1",
+      "selected": "synthetiq-player:animeheaven-v2-1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:animeheaven-v2-1",
+          "version": "4.1.1-beta.1",
+          "sha256": "48c550e4961f3c142c67c415924cc6cf13eefc281870645d9707c1d62ce53125"
+        },
+        {
+          "key": "synthetiq-player-testing:animeheaven-v2-1",
+          "version": "4.1.0",
+          "sha256": "7a818d060c496a610afd92f7b57421c7285c9915b0c3683b2762e3a6def710cd"
+        }
+      ]
+    },
+    {
+      "moduleId": "animeunity-v1",
+      "selected": "synthetiq-player:animeunity-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:animeunity-v1",
+          "version": "1.1.0-beta.3",
+          "sha256": "044a8ae5854a7914161dfa2e87347d3033008c1d3edd06c9fc5f3380f35f2973"
+        },
+        {
+          "key": "synthetiq-player-testing:animeunity-v1",
+          "version": "1.1.0-beta.3",
+          "sha256": "044a8ae5854a7914161dfa2e87347d3033008c1d3edd06c9fc5f3380f35f2973"
+        }
+      ]
+    },
+    {
+      "moduleId": "anipm-v1",
+      "selected": "synthetiq-player:anipm-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:anipm-v1",
+          "version": "0.1.0-beta.9",
+          "sha256": "502da3b8153b600882bd8156778c1048468e591f0de80d06b97ca036a7714c64"
+        },
+        {
+          "key": "synthetiq-player-testing:anipm-v1",
+          "version": "0.1.0-beta.9",
+          "sha256": "696c060e7528f0a278ea618dc4d7afc79e607aa9b161580597bdf8a3e3b14ee7"
+        }
+      ]
+    },
+    {
+      "moduleId": "aniworld-v1",
+      "selected": "synthetiq-player:aniworld-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:aniworld-v1",
+          "version": "1.3.2",
+          "sha256": "0a56360b7e14e121d48fca5ec749f540751fd56c85852557efc279bc50ffd3ff"
+        },
+        {
+          "key": "synthetiq-player-testing:aniworld-v1",
+          "version": "1.3.2",
+          "sha256": "0a56360b7e14e121d48fca5ec749f540751fd56c85852557efc279bc50ffd3ff"
+        }
+      ]
+    },
+    {
+      "moduleId": "cimacub-v1",
+      "selected": "synthetiq-player:cimacub-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:cimacub-v1",
+          "version": "1.2.0",
+          "sha256": "3ddee1d22400b00963d5085b92efd648f36e64128c8af0a9dffbea55b995de86"
+        },
+        {
+          "key": "synthetiq-player-testing:cimacub-v1",
+          "version": "1.2.0",
+          "sha256": "3ddee1d22400b00963d5085b92efd648f36e64128c8af0a9dffbea55b995de86"
+        }
+      ]
+    },
+    {
+      "moduleId": "drama-direct-v1",
+      "selected": "synthetiq-player:drama-direct-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:drama-direct-v1",
+          "version": "0.1.0-beta.9",
+          "sha256": "0374dcafd676e190fdcda6a05016510c8f3873e1b421bc049bc9eb8814e5b1ac"
+        },
+        {
+          "key": "synthetiq-player-testing:drama-direct-v1",
+          "version": "0.1.0-beta.9",
+          "sha256": "0374dcafd676e190fdcda6a05016510c8f3873e1b421bc049bc9eb8814e5b1ac"
+        }
+      ]
+    },
+    {
+      "moduleId": "dramacool-v1",
+      "selected": "synthetiq-player:dramacool-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:dramacool-v1",
+          "version": "1.0.3",
+          "sha256": "abfed0370656fc7ae1c2e5e011148ffba2f982b385370c1a10aa6d891213a6e7"
+        },
+        {
+          "key": "synthetiq-player-testing:dramacool-v1",
+          "version": "1.0.3",
+          "sha256": "abfed0370656fc7ae1c2e5e011148ffba2f982b385370c1a10aa6d891213a6e7"
+        }
+      ]
+    },
+    {
+      "moduleId": "dramafun-v3",
+      "selected": "synthetiq-player:dramafun-v3",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:dramafun-v3",
+          "version": "4.0.1",
+          "sha256": "b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9"
+        },
+        {
+          "key": "synthetiq-player-testing:dramafun-v3",
+          "version": "4.0.1",
+          "sha256": "b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9"
+        }
+      ]
+    },
+    {
+      "moduleId": "justanime-v1",
+      "selected": "synthetiq-player:justanime-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:justanime-v1",
+          "version": "1.0.1",
+          "sha256": "4b47437fd7fa51f1a2f329ed2e6d6396c09cddd855ef0cd083b74b9ab30f890c"
+        },
+        {
+          "key": "synthetiq-player-testing:justanime-v1",
+          "version": "1.0.1",
+          "sha256": "4b47437fd7fa51f1a2f329ed2e6d6396c09cddd855ef0cd083b74b9ab30f890c"
+        }
+      ]
+    },
+    {
+      "moduleId": "kartoons-v1",
+      "selected": "synthetiq-player:kartoons-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:kartoons-v1",
+          "version": "1.1.6",
+          "sha256": "51cf4eb68cc674c6d4fc334329c18b22a5074004607fb0f2a125f951e56463e3"
+        },
+        {
+          "key": "synthetiq-player-testing:kartoons-v1",
+          "version": "1.1.6",
+          "sha256": "51cf4eb68cc674c6d4fc334329c18b22a5074004607fb0f2a125f951e56463e3"
+        }
+      ]
+    },
+    {
+      "moduleId": "kickassanime-v3",
+      "selected": "synthetiq-player:kickassanime-v3",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:kickassanime-v3",
+          "version": "4.2.0",
+          "sha256": "4f31c3cd519a37ecf552e838f6d4e3b41fa72e8ab91f5489ff8c326b4bc8748f"
+        },
+        {
+          "key": "synthetiq-player-testing:kickassanime-v3",
+          "version": "4.2.0",
+          "sha256": "4f31c3cd519a37ecf552e838f6d4e3b41fa72e8ab91f5489ff8c326b4bc8748f"
+        }
+      ]
+    },
+    {
+      "moduleId": "megakino-v1",
+      "selected": "synthetiq-player:megakino-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:megakino-v1",
+          "version": "1.1.5",
+          "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24"
+        },
+        {
+          "key": "synthetiq-player-testing:megakino-v1",
+          "version": "1.1.5",
+          "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24"
+        }
+      ]
+    },
+    {
+      "moduleId": "miruro-v3",
+      "selected": "synthetiq-player:miruro-v3",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:miruro-v3",
+          "version": "4.1.3-beta.7",
+          "sha256": "22a8b23b18e8279069c52ea3e455a834b50aca0c7840420eea688c6777d83209"
+        },
+        {
+          "key": "synthetiq-player-testing:miruro-v3",
+          "version": "4.1.3-beta.11",
+          "sha256": "e561ae9ddbddea68a0988b5708808f3c90d04f13f813a0b120e2cd3d1715b194"
+        }
+      ]
+    },
+    {
+      "moduleId": "moviedb-wiki-v1",
+      "selected": "synthetiq-player:moviedb-wiki-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:moviedb-wiki-v1",
+          "version": "0.1.0-beta.25",
+          "sha256": "fccdb67f028429c9fd7f497cc90fda373efb9af7049a88577c29b869d3cc7e9a"
+        },
+        {
+          "key": "synthetiq-player-testing:moviedb-wiki-v1",
+          "version": "0.1.0-beta.15",
+          "sha256": "78b3b4afdd3b372227ee6a4f2de3336b25a8f389593353aee8e6f315f05f0cbb"
+        }
+      ]
+    },
+    {
+      "moduleId": "movy-v1",
+      "selected": "synthetiq-player:movy-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:movy-v1",
+          "version": "0.1.0-beta.4",
+          "sha256": "9c2efa132f5577520492f1f20c27fd11e2d686194134e0638a5065724c1234c3"
+        },
+        {
+          "key": "synthetiq-player-testing:movy-v1",
+          "version": "0.1.0-beta.1",
+          "sha256": "e66f270a9b305f8102e5ed75b37f8f03a341bfde0bb27ecd1c544ecad9ba796d"
+        }
+      ]
+    },
+    {
+      "moduleId": "mugiwara-v1",
+      "selected": "synthetiq-player:mugiwara-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:mugiwara-v1",
+          "version": "1.1.0-beta.5",
+          "sha256": "be79e89310c221091d52c7cc7aaf15ba5aeda2a7b87a74fe9ea66d45901be857"
+        },
+        {
+          "key": "synthetiq-player-testing:mugiwara-v1",
+          "version": "1.1.0-beta.5",
+          "sha256": "be79e89310c221091d52c7cc7aaf15ba5aeda2a7b87a74fe9ea66d45901be857"
+        }
+      ]
+    },
+    {
+      "moduleId": "onepace-v3",
+      "selected": "synthetiq-player:onepace-v3",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:onepace-v3",
+          "version": "3.0.6",
+          "sha256": "9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25"
+        },
+        {
+          "key": "synthetiq-player-testing:onepace-v3",
+          "version": "3.0.6",
+          "sha256": "9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25"
+        }
+      ]
+    },
+    {
+      "moduleId": "shahiid-v1",
+      "selected": "synthetiq-player:shahiid-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:shahiid-v1",
+          "version": "2.1.3-beta.3",
+          "sha256": "c553daf1fa966c9072726a72a2d3ce6937d265a8891ed70ad3c8cc377cea3d27"
+        },
+        {
+          "key": "synthetiq-player-testing:shahiid-v1",
+          "version": "2.1.3-beta.3",
+          "sha256": "c553daf1fa966c9072726a72a2d3ce6937d265a8891ed70ad3c8cc377cea3d27"
+        }
+      ]
+    },
+    {
+      "moduleId": "streamingunity-v1",
+      "selected": "synthetiq-player:streamingunity-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:streamingunity-v1",
+          "version": "1.0.4",
+          "sha256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c"
+        },
+        {
+          "key": "synthetiq-player-testing:streamingunity-v1",
+          "version": "1.0.4",
+          "sha256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c"
+        }
+      ]
+    },
+    {
+      "moduleId": "synthetiq-anime-direct",
+      "selected": "synthetiq-player:synthetiq-anime-direct",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:synthetiq-anime-direct",
+          "version": "1.0.3-beta.10",
+          "sha256": "cec282d91015f4920d30cb82cb67a9e957e451c39b8a593a1e7edddb71ad7507"
+        },
+        {
+          "key": "synthetiq-player-testing:synthetiq-anime-direct",
+          "version": "1.0.3-beta.10",
+          "sha256": "588cb9a2670082e914c33623f54c700bfc7896c470ac3c1c9ce6f3f357ca0bdd"
+        }
+      ]
+    },
+    {
+      "moduleId": "synthetiq-anime-v1",
+      "selected": "synthetiq-player:synthetiq-anime-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:synthetiq-anime-v1",
+          "version": "1.0.5-beta.8",
+          "sha256": "22d2bf456bb65321d2fd283d162ceaed958f72ecbdbef9a6a35469c9d62621b4"
+        },
+        {
+          "key": "synthetiq-player-testing:synthetiq-anime-v1",
+          "version": "1.0.5-beta.9",
+          "sha256": "413ca29d5755d5b309f1f5beff00d3ddae5c93469a792590786d69650957c613"
+        }
+      ]
+    },
+    {
+      "moduleId": "synthetiq-one-v1",
+      "selected": "synthetiq-player:synthetiq-one-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:synthetiq-one-v1",
+          "version": "1.3.0",
+          "sha256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3"
+        },
+        {
+          "key": "synthetiq-player-testing:synthetiq-one-v1",
+          "version": "1.3.0",
+          "sha256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3"
+        }
+      ]
+    },
+    {
+      "moduleId": "toontales-v1",
+      "selected": "synthetiq-player:toontales-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:toontales-v1",
+          "version": "3.0.1",
+          "sha256": "2d9ef1b1c6795c2e4b0bb78c73a863adc6cee21ffca1b373b1d40925f95f86a0"
+        },
+        {
+          "key": "synthetiq-player-testing:toontales-v1",
+          "version": "3.0.1",
+          "sha256": "2d9ef1b1c6795c2e4b0bb78c73a863adc6cee21ffca1b373b1d40925f95f86a0"
+        }
+      ]
+    },
+    {
+      "moduleId": "xstream-v1",
+      "selected": "synthetiq-player:xstream-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:xstream-v1",
+          "version": "1.3.4",
+          "sha256": "bbbfedc4b81fc36aae90f8b9a3e3629c3598658a50a86dcde83d6566e3bb090d"
+        },
+        {
+          "key": "synthetiq-player-testing:xstream-v1",
+          "version": "1.3.4-beta.2",
+          "sha256": "23ade944e2dde2a0635806e69acab8d7aabad96c4eee53531691e3e9a70fb2ec"
+        }
+      ]
+    },
+    {
+      "moduleId": "yflix-v1",
+      "selected": "synthetiq-player:yflix-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:yflix-v1",
+          "version": "1.1.2",
+          "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f"
+        },
+        {
+          "key": "synthetiq-player-testing:yflix-v1",
+          "version": "1.1.2",
+          "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f"
+        }
+      ]
+    }
+  ],
+  "skippedZipEntries": [
+    {
+      "key": "synthetiq-player:weebcentral-v2",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:synthetiq-manga-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:atsu-v3",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:synthetiq-music-hub-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:mangakatana-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:mgread-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player:colorizedmanga-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:weebcentral-v2",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:synthetiq-manga-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:atsu-v3",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:synthetiq-music-hub-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:mangakatana-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:mgread-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    },
+    {
+      "key": "synthetiq-player-testing:colorizedmanga-v1",
+      "reason": "Missing video contentType, public HTTPS packageUrl or valid SHA-256"
+    }
+  ]
+}
