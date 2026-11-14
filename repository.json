@@ -39,6 +39,24 @@
       "changelog": [
         "1.0.0: Imported existing V3 module, completed required Kinetiq manifest identity fields. Live source playback is unverified."
       ]
+    },
+    {
+      "moduleId": "trfilm-v1",
+      "moduleFamilyId": "trfilm-v1",
+      "moduleIdentity": "TRfilm.Net Library",
+      "moduleIdentityNumber": 1,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/TRfilm.Net-v1.0.0-beta.1.zip",
+      "sha256": "35b20afed9cfc9624c92ab6f2689195bbc31b7d43226864f029367dbfcce0b97",
+      "presentation": {
+        "category": "Movies & Series",
+        "purpose": "TRfilm.Net catalogue, posters, search and discovery; full-film playback unverified",
+        "language": "Turkish"
+      },
+      "changelog": [
+        "1.0.0-beta.1: Search, movie details, poster shelves and site genres. Sampled films exposed trailers rather than verified full-film streams."
+      ]
     }
   ]
 }
