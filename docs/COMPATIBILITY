@@ -1,0 +1,62 @@
+# Kinetiq module compatibility plan
+
+## What Batch 07A genuinely implements
+
+A reproducible, metadata-only aggregation of **8 upstream repositories** into
+one public Kinetiq repository, plus an installer-facing `repository.json` for
+native video ZIP candidate packages. It deduplicates conflicts, preserves
+SHA-256 and original publisher identities, separates testing variants, avoids
+inadvertent downstream copyright/licensing claims, and fails closed if any
+upstream catalogue is unavailable. No upstream module code is bundled.
+
+## What is NOT implemented by this batch
+
+- New Swift runtime support for Synthetiq Manga's `index.js`+`manifest.json`
+  contract or its `fetchv2/pagev2` networking API.
+- A native adapter to execute AROKI's signed connector JSON without changing
+  its canonical signature bytes, trust roots and app-specific version gates.
+- AnyGo's declarative source executor.
+- Converting original Synthetiq Player's signed/binary ZIPs into validated
+  Kinetiq v3 JavaScript packages. Some may already work, but that must be
+  proved package-by-package; passing a SHA check doesn't prove compatibility.
+- Playback smoke tests on the iPhone, streaming availability guarantees or
+  external website access entitlement.
+
+## Follow-up implementation sequence
+
+1. Validate all merged ZIP candidates against Kinetiq `ModulePackageValidator`
+   (flat manifest, V3+, `config.runtime.entry`, all required JS handlers) before
+   marking them installable in the application UI. Keep failed candidates in the
+   full catalogue with diagnostics and preserve installed existing modules.
+2. Add `UnifiedModuleIndex` in Kinetiq Swift, reading `catalog/unified.json` as
+   an informational browser with explicit format support flags. Do not feed
+   connector/manga/AnyGo rows to `ModulePackageStore.install()`.
+3. Define a `MangaModuleAdapter` implementing the Synthetiq Manga contract,
+   with network policy, safe JS runtime boundaries, per-source permissions,
+   tests, and a native reader. Respect `docs/ROADMAP.md` manga phases.
+4. Define an `ArokiConnectorAdapter`, verifying ORIGINAL signed bytes using
+   independently provisioned publisher public keys. Never fake or strip the
+   signature simply to pass validation. Verify minimum **AROKI** app versions
+   against a compatible implementation contract, not Kinetiq marketing version.
+5. Define an `AnyGoSourceAdapter` only after independently validating its JSON
+   source-contract semantics; avoid a generic unrestricted web scraper.
+6. Verify installation, source list, search, discovery, provider fallback,
+   10-minute video playback, subtitles, PiP, downloads and updates on iPhone.
+   Track each candidate as PASS/FAIL/PARTIAL, do not imply every entry works.
+
+## Trust and releases
+
+The Kinetiq iOS app currently uses `schemaVersion: 1` with `moduleId`, stable
+identity fields, SHA-256 checks and a V3+ video-JS package validator. Upstream
+ZIP metadata can be referenced without republishing the binary. If an upstream
+package fails V3 validation, display diagnostics rather than inventing or
+silently modifying code. CI creates a pull request, not an automatic trusted
+module upgrade. Publisher approval remains a user decision.
+
+## Duplicate selection rule
+
+Kinetiq-owned IDs win, then official Player, then PL testing, then FR testing.
+Duplicated IDs across incompatible ecosystems stay separate under namespaced
+catalogue keys (`aroki:id`, `synthetiq-manga:id`, etc.). Newer test versions do
+not silently override official packages. See `catalog/diagnostics.json` after
+sync for complete duplicate alternatives.

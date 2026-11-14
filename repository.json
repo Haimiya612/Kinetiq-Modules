@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repositoryId": "kinetiq-custom-modules",
-  "name": "Kinetiq Custom Modules",
+  "name": "Kinetiq Unified Modules",
   "enabled": true,
   "modules": [
     {
@@ -57,6 +57,566 @@
       "changelog": [
         "1.0.0-beta.1: Search, movie details, poster shelves and site genres. Sampled films exposed trailers rather than verified full-film streams."
       ]
+    },
+    {
+      "moduleId": "alpha-movies",
+      "moduleFamilyId": "alpha_movies_v1",
+      "moduleIdentity": "SP-VID-079-ALPHA-MOVIES",
+      "moduleIdentityNumber": 79,
+      "contentType": "video",
+      "version": "0.2.0-beta.4",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-alpha-movies-v0.2.0-beta.4/Alpha-Movies-0.2.0-beta.4.zip",
+      "sha256": "fa442fd94cb07e66d054d9ffa79dd7e569ba144e0db10ae8ab3b54fe2206f329",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "an1me-v1",
+      "moduleFamilyId": "an1me_v1",
+      "moduleIdentity": "SP-VID-053-AN1ME",
+      "moduleIdentityNumber": 53,
+      "contentType": "video",
+      "version": "1.1.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-an1me-v1-v1.1.1/An1me-1.1.1.zip",
+      "sha256": "456c6110f16b3e6c3224131f024150d6a5f5444a97481e7fc1be782ba32c06ad",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "anikage-v1",
+      "moduleFamilyId": "anikage_v1",
+      "moduleIdentity": "SP-VID-063-ANIKAGE",
+      "moduleIdentityNumber": 63,
+      "contentType": "video",
+      "version": "1.1.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-anikage-v1-v1.1.3/Anikage-1.1.3.zip",
+      "sha256": "70002c6570c46129d00e71c9cf623f7b44bc2ddea2cb559933b10ede1554fff4",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "anikoto-v4",
+      "moduleFamilyId": "anikoto-v3",
+      "moduleIdentity": "SP-VID-036-ANIKOTO",
+      "moduleIdentityNumber": 36,
+      "contentType": "video",
+      "version": "5.0.6-beta.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-anikoto-v4-v5.0.6-beta.3/AniKoto-5.0.6-beta.3.zip",
+      "sha256": "58c85822abc9bb59430ff8c9f8e6d2580973f43628a2828b50822fcc0ce72d4e",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "anime-sama-v1",
+      "moduleFamilyId": "anime_sama_v1",
+      "moduleIdentity": "SP-VID-047-ANIME-SAMA",
+      "moduleIdentityNumber": 47,
+      "contentType": "video",
+      "version": "1.1.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-anime-sama-v1-v1.1.2/Anime-Sama-1.1.2.zip",
+      "sha256": "c6f6c913e0fd015dddbb7291c695c4942fe1bb05fe90ff699b502e2ee10b675e",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "anime4up-site-v1",
+      "moduleFamilyId": "anime4up_site_v1",
+      "moduleIdentity": "SP-VID-101-ANIME4UP",
+      "moduleIdentityNumber": 101,
+      "contentType": "video",
+      "version": "1.0.0-beta.10",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-anime4up-site-v1-v1.0.0-beta.10/Anime4up-1.0.0-beta.10.zip",
+      "sha256": "3a28b4175a7030105490930820720fde63f9a49fffe1013cbc51d33c74668a2c",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "animeav1-v1",
+      "moduleFamilyId": "animeav1_v1",
+      "moduleIdentity": "SP-VID-060-ANIMEAV1",
+      "moduleIdentityNumber": 60,
+      "contentType": "video",
+      "version": "1.3.0-beta.9",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-animeav1-v1-v1.3.0-beta.9/AnimeAV1-1.3.0-beta.9.zip",
+      "sha256": "833d9133c5ee4271092881aaa3e59ddf291e0f98a2ca542d635db3c16dfab943",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "animeheaven-v2-1",
+      "moduleFamilyId": "animeheaven_v2",
+      "moduleIdentity": "SP-VID-003-ANIMEHEAVEN",
+      "moduleIdentityNumber": 3,
+      "contentType": "video",
+      "version": "4.1.1-beta.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-animeheaven-v2-1-v4.1.1-beta.1/AnimeHeaven-4.1.1-beta.1.zip",
+      "sha256": "48c550e4961f3c142c67c415924cc6cf13eefc281870645d9707c1d62ce53125",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "animeunity-v1",
+      "moduleFamilyId": "animeunity_v1",
+      "moduleIdentity": "SP-VID-061-ANIMEUNITY",
+      "moduleIdentityNumber": 61,
+      "contentType": "video",
+      "version": "1.1.0-beta.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-animeunity-v1-v1.1.0-beta.3/AnimeUnity-1.1.0-beta.3.zip",
+      "sha256": "044a8ae5854a7914161dfa2e87347d3033008c1d3edd06c9fc5f3380f35f2973",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "anipm-v1",
+      "moduleFamilyId": "anipm-v1",
+      "moduleIdentity": "SP-VID-084-ANIPM",
+      "moduleIdentityNumber": 84,
+      "contentType": "video",
+      "version": "0.1.0-beta.9",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-anipm-v1-v0.1.0-beta.9/AniPM-0.1.0-beta.9.zip",
+      "sha256": "502da3b8153b600882bd8156778c1048468e591f0de80d06b97ca036a7714c64",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "aniworld-v1",
+      "moduleFamilyId": "aniworld_v1",
+      "moduleIdentity": "SP-VID-050-ANIWORLD",
+      "moduleIdentityNumber": 50,
+      "contentType": "video",
+      "version": "1.3.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-aniworld-v1-v1.3.2/Aniworld-1.3.2.zip",
+      "sha256": "0a56360b7e14e121d48fca5ec749f540751fd56c85852557efc279bc50ffd3ff",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "cimacub-v1",
+      "moduleFamilyId": "cimacub_v1",
+      "moduleIdentity": "SP-VID-287-CIMACLUB",
+      "moduleIdentityNumber": 287,
+      "contentType": "video",
+      "version": "1.2.0",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-cimacub-v1-v1.2.0/CimaClub-1.2.0.zip",
+      "sha256": "3ddee1d22400b00963d5085b92efd648f36e64128c8af0a9dffbea55b995de86",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "drama-direct-v1",
+      "moduleFamilyId": "drama_direct_v1",
+      "moduleIdentity": "SP-VID-078-DRAMA-DIRECT",
+      "moduleIdentityNumber": 78,
+      "contentType": "video",
+      "version": "0.1.0-beta.9",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-drama-direct-v1-v0.1.0-beta.9/Drama-Direct-0.1.0-beta.9.zip",
+      "sha256": "0374dcafd676e190fdcda6a05016510c8f3873e1b421bc049bc9eb8814e5b1ac",
+      "presentation": {
+        "category": "Drama",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "dramacool-v1",
+      "moduleFamilyId": "dramacool_v1",
+      "moduleIdentity": "SP-VID-066-DRAMACOOL",
+      "moduleIdentityNumber": 66,
+      "contentType": "video",
+      "version": "1.0.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-dramacool-v1-v1.0.3/DramaCool-1.0.3.zip",
+      "sha256": "abfed0370656fc7ae1c2e5e011148ffba2f982b385370c1a10aa6d891213a6e7",
+      "presentation": {
+        "category": "Drama",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "dramafun-v3",
+      "moduleFamilyId": "dramafun-v3",
+      "moduleIdentity": "SP-VID-035-DRAMAFUN",
+      "moduleIdentityNumber": 35,
+      "contentType": "video",
+      "version": "4.0.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-dramafun-v3-v4.0.1/DramaFun-4.0.1.zip",
+      "sha256": "b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "dw-live-v1",
+      "moduleFamilyId": "dw_live_v1",
+      "moduleIdentity": "SP-VID-110-DW-LIVE",
+      "moduleIdentityNumber": 110,
+      "contentType": "video",
+      "version": "0.1.0-beta.3",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.3.zip",
+      "sha256": "6068c5f67e3fc64303cd6e39f49141fd153f13f38c32e13fb0b2a0c7d5697cbb",
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "franime-hermes-v1",
+      "moduleFamilyId": "franime_hermes_v1",
+      "moduleIdentity": "SP-VID-9003-FRANIME-HERMES-TEST",
+      "moduleIdentityNumber": 9003,
+      "contentType": "video",
+      "version": "1.0.0-beta.3",
+      "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-hermes-v1-v1.0.0-beta.3/FRAnimeHermes-1.0.0-beta.3.zip",
+      "sha256": "22de7e30f1b4a6709bf55445b031a0cf57b90dd64373f333c81e6715ea185b5d",
+      "presentation": {
+        "category": "Testing",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "franime-v1",
+      "moduleFamilyId": "franime_v1",
+      "moduleIdentity": "SP-VID-9002-FRANIME-CODEX-TEST",
+      "moduleIdentityNumber": 9002,
+      "contentType": "video",
+      "version": "1.0.0-beta.5",
+      "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-v1-v1.0.0-beta.5/FRAnimeCodex-1.0.0-beta.5.zip",
+      "sha256": "8e9dbcdb653e26a8403c040355bc4a8b473d8319d172245b40c739e053d93913",
+      "presentation": {
+        "category": "Testing",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "justanime-v1",
+      "moduleFamilyId": "justanime_v1",
+      "moduleIdentity": "SP-VID-064-JUSTANIME",
+      "moduleIdentityNumber": 64,
+      "contentType": "video",
+      "version": "1.0.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-justanime-v1-v1.0.1/JustAnime-1.0.1.zip",
+      "sha256": "4b47437fd7fa51f1a2f329ed2e6d6396c09cddd855ef0cd083b74b9ab30f890c",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "kartoons-v1",
+      "moduleFamilyId": "kartoons_v1",
+      "moduleIdentity": "SP-VID-057-KARTOONS",
+      "moduleIdentityNumber": 57,
+      "contentType": "video",
+      "version": "1.1.6",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-kartoons-v1-v1.1.6/Kartoons-1.1.6.zip",
+      "sha256": "51cf4eb68cc674c6d4fc334329c18b22a5074004607fb0f2a125f951e56463e3",
+      "presentation": {
+        "category": "Cartoons",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "kickassanime-v3",
+      "moduleFamilyId": "kickassanime-v3",
+      "moduleIdentity": "SP-VID-038-KICKASSANIME",
+      "moduleIdentityNumber": 38,
+      "contentType": "video",
+      "version": "4.2.0",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-kickassanime-v3-v4.2.0/KickAssAnime-4.2.0.zip",
+      "sha256": "4f31c3cd519a37ecf552e838f6d4e3b41fa72e8ab91f5489ff8c326b4bc8748f",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "megakino-v1",
+      "moduleFamilyId": "megakino_v1",
+      "moduleIdentity": "SP-VID-062-MEGAKINO",
+      "moduleIdentityNumber": 62,
+      "contentType": "video",
+      "version": "1.1.5",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.5/MegaKino-1.1.5.zip",
+      "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24",
+      "presentation": {
+        "category": "Movies",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "miruro-v3",
+      "moduleFamilyId": "miruro",
+      "moduleIdentity": "SP-VID-010-MIRURO",
+      "moduleIdentityNumber": 10,
+      "contentType": "video",
+      "version": "4.1.3-beta.7",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-miruro-v3-v4.1.3-beta.7/Miruro-4.1.3-beta.7.zip",
+      "sha256": "22a8b23b18e8279069c52ea3e455a834b50aca0c7840420eea688c6777d83209",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "moviedb-wiki-v1",
+      "moduleFamilyId": "moviedb_wiki_v1",
+      "moduleIdentity": "SP-VID-083-MOVIEDB",
+      "moduleIdentityNumber": 83,
+      "contentType": "video",
+      "version": "0.1.0-beta.25",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-moviedb-wiki-v1-v0.1.0-beta.25/MovieDB-0.1.0-beta.25.zip",
+      "sha256": "fccdb67f028429c9fd7f497cc90fda373efb9af7049a88577c29b869d3cc7e9a",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "movy-v1",
+      "moduleFamilyId": "movy_v1",
+      "moduleIdentity": "SP-VID-076-MOVY",
+      "moduleIdentityNumber": 76,
+      "contentType": "video",
+      "version": "0.1.0-beta.4",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-movy-v1-v0.1.0-beta.4/Movy-0.1.0-beta.4.zip",
+      "sha256": "9c2efa132f5577520492f1f20c27fd11e2d686194134e0638a5065724c1234c3",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "mugiwara-v1",
+      "moduleFamilyId": "mugiwara_v1",
+      "moduleIdentity": "SP-VID-071-MUGIWARA",
+      "moduleIdentityNumber": 71,
+      "contentType": "video",
+      "version": "1.1.0-beta.5",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-mugiwara-v1-v1.1.0-beta.5/Mugiwara-1.1.0-beta.5.zip",
+      "sha256": "be79e89310c221091d52c7cc7aaf15ba5aeda2a7b87a74fe9ea66d45901be857",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "onepace-v3",
+      "moduleFamilyId": "onepace-v3",
+      "moduleIdentity": "SP-VID-033-ONEPACE",
+      "moduleIdentityNumber": 33,
+      "contentType": "video",
+      "version": "3.0.6",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-onepace-v3-v3.0.6/One-Pace-3.0.6.zip",
+      "sha256": "9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25",
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "public-sports-live-v1",
+      "moduleFamilyId": "public_sports_live_v1",
+      "moduleIdentity": "SP-VID-111-PUBLIC-SPORTS-LIVE",
+      "moduleIdentityNumber": 111,
+      "contentType": "video",
+      "version": "0.1.0-beta.5",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-Sports-Live-0.1.0-beta.5.zip",
+      "sha256": "41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094",
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "public-tv-live-v1",
+      "moduleFamilyId": "public_tv_live_v1",
+      "moduleIdentity": "SP-VID-113-PUBLIC-TV-LIVE",
+      "moduleIdentityNumber": 113,
+      "contentType": "video",
+      "version": "0.1.0-beta.4",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.4.zip",
+      "sha256": "892cd783742c501c7925e152fa22bff77a0f783ea4f9e687b7c26b1165bed1ec",
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "qa-fallback-anipm-v1",
+      "moduleFamilyId": "qa-fallback-anipm-v1",
+      "moduleIdentity": "SP-VID-997-QA-FALLBACK-ANIPM",
+      "moduleIdentityNumber": 997,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Fallback-Test-AniPM-1.0.0-beta.1.zip",
+      "sha256": "fc2408262bfefe4daa17115068135f5d6278c0e4ed7ca53f8ac9d022b91e4d24",
+      "presentation": {
+        "category": "Testing",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "shahiid-v1",
+      "moduleFamilyId": "shahiid_v1",
+      "moduleIdentity": "SP-VID-055-SHAHIID",
+      "moduleIdentityNumber": 55,
+      "contentType": "video",
+      "version": "2.1.3-beta.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-shahiid-v1-v2.1.3-beta.3/Shahiid-2.1.3-beta.3.zip",
+      "sha256": "c553daf1fa966c9072726a72a2d3ce6937d265a8891ed70ad3c8cc377cea3d27",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "sololatino-v1",
+      "moduleFamilyId": "sololatino_v1",
+      "moduleIdentity": "SP-VID-067-SOLOLATINO",
+      "moduleIdentityNumber": 67,
+      "contentType": "video",
+      "version": "0.1.0-beta.6",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/SoloLatino-0.1.0-beta.6.zip",
+      "sha256": "8173cadef04d35710009ec663f449b290cc4645fd0063941d85a3c93f1c45893",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "streamingunity-v1",
+      "moduleFamilyId": "streamingunity_v1",
+      "moduleIdentity": "SP-VID-065-STREAMINGUNITY",
+      "moduleIdentityNumber": 65,
+      "contentType": "video",
+      "version": "1.0.4",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-streamingunity-v1-v1.0.4/StreamingUnity-1.0.4.zip",
+      "sha256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "synthetiq-anime-direct",
+      "moduleFamilyId": "synthetiq_anime_direct_v1",
+      "moduleIdentity": "SP-VID-077-ANIME-DIRECT",
+      "moduleIdentityNumber": 77,
+      "contentType": "video",
+      "version": "1.0.3-beta.10",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-anime-direct-v1.0.3-beta.10/Synthetiq-Flux-1.0.3-beta.10.zip",
+      "sha256": "cec282d91015f4920d30cb82cb67a9e957e451c39b8a593a1e7edddb71ad7507",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "synthetiq-anime-v1",
+      "moduleFamilyId": "synthetiq_anime_v1",
+      "moduleIdentity": "SP-VID-074-SYNTHETIQ-ANIME",
+      "moduleIdentityNumber": 74,
+      "contentType": "video",
+      "version": "1.0.5-beta.8",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-anime-v1-v1.0.5-beta.8/Synthetiq-Anime-1.0.5-beta.8.zip",
+      "sha256": "22d2bf456bb65321d2fd283d162ceaed958f72ecbdbef9a6a35469c9d62621b4",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "synthetiq-one-v1",
+      "moduleFamilyId": "synthetiq-one",
+      "moduleIdentity": "SP-VID-100-SYNTHETIQ-ONE",
+      "moduleIdentityNumber": 100,
+      "contentType": "video",
+      "version": "1.3.0",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-one-v1-v1.3.0/Synthetiq-One-1.3.0.zip",
+      "sha256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "toontales-v1",
+      "moduleFamilyId": "toontales-v1",
+      "moduleIdentity": "SP-VID-026-TOONTALES",
+      "moduleIdentityNumber": 26,
+      "contentType": "video",
+      "version": "3.0.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-toontales-v1-v3.0.1/ToonTales-3.0.1.zip",
+      "sha256": "2d9ef1b1c6795c2e4b0bb78c73a863adc6cee21ffca1b373b1d40925f95f86a0",
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "tvapp-live-v1",
+      "moduleFamilyId": "tvapp_live_v1",
+      "moduleIdentity": "SP-VID-081-TVAPP-LIVE",
+      "moduleIdentityNumber": 81,
+      "contentType": "video",
+      "version": "0.1.0-beta.10",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.10.zip",
+      "sha256": "53ad7b27f4723e4f9e1286891e614ccbd64ac0477879a75f6ba30fbc0cc1c0a5",
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "xstream-v1",
+      "moduleFamilyId": "xstream_v1",
+      "moduleIdentity": "SP-VID-048-XSTREAM",
+      "moduleIdentityNumber": 48,
+      "contentType": "video",
+      "version": "1.3.4",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-xstream-v1-v1.3.4/X-Stream-1.3.4.zip",
+      "sha256": "bbbfedc4b81fc36aae90f8b9a3e3629c3598658a50a86dcde83d6566e3bb090d",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
+    },
+    {
+      "moduleId": "yflix-v1",
+      "moduleFamilyId": "yflix_v1",
+      "moduleIdentity": "SP-VID-072-YFLIX",
+      "moduleIdentityNumber": 72,
+      "contentType": "video",
+      "version": "1.1.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.2/YFlix-1.1.2.zip",
+      "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Upstream ZIP reference: Kinetiq V3 installation and iPhone playback are not yet verified."
+      }
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "name": "kinetiq-unified-catalog",
+  "private": true,
+  "version": "0.7.0",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "sync": "node scripts/sync-unified.mjs",
+    "check": "node scripts/check-unified.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

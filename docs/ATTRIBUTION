@@ -1,0 +1,26 @@
+# Attribution and source boundaries
+
+This project references public catalogue metadata and URLs from the eight
+repository owners listed in `catalog/upstreams.json`. Each upstream owns its
+own code, packages, release process, artwork and trademarks.
+
+Public visibility is not a redistribution license. As of this project's
+initial review, only `kas021/Testing-Modules-AR` exposed a root `LICENSE`
+(MIT); this workflow does not repackage its code either. Do not infer a license
+for any other upstream repository without checking its current terms.
+
+The merge intentionally **does not** copy source code, signed connector files,
+ZIP packages or artwork from external repositories into `Haimiya612/Kinetiq-Modules`.
+It stores names, version descriptors, upstream links, hash strings and format
+capability flags to support discovery and compatibility work. All installable
+binaries remain hosted by their original publisher.
+
+Upstream links:
+- https://github.com/Synthetiq-HQ/synthetiq-manga-sources
+- https://github.com/kas021/Synthetiq-Modules
+- https://github.com/kas021/AROKI-Connectors
+- https://github.com/kas021/Testing-Modules-1-2-3-4
+- https://github.com/kas021/Module-Testing-PL
+- https://github.com/kas021/Testing-Modules-AR
+- https://github.com/kas021/AnyGo-Sources
+- https://github.com/Haimiya612/Kinetiq-Modules

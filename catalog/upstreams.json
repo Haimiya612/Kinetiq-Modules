@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "description": "Eight upstream catalogues federated into Kinetiq; packages are referenced, not republished.",
+  "repositories": [
+    {
+      "key": "kinetiq",
+      "repository": "Haimiya612/Kinetiq-Modules",
+      "format": "kinetiq-video-zip",
+      "kind": "videoZip",
+      "indexPath": "catalog/local-modules.json",
+      "scope": "local",
+      "priority": 0,
+      "installPolicy": "local"
+    },
+    {
+      "key": "synthetiq-player",
+      "repository": "kas021/Synthetiq-Modules",
+      "format": "synthetiq-player-zip",
+      "kind": "videoZip",
+      "indexPath": "repository.json",
+      "scope": "remote",
+      "priority": 10,
+      "installPolicy": "candidate"
+    },
+    {
+      "key": "synthetiq-player-testing",
+      "repository": "kas021/Module-Testing-PL",
+      "format": "synthetiq-player-testing-zip",
+      "kind": "videoZip",
+      "indexPath": "repository.json",
+      "scope": "remote",
+      "priority": 30,
+      "installPolicy": "unique-only"
+    },
+    {
+      "key": "synthetiq-player-fr-testing",
+      "repository": "kas021/Testing-Modules-1-2-3-4",
+      "format": "synthetiq-player-testing-zip",
+      "kind": "videoZip",
+      "indexPath": "repository.json",
+      "scope": "remote",
+      "priority": 40,
+      "installPolicy": "unique-only"
+    },
+    {
+      "key": "synthetiq-manga",
+      "repository": "Synthetiq-HQ/synthetiq-manga-sources",
+      "format": "synthetiq-manga-js",
+      "kind": "mangaManifest",
+      "indexPath": "index.json",
+      "scope": "remote",
+      "priority": 10,
+      "installPolicy": "metadata-only"
+    },
+    {
+      "key": "aroki",
+      "repository": "kas021/AROKI-Connectors",
+      "format": "aroki-signed-json",
+      "kind": "connectorManifest",
+      "indexPath": "index.json",
+      "scope": "remote",
+      "priority": 10,
+      "installPolicy": "metadata-only"
+    },
+    {
+      "key": "aroki-testing",
+      "repository": "kas021/Testing-Modules-AR",
+      "format": "aroki-testing-json",
+      "kind": "connectorManifest",
+      "indexPath": "index.json",
+      "scope": "remote",
+      "priority": 20,
+      "installPolicy": "metadata-only"
+    },
+    {
+      "key": "anygo",
+      "repository": "kas021/AnyGo-Sources",
+      "format": "anygo-source-json",
+      "kind": "anygoSource",
+      "indexPath": "index.json",
+      "scope": "remote",
+      "priority": 10,
+      "installPolicy": "metadata-only"
+    }
+  ]
+}
