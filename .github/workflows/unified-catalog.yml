@@ -1,0 +1,69 @@
+name: Kinetiq Unified Module Catalogue
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'catalog/local-modules.json'
+      - 'catalog/upstreams.json'
+      - 'scripts/sync-unified.mjs'
+      - 'scripts/check-unified.mjs'
+      - '.github/workflows/unified-catalog.yml'
+  schedule:
+    - cron: '17 4 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: kinetiq-unified-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Fetch, merge, validate and propose changes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate merger with offline fixtures
+        run: npm test
+      - name: Download all 8 public source indexes and regenerate catalogue
+        run: npm run sync
+      - name: Validate generated Kinetiq contract
+        run: npm run check
+      - name: Upload merged catalogue as a downloadable fallback
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kinetiq-Unified-Catalogue
+          path: |
+            repository.json
+            catalog/unified.json
+            catalog/diagnostics.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Propose updates via pull request (no automatic trusted-module install)
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync/kinetiq-unified-catalogue
+          delete-branch: true
+          commit-message: 'chore(catalog): refresh eight upstream module indexes'
+          title: 'Sync Kinetiq unified catalogue from 8 upstream repositories'
+          body: |
+            Automatically generated metadata federation for **8** public upstreams.
+            - `repository.json`: ZIP candidates only, existing local source identities retained.
+            - `catalog/unified.json`: all upstream formats, including non-installable entries.
+            - `catalog/diagnostics.json`: duplicate module IDs and rejected package candidates.
+            **Review new/changed ZIP SHA-256, package URL and source identities before merging.**
+            Catalogue presence does not certify device playback or grant redistribution rights.
+          add-paths: |
+            repository.json
+            catalog/unified.json
+            catalog/diagnostics.json
