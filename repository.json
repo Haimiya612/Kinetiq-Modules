@@ -229,6 +229,27 @@
       ]
     },
     {
+      "moduleId": "animeworld-v1",
+      "moduleFamilyId": "animeworld_v1",
+      "moduleIdentity": "SP-VID-289-ANIMEWORLD",
+      "moduleIdentityNumber": 289,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-animeworld-v1-v1.0.0-beta.1/AnimeWorld-1.0.0-beta.1.zip",
+      "sha256": "f3127253ac5e1060b98b683d50142806ff6479afbf51380d03cd53e0afd667c8",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Italian Anime",
+        "language": "Italian (SUB ITA / ITA)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeworld.png"
+      },
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "1.0.0-beta.1: New Italian anime source. SUB ITA (Japanese audio, Italian subtitles) and ITA (Italian dub) are combined into one series and never substituted for each other. English titles are searchable (e.g. Attack on Titan finds L'attacco dei Giganti).",
+        "1.0.0-beta.1: Tested on the V9 app runtime: 42/42 sampled sub and dub episodes across 11 series played; spoken language matched the label; 2-minute in-player playback and a full episode download passed."
+      ]
+    },
+    {
       "moduleId": "anipm-v1",
       "moduleFamilyId": "anipm-v1",
       "moduleIdentity": "SP-VID-084-ANIPM",
@@ -304,6 +325,27 @@
         "1.1.0: Much faster home screen (the newest row and the three themed rows now load together instead of one after another: measured 8.4s -> 1.3s), plus verified server handling. Only the mirror family that can actually deliver video is offered: the site's DoodStream servers sit behind a bot wall, and its cybervynx servers were traced to playlists filled with ad images rather than video, so they are skipped instead of showing an option that cannot play. Source-side note: individual mirrors often go dead at the host - those episodes report honestly that no link is available rather than playing nothing.",
         "1.0.0: First release of the CimaClub engine (w.cimacub.com) - Arabic subtitled movies, series and anime. The catalogue is read straight from the site's own WordPress API (search, newest-episode home rows and a paged feed), so titles and posters come from the source itself. Playback follows each episode's watch page to its MixDrop servers and resolves the player's signed mp4 url per play - those links expire in about four hours, so nothing is cached, and the mirror list cascades automatically until a live one answers. Not the default movie source; install alongside your others.",
         "Owner-approved public release for all-user testing. Source-side notes: some mirror links are already dead at the host and get skipped automatically, and the alternative DoodStream servers sit behind a bot wall so they are not offered. Subtitles on this site are burned into the source video. Playback reports welcome in the Discord support channels."
+      ]
+    },
+    {
+      "moduleId": "documentaryarea-v1",
+      "moduleFamilyId": "documentaryarea_v1",
+      "moduleIdentity": "SP-VID-288-DOCUMENTARYAREA",
+      "moduleIdentityNumber": 288,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-documentaryarea-v1-v1.0.0-beta.1/DocumentaryArea-1.0.0-beta.1.zip",
+      "sha256": "db4657bc3537e55832cedf51c796cd2b952f32c1e0c66dd2a2a1ad008edf2c49",
+      "presentation": {
+        "category": "Documentaries",
+        "purpose": "Documentaries",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/documentaryarea.png"
+      },
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "1.0.0-beta.1: New documentary source with about 2,800 free documentaries (history, war, nature, wildlife, space, science, biographies and more), SD or HD as the site serves it, with English subtitles where provided.",
+        "1.0.0-beta.1: Tested on the V9 app runtime: 15/15 sampled documentaries played with working English subtitles; 2-minute in-player playback passed; a full documentary downloaded completely; subtitle timing matched the audio."
       ]
     },
     {
@@ -385,16 +427,17 @@
       "moduleIdentity": "SP-VID-110-DW-LIVE",
       "moduleIdentityNumber": 110,
       "contentType": "video",
-      "version": "0.1.0-beta.3",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.3.zip",
-      "sha256": "6068c5f67e3fc64303cd6e39f49141fd153f13f38c32e13fb0b2a0c7d5697cbb",
+      "version": "0.1.0-beta.4",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.4.zip",
+      "sha256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
       "presentation": {
         "category": "Live TV",
         "language": "English / Spanish / Arabic",
         "iconUrl": "https://www.dw.com/images/icons/favicon-180x180.png"
       },
-      "publishedAtMs": 1792187616762,
+      "publishedAtMs": 1795108021597,
       "changelog": [
+        "0.1.0-beta.4: dw.com intermittently refuses page requests (403). The module now retries, keeps the last source found and falls back to each channel's official DW master playlist, still checked as an active live playlist. 3/3 channels played in the V9 runtime (was 0/3).",
         "TEST-only official DW English, Spanish and Arabic live news channels. Requires Player 9.0.90 for the Live clock/resume fixes.",
         "beta.3 corrects the private candidate identity collision with Flux; playback JavaScript is byte-identical to beta.2. Physical-device acceptance remains pending."
       ]
@@ -422,21 +465,23 @@
     {
       "moduleId": "franime-v1",
       "moduleFamilyId": "franime_v1",
-      "moduleIdentity": "SP-VID-9002-FRANIME-CODEX-TEST",
-      "moduleIdentityNumber": 9002,
+      "moduleIdentity": "SP-VID-054-FRANIME",
+      "moduleIdentityNumber": 54,
       "contentType": "video",
-      "version": "1.0.0-beta.5",
-      "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-v1-v1.0.0-beta.5/FRAnimeCodex-1.0.0-beta.5.zip",
-      "sha256": "8e9dbcdb653e26a8403c040355bc4a8b473d8319d172245b40c739e053d93913",
+      "version": "1.1.0-beta.1",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-franime-v1-v1.1.0-beta.1/FRAnime-1.1.0-beta.1.zip",
+      "sha256": "cc03bdf0d4a482412ed95abb60a12b3ff26be44329c6c60aafcb9795220d888e",
       "presentation": {
-        "category": "Testing"
+        "category": "Anime",
+        "purpose": "French Anime",
+        "language": "French (VOSTFR / VF)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/franime.png"
       },
-      "publishedAtMs": 1789668169868,
+      "publishedAtMs": 1784986932868,
       "changelog": [
-        "Fix Flutter response-shape handling for parsed JSON and string-valued text/body responses",
-        "Resolve temporary media redirects before returning streams and keep the required headers paired",
-        "Exclude FRAnime seasons explicitly labeled Live Action so One Piece starts at the real anime S1E1",
-        "Package verified with the workshop kit checker, live source checks and flat ZIP inspection"
+        "1.1.0-beta.1: New French anime source with about 2,500 series and films. VOSTFR (Japanese audio, French subtitles) and VF (French dub) are kept separate and never substituted for each other.",
+        "1.1.0-beta.1: Episodes keep the site's own numbering (One Piece runs 1-1180 across its arcs); half-episodes such as 1004.5 are listed under a Specials season.",
+        "1.1.0-beta.1: Tested before release on the V9 app runtime: 78/80 sampled episodes across 20 series played; spoken language matched the label on every sample; 2-minute in-player playback and offline playback of a downloaded episode passed. Some older episodes are unavailable where the site's own video was deleted."
       ]
     },
     {
@@ -538,9 +583,9 @@
       "moduleIdentity": "SP-VID-062-MEGAKINO",
       "moduleIdentityNumber": 62,
       "contentType": "video",
-      "version": "1.1.5",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.5/MegaKino-1.1.5.zip",
-      "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24",
+      "version": "1.1.6-beta.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.6-beta.2/MegaKino-1.1.6-beta.2.zip",
+      "sha256": "e34aed6a9b9b212b553644f43f8ce45216d0f9ccef87831c1789c3d12130bbb6",
       "presentation": {
         "category": "Movies",
         "purpose": "German Movies & Series",
@@ -550,6 +595,8 @@
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.1.6-beta.2: The source moved again (megakino28). The resolver now follows longer redirect chains and probes the next numbered hosts, so further moves are followed automatically. German dub is still never returned for a Sub request.",
+        "1.1.6-beta.2: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 16/20, up from 0/20. Exact-byte Flutter runtime passed.",
         "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
         "1.1.5: Verified before release — a movie and a series both play with real video segments, on both app lines (8.5.33 and 9.0.71), release gate ALL_PASSED.",
         "1.1.4: Search fixed — the source moved to a new domain and switched to GET-based search; the module now follows the current host safely and uses the new search format, with pagination. Searching for series and movies works again.",
@@ -587,9 +634,9 @@
       "moduleIdentity": "SP-VID-083-MOVIEDB",
       "moduleIdentityNumber": 83,
       "contentType": "video",
-      "version": "0.1.0-beta.25",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-moviedb-wiki-v1-v0.1.0-beta.25/MovieDB-0.1.0-beta.25.zip",
-      "sha256": "fccdb67f028429c9fd7f497cc90fda373efb9af7049a88577c29b869d3cc7e9a",
+      "version": "0.1.0-beta.27",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-moviedb-wiki-v1-v0.1.0-beta.27/MovieDB-0.1.0-beta.27.zip",
+      "sha256": "f05fc55ccdf874a17bbd34b9f4e0f6c02e4075a2593a8c8f2ddb4500ab42e2d9",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "Fast one-call movie & TV streams (Beta)",
@@ -599,12 +646,12 @@
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "0.1.0-beta.27: Fixed a V9 app bug where the built-in Movy backup replaced MovieDB's own search and episode handlers, so titles opened Movy links and failed to play. The backup is now fully isolated and uses the fixed Movy 0.1.0-beta.5 subtitle logic.",
+        "0.1.0-beta.27: When moviedb.wiki is down, search, details and home now switch to TMDB after one 12 s check instead of hanging. Tested with the site offline: 21/21 sample titles played; English subtitles on 13/21 (was 5/21).",
+        "0.1.0-beta.26: Playback reliability — when the current player route returns nothing playable, an isolated backup resolver is tried (TMDB id; original audio only, never used for Dub).",
+        "0.1.0-beta.26: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 6/20. Exact-byte Flutter runtime passed. Physical-device acceptance not yet done.",
         "0.1.0-beta.25: Owner-approved LIVE BETA, not full player/device certification. Updates the current player route and subtitle handling; captions arriving within the existing resolve deadline are retained, captionless cached results refresh, and fresh retries cannot be overwritten by older requests.",
-        "Local short-video and English-caption checks, allowing up to three attempts: development 39/42 video and 38/42 captions; separate holdout 9/10 for both. First-attempt caption success was 29/42 and 5/10. These are not first-open guarantees, full-length tests or verification of every language. The exact V9 Flutter runtime passed; full S2 and physical-device acceptance remain incomplete.",
-        "Source availability, subtitle timing and older public-app compatibility still need user testing. Report the title, episode and module version if a stream or subtitle fails. Previous packages remain available for rollback; no other movie modules changed in this release.",
-        "0.1.0-beta.15: Revived the catalogue and playback after the old source disappeared. Search, details, episodes and the home row fall back to TMDB, and streams come from the MoviesAPI/VidSpark provider with English subtitles; the original providers stay behind it as fallbacks. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays at 804p with a subtitle track.",
-        "0.1.0-beta.14: Quality labels for direct-file routes now show the REAL resolution, read from the file's own header (The Mentalist shows 1080p instead of a generic “Auto”; letterboxed titles show their true height, e.g. 816p). No extra network cost — the bytes were already fetched during validation.",
-        "0.1.0-beta.13: Streams are accepted in every format the source serves — direct MP4 and TS files now play exactly like HLS, with the format detected from the actual bytes instead of assumed. Fixes titles (e.g. The Mentalist) that played on the site but showed “no playable stream” in the app."
+        "Local short-video and English-caption checks, allowing up to three attempts: development 39/42 video and 38/42 captions; separate holdout 9/10 for both. First-attempt caption success was 29/42 and 5/10. These are not first-open guarantees, full-length tests or verification of every language. The exact V9 Flutter runtime passed; full S2 and physical-device acceptance remain incomplete."
       ]
     },
     {
@@ -613,9 +660,9 @@
       "moduleIdentity": "SP-VID-076-MOVY",
       "moduleIdentityNumber": 76,
       "contentType": "video",
-      "version": "0.1.0-beta.4",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-movy-v1-v0.1.0-beta.4/Movy-0.1.0-beta.4.zip",
-      "sha256": "9c2efa132f5577520492f1f20c27fd11e2d686194134e0638a5065724c1234c3",
+      "version": "0.1.0-beta.5",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-movy-v1-v0.1.0-beta.5/Movy-0.1.0-beta.5.zip",
+      "sha256": "ce2117267331d270dc03661952533b11d6c314ba2614d34587a02c8401534473",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "Movies & TV (Beta)",
@@ -624,6 +671,8 @@
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "0.1.0-beta.5: Subtitles fixed. Many titles (e.g. Prison Break, Breaking Bad, Dune) showed no subtitles because the first servers asked carry none and real WebVTT files named \".m3u8\" were discarded. Those files are now checked and kept, and when the playing servers have no working English track the next servers are asked for subtitles only (bounded to about 3.5 s). Dead default English tracks are dropped and duplicate languages merged.",
+        "0.1.0-beta.5: Tested on the V9 app runtime: working English subtitles on 20/21 sample titles (was 6/21), every title still plays; timing spot-checked against the spoken audio at 0:25, 10:00 and 20:00.",
         "0.1.0-beta.4: New Movy beta for movies and TV. Fresh provider links, source-supplied captions with corrected language labels, separate HLS/MP4 quality groups, real season/episode numbering, bounded requests and provider cooldowns. Availability and subtitle coverage vary; not full-film or physical-device certification."
       ]
     },
@@ -704,17 +753,18 @@
       "moduleIdentity": "SP-VID-113-PUBLIC-TV-LIVE",
       "moduleIdentityNumber": 113,
       "contentType": "video",
-      "version": "0.1.0-beta.4",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.4.zip",
-      "sha256": "892cd783742c501c7925e152fa22bff77a0f783ea4f9e687b7c26b1165bed1ec",
+      "version": "0.1.0-beta.5",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.5.zip",
+      "sha256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
       "presentation": {
         "category": "Live TV",
         "purpose": "General",
         "language": "Multiple languages",
         "recommended": false
       },
-      "publishedAtMs": 1792274503117,
+      "publishedAtMs": 1795108021597,
       "changelog": [
+        "0.1.0-beta.5: France 24 English returns. The public list switched it to an unofficial relay; the approved official France 24 route is kept while the channel is listed and is re-validated as live media on every play. 4/4 channels played (was 3/4).",
         "Expanded active-only public TV selection after two bounded decodes and fresh module live-playlist checks. Failed and unverified candidates remain hidden.",
         "Sports channels may broadcast replays or news; no guarantee that a live football or cricket match is currently on air. Regional availability varies.",
         "Exact package passed S2 standard native simulator playback. Physical-device and all-region acceptance are separate."
@@ -823,23 +873,23 @@
       "moduleIdentity": "SP-VID-065-STREAMINGUNITY",
       "moduleIdentityNumber": 65,
       "contentType": "video",
-      "version": "1.0.4",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-streamingunity-v1-v1.0.4/StreamingUnity-1.0.4.zip",
-      "sha256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c",
+      "version": "1.0.5-beta.3",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-streamingunity-v1-v1.0.5-beta.3/StreamingUnity-1.0.5-beta.3.zip",
+      "sha256": "a2e63ae3f05b2b76a5370f6514875de05577e321fecba20e140c1becd12b4863",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "StreamingUnity Movies & TV",
-        "language": "English",
+        "language": "Italian",
         "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/streamingunity.png"
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.0.5-beta.3: The site and its old player host are blocked or offline. Search, details, episodes and Home now use a TMDB catalogue; playback uses the VixSrc player and only returns streams with an Italian audio track, labelled Dub (never shown as Sub).",
+        "1.0.5-beta.3: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 0/20. Exact-byte Flutter runtime passed for a film and a series. Links saved from the old site may not resolve.",
         "1.0.4: Fixed episode routing by using the current title ID plus episode ID iframe endpoint",
         "1.0.4: Prevented unrelated Gravitas Ventures or Paramount media from being returned for One Piece episodes",
         "1.0.4: Verified distinct episode 1 and episode 2 HLS routes for SUB and DUB",
-        "1.0.3: Added StreamingUnity movie and TV catalogue with home discovery, search, title details, and multi-season episode mapping",
-        "1.0.3: Added adaptive VixCloud HLS resolution with English SUB and verified Italian DUB routing",
-        "1.0.3: Exposed provider subtitle and audio-track metadata while preserving required playback headers"
+        "1.0.3: Added StreamingUnity movie and TV catalogue with home discovery, search, title details, and multi-season episode mapping"
       ]
     },
     {
@@ -969,16 +1019,18 @@
       "moduleIdentity": "SP-VID-081-TVAPP-LIVE",
       "moduleIdentityNumber": 81,
       "contentType": "video",
-      "version": "0.1.0-beta.10",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.10.zip",
-      "sha256": "53ad7b27f4723e4f9e1286891e614ccbd64ac0477879a75f6ba30fbc0cc1c0a5",
+      "version": "0.1.0-beta.11",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.11.zip",
+      "sha256": "9881b840268a79e6a10070db758132dff76f3cf760b84933b217b9317b962c13",
       "presentation": {
         "category": "Live TV",
         "language": "English",
         "iconUrl": "https://tvapp1.com/favicon-512x512.png"
       },
-      "publishedAtMs": 1792191292440,
+      "publishedAtMs": 1795108021597,
       "changelog": [
+        "0.1.0-beta.11: Adult content filter on both third-party feeds (title, category and tags). When a channel's main feed is off air, its listed alternate feeds are tried (HD first).",
+        "0.1.0-beta.11: V9 runtime: NFL Network, CNN, 24/7 The Simpsons, Tennis Channel, Fox Footy and NHL Network played; Willow and Sky Sports Racing were off air at the provider (every feed 404).",
         "TEST-only cricket update for Player 9.0.91. Willow passed the actual native V9 Live player: sustained playback, pause/resume and fresh Go Live.",
         "Supports validated wrapped Live video; removes false off-air detection based on image filenames. Broadcasts can include replays. General S2 Willow journey still fails outside the native path; no all-channel or Android certification."
       ]
@@ -989,9 +1041,9 @@
       "moduleIdentity": "SP-VID-048-XSTREAM",
       "moduleIdentityNumber": 48,
       "contentType": "video",
-      "version": "1.3.4",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-xstream-v1-v1.3.4/X-Stream-1.3.4.zip",
-      "sha256": "bbbfedc4b81fc36aae90f8b9a3e3629c3598658a50a86dcde83d6566e3bb090d",
+      "version": "1.3.5-beta.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-xstream-v1-v1.3.5-beta.2/X-Stream-1.3.5-beta.2.zip",
+      "sha256": "627f5f2d648c9c76ae3928ff6906562d1171199337d596e492dd1b8757911d2f",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "Movies & TV",
@@ -1000,12 +1052,12 @@
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.3.5-beta.2: Fixed a V9 app bug where the built-in Movy backup replaced X-Stream's own search and episode handlers. The backup is now fully isolated and uses the fixed Movy 0.1.0-beta.5 subtitle logic.",
+        "1.3.5-beta.2: Tested on the V9 app runtime: 15/15 sample videos loaded and 14/15 had working English subtitles. Some English subtitles come from a third-party service with a shared daily limit and can be missing late in the day (UTC).",
+        "1.3.5-beta.1: Playback reliability — the provider's own servers now fail on most titles, so when they return nothing playable the module falls back to an isolated backup resolver (movie and series episodes by TMDB id). The backup carries original audio only and is never used for Dub.",
+        "1.3.5-beta.1: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 5/20. Exact-byte Flutter runtime passed. Physical-device acceptance not yet done.",
         "1.3.4: Playback restored. The old embed page stopped exposing its player for most titles, so the module now resolves through the provider's own JSON player API (the page route stays as a fallback). Results also carry the primary URL, its headers and real quality labels (e.g. 536p) instead of a bare Auto. Verified on the exact bytes: release gate ALL_PASSED, 16/17 sampled titles, 12 subtitle tracks on a movie.",
-        "1.3.3: Fixes Fresh Retry getting stuck after earlier provider failures; prevents stale requests overwriting refreshed links; respects provider cooldowns. Keeps 1.3.2's faster verified-route startup.",
-        "Stricter film and season matching avoids substituting a different title or episode. Availability and quality still depend on the providers; this update does not make every title playable.",
-        "Owner-approved reliability release. Automated runtime and decoder evidence is recorded in the release notes; physical-device acceptance and full language certification remain incomplete.",
-        "Explicit provider servers and quality choices with source-specific subtitles and headers",
-        "Fix singleton-provider retries and expire cached video links; retain media and language gates"
+        "1.3.3: Fixes Fresh Retry getting stuck after earlier provider failures; prevents stale requests overwriting refreshed links; respects provider cooldowns. Keeps 1.3.2's faster verified-route startup."
       ]
     },
     {
@@ -1014,9 +1066,9 @@
       "moduleIdentity": "SP-VID-072-YFLIX",
       "moduleIdentityNumber": 72,
       "contentType": "video",
-      "version": "1.1.2",
-      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.2/YFlix-1.1.2.zip",
-      "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f",
+      "version": "1.1.3-beta.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.3-beta.2/YFlix-1.1.3-beta.2.zip",
+      "sha256": "9054a75b9f2700f567468c8e50091638a048810d788b1df5d3444fa6cd02b683",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "Movies & TV Shows (HD Streams)",
@@ -1026,12 +1078,12 @@
       },
       "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.1.3-beta.2: yflix.ws is legally blocked in some regions (HTTP 451 in the UK). Search, details, episodes and Home now fall back to a TMDB catalogue, and playback resolves by IMDb id through a working HLS provider. The dead Videasy route is disabled.",
+        "1.1.3-beta.2: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 0/20. Exact-byte Flutter runtime passed for a film and a series. Links saved from the old site may not resolve where the site is blocked.",
         "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
         "1.1.1: Owner-approved public release — restored playback: the backup provider dropped TMDB ids, so lookups now use an exact title+year identity match (never substitutes a different film); subtitle tracks are forwarded as absolute URLs, deduped per language, all languages kept.",
         "1.1.1: Resolvers race so the first working source wins — a dead provider no longer delays playback (verified ~3.7s resolves with full subtitle sets).",
-        "1.1.0: Owner-approved beta.1 source unchanged; fresh playback links, episode ID fixes and provider-specific server/caption metadata.",
-        "1.1.0: Quality choices stay within the initial provider; other providers are available through Servers. Availability varies by title.",
-        "1.0.0: Official yFlix (yflix.ws) movies and TV series with adaptive 1080p/4K/720p HLS playback"
+        "1.1.0: Owner-approved beta.1 source unchanged; fresh playback links, episode ID fixes and provider-specific server/caption metadata."
       ]
     }
   ]
