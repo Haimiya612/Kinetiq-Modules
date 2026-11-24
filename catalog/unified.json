@@ -3,57 +3,65 @@
   "repositoryId": "kinetiq-custom-modules",
   "name": "Kinetiq Unified Catalogue",
   "sourceCount": 8,
-  "entryCount": 152,
-  "nativeZipCandidates": 43,
-  "warning": "A catalogue entry is not proof of package compatibility, live playback, redistribution rights or source reliability.",
+  "entryCount": 158,
+  "nativeZipCandidates": 45,
+  "warning": "Candidates are not certified for playback. Retained references may be stale.",
   "sources": [
     {
       "key": "kinetiq",
       "repository": "Haimiya612/Kinetiq-Modules",
       "format": "kinetiq-video-zip",
-      "entries": 3
+      "entries": 3,
+      "stale": false
     },
     {
       "key": "synthetiq-player",
       "repository": "kas021/Synthetiq-Modules",
       "format": "synthetiq-player-zip",
-      "entries": 39
+      "entries": 41,
+      "stale": false
     },
     {
       "key": "synthetiq-player-testing",
       "repository": "kas021/Module-Testing-PL",
       "format": "synthetiq-player-testing-zip",
-      "entries": 45
+      "entries": 44,
+      "stale": false
     },
     {
       "key": "synthetiq-player-fr-testing",
       "repository": "kas021/Testing-Modules-1-2-3-4",
       "format": "synthetiq-player-testing-zip",
-      "entries": 2
+      "entries": 2,
+      "stale": false
     },
     {
       "key": "synthetiq-manga",
       "repository": "Synthetiq-HQ/synthetiq-manga-sources",
       "format": "synthetiq-manga-js",
-      "entries": 47
+      "entries": 47,
+      "stale": false
     },
     {
       "key": "aroki",
       "repository": "kas021/AROKI-Connectors",
       "format": "aroki-signed-json",
-      "entries": 11
+      "entries": 15,
+      "stale": false
     },
     {
       "key": "aroki-testing",
       "repository": "kas021/Testing-Modules-AR",
       "format": "aroki-testing-json",
-      "entries": 4
+      "entries": 4,
+      "stale": false
     },
     {
       "key": "anygo",
       "repository": "kas021/AnyGo-Sources",
       "format": "anygo-source-json",
-      "entries": 1
+      "entries": 1,
+      "stale": false
     }
   ],
   "entries": [
@@ -76,7 +84,7 @@
       "releaseNotes": "1.0.1: Expanded FlixCloud SvelteKit data region decoding, robust response-body handling, and redacted media-probe diagnostics. Not yet confirmed with live iPhone playback.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "kinetiq:hdfilmcehennemi-v1",
@@ -97,7 +105,7 @@
       "releaseNotes": "1.0.0: Imported existing V3 module, completed required Kinetiq manifest identity fields. Live source playback is unverified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "kinetiq:trfilm-v1",
@@ -118,7 +126,7 @@
       "releaseNotes": "1.0.0-beta.1: Search, movie details, poster shelves and site genres. Sampled films exposed trailers rather than verified full-film streams.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:synthetiq-anime-v1",
@@ -138,8 +146,8 @@
       "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-anime-v1-v1.0.5-beta.8/Synthetiq-Anime-1.0.5-beta.8.zip",
       "releaseNotes": "1.0.5-beta.8: Updates provider response and token handling, with exact-title, episode and advertised audio checks on rescue routes. Restores provider-supplied English subtitle tokens and excludes thumbnail/storyboard tracks. Owner-requested live phone test; not full public-app certification. Source availability varies and physical acceptance is pending.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:synthetiq-anime-direct",
@@ -160,28 +168,7 @@
       "releaseNotes": "1.0.3-beta.10: Prefers a validated Koto route and improves video-variant selection while preserving external HLS renditions. Owner-requested live-test release with limited testing; Wave fallback, captions and device acceptance remain unverified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
-    },
-    {
-      "key": "synthetiq-player:synthetiq-one-v1",
-      "id": "synthetiq-one-v1",
-      "name": "SP-VID-100-SYNTHETIQ-ONE",
-      "version": "1.3.0",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "synthetiq-player-zip",
-      "upstream": "kas021/Synthetiq-Modules",
-      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/repository.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-one-v1-v1.3.0/Synthetiq-One-1.3.0.zip",
-      "releaseNotes": "Added the Fastest catalogue label",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:anipm-v1",
@@ -202,7 +189,7 @@
       "releaseNotes": "0.1.0-beta.9: Adds an alternative Koto playback route when the primary source fails, with exact-title, episode and advertised-audio checks. Owner-requested live-test release; the primary provider denial is not fixed, and caption/audio/device acceptance remains unverified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:anikoto-v4",
@@ -223,7 +210,7 @@
       "releaseNotes": "5.0.6-beta.3: Faster cached lookups with verified embed IDs, provider-scoped caches, safer fallback language checks and preserved external audio/subtitle playlists. Stops returning unrelated videos when embed metadata is unavailable. Owner-approved LIVE BETA: sampled media, runtime and regression checks passed; full certification and native phone acceptance remain pending. S2 retains the same opening-language detector flag observed on the previous live build. Existing source availability and backup-only-Dub limitations remain.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:anikage-v1",
@@ -244,13 +231,13 @@
       "releaseNotes": "1.1.3: Playback restored. The source now hands back an opaque token instead of a direct URL and the module discarded it as \"not a URL\", so every provider looked dead. Tokens are expanded through the source's own proxy now, the live providers (wave/koto/megg) are tried first, and quality labels come from the stream itself (720p/360p) instead of a bare Auto. Verified on the exact bytes: release gate ALL_PASSED.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:yflix-v1",
       "id": "yflix-v1",
       "name": "SP-VID-072-YFLIX",
-      "version": "1.1.2",
+      "version": "1.1.3-beta.2",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -260,12 +247,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.2/YFlix-1.1.2.zip",
-      "releaseNotes": "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
+      "upstreamSHA256": "9054a75b9f2700f567468c8e50091638a048810d788b1df5d3444fa6cd02b683",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.3-beta.2/YFlix-1.1.3-beta.2.zip",
+      "releaseNotes": "1.1.3-beta.2: yflix.ws is legally blocked in some regions (HTTP 451 in the UK). Search, details, episodes and Home now fall back to a TMDB catalogue, and playback resolves by IMDb id through a working HLS provider. The dead Videasy route is disabled.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:dramacool-v1",
@@ -286,7 +273,7 @@
       "releaseNotes": "1.0.3: Subtitles fixed for VidMoly-hosted dramas. The player page lists its caption files outside the video stream and the module never read that list, so BL and other dramas on VidMoly played without subtitles. Those tracks now appear (English first).",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:drama-direct-v1",
@@ -307,7 +294,7 @@
       "releaseNotes": "Owner-approved public availability of the unchanged 0.1.0-beta.9 prototype; not a fully certified stable release. Existing DramaCool remains unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:onepace-v3",
@@ -328,7 +315,7 @@
       "releaseNotes": "3.0.6: Real episode still artwork from the source CDN replaces the onepace.net favicon on cards and details.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:animeheaven-v2-1",
@@ -349,13 +336,13 @@
       "releaseNotes": "4.1.1-beta.1: Live phone-test beta: ignore commented-out logo clips and select the active episode player.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:xstream-v1",
       "id": "xstream-v1",
       "name": "SP-VID-048-XSTREAM",
-      "version": "1.3.4",
+      "version": "1.3.5-beta.2",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -365,12 +352,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "bbbfedc4b81fc36aae90f8b9a3e3629c3598658a50a86dcde83d6566e3bb090d",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-xstream-v1-v1.3.4/X-Stream-1.3.4.zip",
-      "releaseNotes": "1.3.4: Playback restored. The old embed page stopped exposing its player for most titles, so the module now resolves through the provider's own JSON player API (the page route stays as a fallback). Results also carry the primary URL, its headers and real quality labels (e.g. 536p) instead of a bare Auto. Verified on the exact bytes: release gate ALL_PASSED, 16/17 sampled titles, 12 subtitle tracks on a movie.",
+      "upstreamSHA256": "627f5f2d648c9c76ae3928ff6906562d1171199337d596e492dd1b8757911d2f",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-xstream-v1-v1.3.5-beta.2/X-Stream-1.3.5-beta.2.zip",
+      "releaseNotes": "1.3.5-beta.2: Fixed a V9 app bug where the built-in Movy backup replaced X-Stream's own search and episode handlers. The backup is now fully isolated and uses the fixed Movy 0.1.0-beta.5 subtitle logic.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:miruro-v3",
@@ -390,8 +377,8 @@
       "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-miruro-v3-v4.1.3-beta.7/Miruro-4.1.3-beta.7.zip",
       "releaseNotes": "4.1.3-beta.7: Repairs current embed extraction and refreshes links on reopen/retry; updates the Miruro domain; adds explicit season/part matching guards and stops listing invented playable episodes when the source has none. Owner-approved limited update: sampled media/runtime checks passed; complex aliases remain best-effort, and simulator, physical-device, full-episode and subtitle acceptance remain unverified.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:anime-sama-v1",
@@ -412,7 +399,7 @@
       "releaseNotes": "1.1.2: Fixed double-audio playback reports (an extra song under the episode; audio continuing after pause on some titles) - the module now returns exactly one validated route per play so the app cannot start a second concurrent stream over the first; Sibnet MP4 stays primary with ansembed HLS as the per-episode fallback.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:an1me-v1",
@@ -433,7 +420,7 @@
       "releaseNotes": "1.1.1: Owner-approved public promotion of 1.1.0-beta.4; playback JavaScript unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:animeav1-v1",
@@ -454,7 +441,7 @@
       "releaseNotes": "1.3.0-beta.9: Reduces repeated catalogue requests and rate-limit pressure, corrects unknown language availability after failed checks, and keeps HLS master streams when separate audio/caption tracks are present. Previous tests decoded 30 of 30 attempted routes; this is not a guarantee for every title, language or device.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:kartoons-v1",
@@ -475,7 +462,7 @@
       "releaseNotes": "1.1.6: Repackaged the unchanged 1.1.5 module with exactly one JSON manifest so updates install correctly",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:dramafun-v3",
@@ -496,7 +483,7 @@
       "releaseNotes": "4.0.1: Owner-approved promotion of beta.6 with byte-identical playback JavaScript; featured/paginated browsing, fresh checked providers and source quality metadata.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:toontales-v1",
@@ -517,7 +504,7 @@
       "releaseNotes": "3.0.1: Owner-approved public release — fixed instant failures on strict HTTP clients (bodyless GET requests no longer carry an empty-string body); catalogue + real MP4 playback verified through the app runtime.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:aniworld-v1",
@@ -538,13 +525,13 @@
       "releaseNotes": "1.3.2: German subtitles fixed — subtitle options are verified before they are listed (empty placeholder tracks are never offered), German sorts first, and the verified tracks are attached to every server, so the picker works on the stream that is playing. The German option no longer appears and disappears between attempts.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:megakino-v1",
       "id": "megakino-v1",
       "name": "SP-VID-062-MEGAKINO",
-      "version": "1.1.5",
+      "version": "1.1.6-beta.2",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -554,12 +541,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.5/MegaKino-1.1.5.zip",
-      "releaseNotes": "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
+      "upstreamSHA256": "e34aed6a9b9b212b553644f43f8ce45216d0f9ccef87831c1789c3d12130bbb6",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.6-beta.2/MegaKino-1.1.6-beta.2.zip",
+      "releaseNotes": "1.1.6-beta.2: The source moved again (megakino28). The resolver now follows longer redirect chains and probes the next numbered hosts, so further moves are followed automatically. German dub is still never returned for a Sub request.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:weebcentral-v2",
@@ -580,7 +567,7 @@
       "releaseNotes": "4.1.13: Fixes chapter order on titles using #, Episode, or Collar labels, including To Your Eternity. Preserves WeebCentral's newest-first order for chapters, specials, and volumes.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:synthetiq-manga-v1",
@@ -601,7 +588,7 @@
       "releaseNotes": "1.0.3: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:atsu-v3",
@@ -622,7 +609,7 @@
       "releaseNotes": "4.0.5: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:synthetiq-music-hub-v1",
@@ -643,7 +630,7 @@
       "releaseNotes": "Improved exact artist and track matching",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:animeunity-v1",
@@ -664,7 +651,7 @@
       "releaseNotes": "1.1.0-beta.3: Updates the source address and preserves HLS master streams when separate audio or subtitle tracks are present. Owner-approved live phone test release: runtime and sampled media checks passed; the simulator test timed out and phone playback remains to be verified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:kickassanime-v3",
@@ -685,7 +672,7 @@
       "releaseNotes": "4.2.0: Search now finds titles the way users type them - generated punctuation variants (colon at any word boundary, 'dr.' forms, year parentheses, tail-tokens fallback) plus merged results take the natural-query hit rate to 24/24 (was 22/24) and a season-qualified hard set from 2/8 to 8/8. Season/part variants of a show are grouped and ordered (base, Cour/Part, Season 2, 3..., then specials/OVAs/movies) with release years on cards. The home now serves 6 rows (adds Recently Added, Popular Shows and Coming Soon) in one parallel fan-out. Module icon added.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:shahiid-v1",
@@ -706,7 +693,7 @@
       "releaseNotes": "2.1.3-beta.3: Ranks exact Naruto and One Piece search matches ahead of related series, specials and arcs. Existing playback and language handling are unchanged. Source availability varies; owner phone acceptance is pending.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:mugiwara-v1",
@@ -727,7 +714,7 @@
       "releaseNotes": "1.1.0-beta.5: Playback fixed — Sibnet links are now resolved to the final signed video URL on every platform, so episodes that previously spun and never loaded now play.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:justanime-v1",
@@ -748,13 +735,13 @@
       "releaseNotes": "1.0.1: Owner-approved public release — implemented the advertised discovery home (hero + Trending/Popular/Airing/Latest rows with feed pages) and fixed home cards missing artwork.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:streamingunity-v1",
       "id": "streamingunity-v1",
       "name": "SP-VID-065-STREAMINGUNITY",
-      "version": "1.0.4",
+      "version": "1.0.5-beta.3",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -764,12 +751,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-streamingunity-v1-v1.0.4/StreamingUnity-1.0.4.zip",
-      "releaseNotes": "1.0.4: Fixed episode routing by using the current title ID plus episode ID iframe endpoint",
+      "upstreamSHA256": "a2e63ae3f05b2b76a5370f6514875de05577e321fecba20e140c1becd12b4863",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-streamingunity-v1-v1.0.5-beta.3/StreamingUnity-1.0.5-beta.3.zip",
+      "releaseNotes": "1.0.5-beta.3: The site and its old player host are blocked or offline. Search, details, episodes and Home now use a TMDB catalogue; playback uses the VixSrc player and only returns streams with an Italian audio track, labelled Dub (never shown as Sub).",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:mangakatana-v1",
@@ -790,7 +777,7 @@
       "releaseNotes": "1.0.2: Owner-approved public release — search works again (source burst-window pacing + retry), synopsis descriptions restored, home/feed section caps and pagination flags corrected.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:mgread-v1",
@@ -811,7 +798,7 @@
       "releaseNotes": "1.0.1: Owner-approved public release — chapter lists restored through the source's new reader API (the site redesign removed chapter links from the HTML).",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:colorizedmanga-v1",
@@ -832,7 +819,7 @@
       "releaseNotes": "1.0.0-beta.1: Initial public beta converted from the Colorized Manga source module for Synthetiq Player's image/manga reader contract.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:alpha-movies",
@@ -853,13 +840,13 @@
       "releaseNotes": "0.2.0-beta.4: Playback restored. The old providers are gone (Videasy's backend no longer exists and Stream Unity was retired), so streams now come from the MoviesAPI/VidSpark provider first with English subtitles, and the old chain stays behind it as a fallback. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays with a subtitle track.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:moviedb-wiki-v1",
       "id": "moviedb-wiki-v1",
       "name": "SP-VID-083-MOVIEDB",
-      "version": "0.1.0-beta.25",
+      "version": "0.1.0-beta.27",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -869,12 +856,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "fccdb67f028429c9fd7f497cc90fda373efb9af7049a88577c29b869d3cc7e9a",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-moviedb-wiki-v1-v0.1.0-beta.25/MovieDB-0.1.0-beta.25.zip",
-      "releaseNotes": "0.1.0-beta.25: Owner-approved LIVE BETA, not full player/device certification. Updates the current player route and subtitle handling; captions arriving within the existing resolve deadline are retained, captionless cached results refresh, and fresh retries cannot be overwritten by older requests.",
+      "upstreamSHA256": "f05fc55ccdf874a17bbd34b9f4e0f6c02e4075a2593a8c8f2ddb4500ab42e2d9",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-moviedb-wiki-v1-v0.1.0-beta.27/MovieDB-0.1.0-beta.27.zip",
+      "releaseNotes": "0.1.0-beta.27: Fixed a V9 app bug where the built-in Movy backup replaced MovieDB's own search and episode handlers, so titles opened Movy links and failed to play. The backup is now fully isolated and uses the fixed Movy 0.1.0-beta.5 subtitle logic.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:cimacub-v1",
@@ -895,7 +882,7 @@
       "releaseNotes": "1.2.0: Fixes the episode failures reported on this source. The site repeats its players in a download section that can carry a mirror the server list omits - those extra mirrors are now used too, so episodes whose three listed servers were all deleted play again instead of reporting no link. No identity change.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:anime4up-site-v1",
@@ -916,13 +903,13 @@
       "releaseNotes": "1.0.0-beta.10: Fixes episodes that ended with no playable servers. The module read JSON responses through text(), and the app runtime returns an EMPTY text() for JSON (the parsed value is only exposed through json()) - so every Share4Max mirror list was lost, and only the HTML-based hosts could ever play. JSON is now read through json(); the Share4Max payload parser also accepts both payload shapes, and its phase is bounded to 9s so it cannot spend the whole episode budget.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player:movy-v1",
       "id": "movy-v1",
       "name": "SP-VID-076-MOVY",
-      "version": "0.1.0-beta.4",
+      "version": "0.1.0-beta.5",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -932,12 +919,75 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "9c2efa132f5577520492f1f20c27fd11e2d686194134e0638a5065724c1234c3",
-      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-movy-v1-v0.1.0-beta.4/Movy-0.1.0-beta.4.zip",
-      "releaseNotes": "0.1.0-beta.4: New Movy beta for movies and TV. Fresh provider links, source-supplied captions with corrected language labels, separate HLS/MP4 quality groups, real season/episode numbering, bounded requests and provider cooldowns. Availability and subtitle coverage vary; not full-film or physical-device certification.",
+      "upstreamSHA256": "ce2117267331d270dc03661952533b11d6c314ba2614d34587a02c8401534473",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-movy-v1-v0.1.0-beta.5/Movy-0.1.0-beta.5.zip",
+      "releaseNotes": "0.1.0-beta.5: Subtitles fixed. Many titles (e.g. Prison Break, Breaking Bad, Dune) showed no subtitles because the first servers asked carry none and real WebVTT files named \".m3u8\" were discarded. Those files are now checked and kept, and when the playing servers have no working English track the next servers are asked for subtitles only (bounded to about 3.5 s). Dead default English tracks are dropped and duplicate languages merged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "synthetiq-player:franime-v1",
+      "id": "franime-v1",
+      "name": "SP-VID-054-FRANIME",
+      "version": "1.1.0-beta.1",
+      "contentType": "video",
+      "status": "unspecified",
+      "releaseTrack": null,
+      "format": "synthetiq-player-zip",
+      "upstream": "kas021/Synthetiq-Modules",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/repository.json",
+      "manifestURL": null,
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "8.0.0",
+      "upstreamSHA256": "cc03bdf0d4a482412ed95abb60a12b3ff26be44329c6c60aafcb9795220d888e",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-franime-v1-v1.1.0-beta.1/FRAnime-1.1.0-beta.1.zip",
+      "releaseNotes": "1.1.0-beta.1: New French anime source with about 2,500 series and films. VOSTFR (Japanese audio, French subtitles) and VF (French dub) are kept separate and never substituted for each other.",
+      "installability": "candidate-zip",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "synthetiq-player:documentaryarea-v1",
+      "id": "documentaryarea-v1",
+      "name": "SP-VID-288-DOCUMENTARYAREA",
+      "version": "1.0.0-beta.1",
+      "contentType": "video",
+      "status": "unspecified",
+      "releaseTrack": null,
+      "format": "synthetiq-player-zip",
+      "upstream": "kas021/Synthetiq-Modules",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/repository.json",
+      "manifestURL": null,
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "8.0.0",
+      "upstreamSHA256": "db4657bc3537e55832cedf51c796cd2b952f32c1e0c66dd2a2a1ad008edf2c49",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-documentaryarea-v1-v1.0.0-beta.1/DocumentaryArea-1.0.0-beta.1.zip",
+      "releaseNotes": "1.0.0-beta.1: New documentary source with about 2,800 free documentaries (history, war, nature, wildlife, space, science, biographies and more), SD or HD as the site serves it, with English subtitles where provided.",
+      "installability": "candidate-zip",
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "synthetiq-player:animeworld-v1",
+      "id": "animeworld-v1",
+      "name": "SP-VID-289-ANIMEWORLD",
+      "version": "1.0.0-beta.1",
+      "contentType": "video",
+      "status": "unspecified",
+      "releaseTrack": null,
+      "format": "synthetiq-player-zip",
+      "upstream": "kas021/Synthetiq-Modules",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/repository.json",
+      "manifestURL": null,
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "8.0.0",
+      "upstreamSHA256": "f3127253ac5e1060b98b683d50142806ff6479afbf51380d03cd53e0afd667c8",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-animeworld-v1-v1.0.0-beta.1/AnimeWorld-1.0.0-beta.1.zip",
+      "releaseNotes": "1.0.0-beta.1: New Italian anime source. SUB ITA (Japanese audio, Italian subtitles) and ITA (Italian dub) are combined into one series and never substituted for each other. English titles are searchable (e.g. Attack on Titan finds L'attacco dei Giganti).",
+      "installability": "candidate-zip",
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:synthetiq-anime-v1",
@@ -957,8 +1007,8 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/synthetiq-anime-v1-1.0.5-beta.9.zip",
       "releaseNotes": "TEST-only 1.0.5-beta.9: standard S2 PARTIAL. Narrow recovery for the retired relay's specific Application not found response. Native One Piece E1 Dub extraction, English audio detection, 120-second decode and simulator playback controls passed; original TEST mappings retained. Limits: PARTIAL: subtitle meaning/timing and physical-device acceptance unverified. Existing simulator audio-device warning; not audible simulator proof, full-catalogue certification or a repair for other provider outages. Existing fallback settings and explicit Off are unchanged.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:synthetiq-anime-direct",
@@ -979,49 +1029,7 @@
       "releaseNotes": "1.0.3-beta.10: Prefers a validated Koto route and improves video-variant selection while preserving external HLS renditions. Owner-requested live-test release with limited testing; Wave fallback, captions and device acceptance remain unverified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
-    },
-    {
-      "key": "synthetiq-player-testing:synthetiq-one-v1",
-      "id": "synthetiq-one-v1",
-      "name": "SP-VID-100-SYNTHETIQ-ONE",
-      "version": "1.3.0",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "synthetiq-player-testing-zip",
-      "upstream": "kas021/Module-Testing-PL",
-      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/repository.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Synthetiq-One-1.3.0.zip",
-      "releaseNotes": "Added the Fastest catalogue label",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
-    },
-    {
-      "key": "synthetiq-player-testing:anipm-v1",
-      "id": "anipm-v1",
-      "name": "SP-VID-084-ANIPM",
-      "version": "0.1.0-beta.9",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "synthetiq-player-testing-zip",
-      "upstream": "kas021/Module-Testing-PL",
-      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/repository.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": "9.0.0",
-      "upstreamSHA256": "696c060e7528f0a278ea618dc4d7afc79e607aa9b161580597bdf8a3e3b14ee7",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AniPM-0.1.0-beta.9.zip",
-      "releaseNotes": "0.1.0-beta.9: Adds an alternative Koto playback route when the primary source fails, with exact-title, episode and advertised-audio checks. Owner-requested live-test release; the primary provider denial is not fixed, and caption/audio/device acceptance remains unverified.",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:anikoto-v4",
@@ -1042,7 +1050,28 @@
       "releaseNotes": "TEST-only 5.0.6-beta.3: standard S2 PASS. V9 catch-up to the verified-ID/cache/playlist safety fixes in the current official core, preserving TEST catalogue and fallback metadata. Current V9 native Frieren Dub and warm standard One Piece Dub passed, including sampled English audio/caption checks and simulator controls. Limits: Sampled TEST beta, not whole-catalogue or physical-device certification. Earlier Frieren opening-language detector flag remains documented; paired later dialogue/frame samples match the old build. Cold simulator timeout retained; warm run passed. Audible simulator output and full caption meaning/timing/offline acceptance remain unverified. Existing fallback settings and explicit Off are unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "synthetiq-player-testing:anipm-v1",
+      "id": "anipm-v1",
+      "name": "SP-VID-084-ANIPM",
+      "version": "0.1.0-beta.9",
+      "contentType": "video",
+      "status": "unspecified",
+      "releaseTrack": null,
+      "format": "synthetiq-player-testing-zip",
+      "upstream": "kas021/Module-Testing-PL",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/repository.json",
+      "manifestURL": null,
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "9.0.0",
+      "upstreamSHA256": "696c060e7528f0a278ea618dc4d7afc79e607aa9b161580597bdf8a3e3b14ee7",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AniPM-0.1.0-beta.9.zip",
+      "releaseNotes": "0.1.0-beta.9: Adds an alternative Koto playback route when the primary source fails, with exact-title, episode and advertised-audio checks. Owner-requested live-test release; the primary provider denial is not fixed, and caption/audio/device acceptance remains unverified.",
+      "installability": "candidate-zip",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:anikage-v1",
@@ -1063,7 +1092,7 @@
       "releaseNotes": "1.1.3: Playback restored. The source now hands back an opaque token instead of a direct URL and the module discarded it as \"not a URL\", so every provider looked dead. Tokens are expanded through the source's own proxy now, the live providers (wave/koto/megg) are tried first, and quality labels come from the stream itself (720p/360p) instead of a bare Auto. Verified: release gate ALL_PASSED.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:yflix-v1",
@@ -1083,8 +1112,8 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/YFlix-1.1.2.zip",
       "releaseNotes": "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:dramacool-v1",
@@ -1105,7 +1134,7 @@
       "releaseNotes": "1.0.3: Subtitles fixed for VidMoly-hosted dramas. The player page lists its caption files outside the video stream and the module never read that list, so BL and other dramas on VidMoly played without subtitles. Those tracks now appear (English first).",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:drama-direct-v1",
@@ -1126,7 +1155,7 @@
       "releaseNotes": "Owner-approved public availability of the unchanged 0.1.0-beta.9 prototype; not a fully certified stable release. Existing DramaCool remains unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:onepace-v3",
@@ -1147,13 +1176,13 @@
       "releaseNotes": "3.0.6: Real episode still artwork from the source CDN replaces the onepace.net favicon on cards and details.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:animeheaven-v2-1",
       "id": "animeheaven-v2-1",
       "name": "SP-VID-003-ANIMEHEAVEN",
-      "version": "4.1.0",
+      "version": "4.1.1-beta.1",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1163,18 +1192,18 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "7a818d060c496a610afd92f7b57421c7285c9915b0c3683b2762e3a6def710cd",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AnimeHeaven-4.1.0.zip",
-      "releaseNotes": "4.1.0: Owner-approved server alternatives with media probing, duplicate filtering and required headers.",
+      "upstreamSHA256": "48c550e4961f3c142c67c415924cc6cf13eefc281870645d9707c1d62ce53125",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/animeheaven-v2-1-4.1.1-beta.1.zip",
+      "releaseNotes": "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PASS, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:xstream-v1",
       "id": "xstream-v1",
       "name": "SP-VID-048-XSTREAM",
-      "version": "1.3.4-beta.2",
+      "version": "1.3.5-beta.1",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1184,12 +1213,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "9.0.0",
-      "upstreamSHA256": "23ade944e2dde2a0635806e69acab8d7aabad96c4eee53531691e3e9a70fb2ec",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/X-Stream-1.3.4-beta.2.zip",
-      "releaseNotes": "1.3.4-beta.2: Playback restored — the old embed page stopped exposing its player for most titles, so the module now resolves through the provider's own JSON player API (page route kept as fallback). Results carry the primary URL, its headers and real quality labels (e.g. 536p). Verified: release gate ALL_PASSED, 16/17 sampled titles, 12 subtitle tracks on a movie.",
+      "upstreamSHA256": "c2f904af7e45acfdacd354cf873daf70cc1549abd32a8b99155d2179e9c2593a",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/xstream-v1-1.3.5-beta.1.zip",
+      "releaseNotes": "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PARTIAL, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:miruro-v3",
@@ -1209,8 +1238,8 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/miruro-v3-4.1.3-beta.11.zip",
       "releaseNotes": "TEST-only 4.1.3-beta.11: standard S2 PASS. Repairs false-empty episode results, shares pending requests on retry, validates provider IDs and exact title mapping, bounds slow episode metadata and honors concurrent mapping cooldowns.24 recovery fixtures and fresh V9 native/runtime/media/simulator checks pass. Limits: Sampled One Piece Sub beta validation, not whole-catalogue reliability or physical-device certification. Earlier beta10 cold simulator failure retained. Simulator audio-device output unavailable; full hardcoded-caption semantics/timing and completed offline downloads are not certified.. Existing fallback settings and explicit Off are unchanged.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:anime-sama-v1",
@@ -1231,7 +1260,7 @@
       "releaseNotes": "1.1.2: Fixed double-audio playback reports (an extra song under the episode; audio continuing after pause on some titles) - the module now returns exactly one validated route per play so the app cannot start a second concurrent stream over the first; Sibnet MP4 stays primary with ansembed HLS as the per-episode fallback.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:an1me-v1",
@@ -1252,7 +1281,7 @@
       "releaseNotes": "1.1.1: Owner-approved public promotion of 1.1.0-beta.4; playback JavaScript unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:animeav1-v1",
@@ -1273,7 +1302,7 @@
       "releaseNotes": "1.3.0-beta.9: Reduces repeated catalogue requests and rate-limit pressure, corrects unknown language availability after failed checks, and keeps HLS master streams when separate audio/caption tracks are present. Previous tests decoded 30 of 30 attempted routes; this is not a guarantee for every title, language or device.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:kartoons-v1",
@@ -1294,7 +1323,7 @@
       "releaseNotes": "1.1.6: Repackaged the unchanged 1.1.5 module with exactly one JSON manifest so updates install correctly",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:dramafun-v3",
@@ -1315,7 +1344,7 @@
       "releaseNotes": "4.0.1: Owner-approved promotion of beta.6 with byte-identical playback JavaScript; featured/paginated browsing, fresh checked providers and source quality metadata.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:toontales-v1",
@@ -1336,7 +1365,7 @@
       "releaseNotes": "3.0.1: Owner-approved public release — fixed instant failures on strict HTTP clients (bodyless GET requests no longer carry an empty-string body); catalogue + real MP4 playback verified through the app runtime.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:aniworld-v1",
@@ -1357,7 +1386,7 @@
       "releaseNotes": "1.3.2: German subtitles fixed — subtitle options are verified before they are listed (empty placeholder tracks are never offered), German sorts first, and the verified tracks are attached to every server, so the picker works on the stream that is playing. The German option no longer appears and disappears between attempts.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:megakino-v1",
@@ -1377,8 +1406,8 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MegaKino-1.1.5.zip",
       "releaseNotes": "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "selectedForKinetiq": true,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:weebcentral-v2",
@@ -1399,7 +1428,7 @@
       "releaseNotes": "4.1.13: Fixes chapter order on titles using #, Episode, or Collar labels, including To Your Eternity. Preserves WeebCentral's newest-first order for chapters, specials, and volumes.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:synthetiq-manga-v1",
@@ -1420,7 +1449,7 @@
       "releaseNotes": "1.0.3: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:atsu-v3",
@@ -1441,7 +1470,7 @@
       "releaseNotes": "4.0.5: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:synthetiq-music-hub-v1",
@@ -1462,7 +1491,7 @@
       "releaseNotes": "Improved exact artist and track matching",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:animeunity-v1",
@@ -1483,7 +1512,7 @@
       "releaseNotes": "1.1.0-beta.3: Updates the source address and preserves HLS master streams when separate audio or subtitle tracks are present. Owner-approved live phone test release: runtime and sampled media checks passed; the simulator test timed out and phone playback remains to be verified.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:kickassanime-v3",
@@ -1504,7 +1533,7 @@
       "releaseNotes": "4.2.0: Search now finds titles the way users type them - generated punctuation variants (colon at any word boundary, 'dr.' forms, year parentheses, tail-tokens fallback) plus merged results take the natural-query hit rate to 24/24 (was 22/24) and a season-qualified hard set from 2/8 to 8/8. Season/part variants of a show are grouped and ordered (base, Cour/Part, Season 2, 3..., then specials/OVAs/movies) with release years on cards. The home now serves 6 rows (adds Recently Added, Popular Shows and Coming Soon) in one parallel fan-out. Module icon added.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:shahiid-v1",
@@ -1525,7 +1554,7 @@
       "releaseNotes": "2.1.3-beta.3: Ranks exact Naruto and One Piece search matches ahead of related series, specials and arcs. Existing playback and language handling are unchanged. Source availability varies; owner phone acceptance is pending.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:mugiwara-v1",
@@ -1546,7 +1575,7 @@
       "releaseNotes": "1.1.0-beta.5: Playback fixed — Sibnet links are now resolved to the final signed video URL on every platform, so episodes that previously spun and never loaded now play.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:justanime-v1",
@@ -1567,13 +1596,13 @@
       "releaseNotes": "1.0.1: Owner-approved public release — implemented the advertised discovery home (hero + Trending/Popular/Airing/Latest rows with feed pages) and fixed home cards missing artwork.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:streamingunity-v1",
       "id": "streamingunity-v1",
       "name": "SP-VID-065-STREAMINGUNITY",
-      "version": "1.0.4",
+      "version": "1.0.5-beta.3",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1583,12 +1612,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "8.0.0",
-      "upstreamSHA256": "5061ab59efe1166dfaeabe51082c2838020abfb78dd1a5900bc5ea32261e654c",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/StreamingUnity-1.0.4.zip",
-      "releaseNotes": "1.0.4: Fixed episode routing by using the current title ID plus episode ID iframe endpoint",
+      "upstreamSHA256": "a2e63ae3f05b2b76a5370f6514875de05577e321fecba20e140c1becd12b4863",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/streamingunity-v1-1.0.5-beta.3.zip",
+      "releaseNotes": "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PARTIAL, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:mangakatana-v1",
@@ -1609,7 +1638,7 @@
       "releaseNotes": "1.0.2: Owner-approved public release — search works again (source burst-window pacing + retry), synopsis descriptions restored, home/feed section caps and pagination flags corrected.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:mgread-v1",
@@ -1630,7 +1659,7 @@
       "releaseNotes": "1.0.1: Owner-approved public release — chapter lists restored through the source's new reader API (the site redesign removed chapter links from the HTML).",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:colorizedmanga-v1",
@@ -1651,7 +1680,7 @@
       "releaseNotes": "1.0.0-beta.1: Initial public beta converted from the Colorized Manga source module for Synthetiq Player's image/manga reader contract.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:alpha-movies",
@@ -1672,7 +1701,7 @@
       "releaseNotes": "0.2.0-beta.4: Playback restored. The old providers are gone (Videasy's backend no longer exists and Stream Unity was retired), so streams now come from the MoviesAPI/VidSpark provider first with English subtitles, and the old chain stays behind it as a fallback. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays with a subtitle track.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:moviedb-wiki-v1",
@@ -1693,7 +1722,7 @@
       "releaseNotes": "0.1.0-beta.15: Revived the catalogue and playback after the old source disappeared. Search, details, episodes and the home row fall back to TMDB, and streams come from the MoviesAPI/VidSpark provider with English subtitles; the original providers stay behind it as fallbacks. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays at 804p with a subtitle track.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:qa-fallback-anipm-v1",
@@ -1714,7 +1743,7 @@
       "releaseNotes": "TEST ONLY: intentionally fails every stream request to exercise fallback into real AniPM. Updated Player V9 (9.0.55+) auto-imports compatible groups when both member packages are installed; it does not auto-install modules or certify playback reliability.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:cimacub-v1",
@@ -1735,7 +1764,7 @@
       "releaseNotes": "1.2.0: Fixes the episode failures reported on this source. The site repeats its players in a download section that can carry a mirror the server list omits - those extra mirrors are now used too, so episodes whose three listed servers were all deleted play again instead of reporting no link. No identity change.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:anime4up-site-v1",
@@ -1756,7 +1785,7 @@
       "releaseNotes": "1.0.0-beta.10: Fixes episodes that ended with no playable servers. The module read JSON responses through text(), and the app runtime returns an EMPTY text() for JSON (the parsed value is only exposed through json()) - so every Share4Max mirror list was lost, and only the HTML-based hosts could ever play. JSON is now read through json(); the Share4Max payload parser also accepts both payload shapes, and its phase is bounded to 9s so it cannot spend the whole episode budget.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:sololatino-v1",
@@ -1777,13 +1806,13 @@
       "releaseNotes": "0.1.0-beta.6 - testing identity corrected to SP-VID-067-SOLOLATINO: the previous 0.1.0-beta.5 package reused identity number 61 (owned by AnimeUnity), which made the app reject the whole TEST repository with \"duplicate module identity numbers\". The package itself is unchanged.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:dw-live-v1",
       "id": "dw-live-v1",
       "name": "SP-VID-110-DW-LIVE",
-      "version": "0.1.0-beta.3",
+      "version": "0.1.0-beta.4",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1793,18 +1822,18 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "9.0.0",
-      "upstreamSHA256": "6068c5f67e3fc64303cd6e39f49141fd153f13f38c32e13fb0b2a0c7d5697cbb",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.3.zip",
-      "releaseNotes": "TEST-only official DW English, Spanish and Arabic live news channels. Requires Player 9.0.90 for the Live clock/resume fixes.",
+      "upstreamSHA256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.4.zip",
+      "releaseNotes": "0.1.0-beta.4: dw.com intermittently refuses page requests (403). The module now retries, keeps the last source found and falls back to each channel's official DW master playlist, still checked as an active live playlist. 3/3 channels played in the V9 runtime (was 0/3).",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:tvapp-live-v1",
       "id": "tvapp-live-v1",
       "name": "SP-VID-081-TVAPP-LIVE",
-      "version": "0.1.0-beta.10",
+      "version": "0.1.0-beta.11",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1814,12 +1843,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "9.0.0",
-      "upstreamSHA256": "53ad7b27f4723e4f9e1286891e614ccbd64ac0477879a75f6ba30fbc0cc1c0a5",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.10.zip",
-      "releaseNotes": "TEST-only cricket update for Player 9.0.91. Willow passed the actual native V9 Live player: sustained playback, pause/resume and fresh Go Live.",
+      "upstreamSHA256": "9881b840268a79e6a10070db758132dff76f3cf760b84933b217b9317b962c13",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.11.zip",
+      "releaseNotes": "0.1.0-beta.11: Adult content filter on both third-party feeds (title, category and tags). When a channel's main feed is off air, its listed alternate feeds are tried (HD first).",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:public-sports-live-v1",
@@ -1840,7 +1869,7 @@
       "releaseNotes": "Optional TEST-only public sports IPTV trial: FIFA+ Women, FUEL TV, Red Bull TV UK, World of Freesports and SportsGrid.",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:movy-v1",
@@ -1861,13 +1890,13 @@
       "releaseNotes": "New TEST source: movies and TV from movy.sx (TMDB catalogue). Original-audio servers up to 4K with source subtitles; matching Hindi/Spanish/French/German servers for films in those languages, and labelled dubbed servers only when no original audio exists.",
       "installability": "candidate-zip",
       "selectedForKinetiq": false,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-testing:public-tv-live-v1",
       "id": "public-tv-live-v1",
       "name": "SP-VID-113-PUBLIC-TV-LIVE",
-      "version": "0.1.0-beta.4",
+      "version": "0.1.0-beta.5",
       "contentType": "video",
       "status": "unspecified",
       "releaseTrack": null,
@@ -1877,12 +1906,12 @@
       "manifestURL": null,
       "standaloneURL": null,
       "upstreamMinAppVersion": "9.0.0",
-      "upstreamSHA256": "892cd783742c501c7925e152fa22bff77a0f783ea4f9e687b7c26b1165bed1ec",
-      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.4.zip",
-      "releaseNotes": "Expanded active-only public TV selection after two bounded decodes and fresh module live-playlist checks. Failed and unverified candidates remain hidden.",
+      "upstreamSHA256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
+      "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.5.zip",
+      "releaseNotes": "0.1.0-beta.5: France 24 English returns. The public list switched it to an unofficial relay; the approved official France 24 route is kept while the channel is listed and is re-validated as live media on every play. 4/4 channels played (was 3/4).",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-fr-testing:franime-v1",
@@ -1903,7 +1932,7 @@
       "releaseNotes": "Fix Flutter response-shape handling for parsed JSON and string-valued text/body responses",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-player-fr-testing:franime-hermes-v1",
@@ -1924,7 +1953,7 @@
       "releaseNotes": "Fix Flutter response-shape handling for parsed JSON and string-valued text/body responses",
       "installability": "candidate-zip",
       "selectedForKinetiq": true,
-      "limitations": "Kinetiq V3 package contract and live playback must still be verified; metadata is not certification."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:atsu",
@@ -1945,7 +1974,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:synthetiq-manga-v1",
@@ -1966,7 +1995,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:weebcentral-v2",
@@ -1987,7 +2016,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mangafire-v2",
@@ -2008,7 +2037,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:internet-archive",
@@ -2029,7 +2058,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:internet-archive-publications",
@@ -2050,7 +2079,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mangakatana",
@@ -2071,7 +2100,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mgread",
@@ -2092,7 +2121,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:black-clover",
@@ -2113,7 +2142,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:kagurabachi",
@@ -2134,7 +2163,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:beginning-after-the-end",
@@ -2155,7 +2184,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:solo-leveling",
@@ -2176,7 +2205,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:gachiakuta",
@@ -2197,7 +2226,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:haikyuu",
@@ -2218,7 +2247,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:weeb-central",
@@ -2239,7 +2268,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:snafu",
@@ -2260,7 +2289,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:grabber-zone",
@@ -2281,7 +2310,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:xkcd",
@@ -2302,7 +2331,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:comicgrowl",
@@ -2323,7 +2352,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:dbmultiverse",
@@ -2344,7 +2373,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:comicfury",
@@ -2365,7 +2394,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:lnori",
@@ -2386,7 +2415,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:novelfire",
@@ -2407,7 +2436,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:poseidon-scans",
@@ -2428,7 +2457,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mangaworld",
@@ -2449,7 +2478,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:yskcomics",
@@ -2470,7 +2499,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:onepiece-manga-online",
@@ -2491,7 +2520,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mangaball",
@@ -2512,7 +2541,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:attack-on-titan",
@@ -2533,7 +2562,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:asura-scans",
@@ -2554,7 +2583,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:ichi-the-witch",
@@ -2575,7 +2604,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:sakamoto-days",
@@ -2596,7 +2625,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:blue-lock",
@@ -2617,7 +2646,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:one-punch-man",
@@ -2638,7 +2667,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:kingdom",
@@ -2659,7 +2688,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:novelfrance",
@@ -2680,7 +2709,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:novelneko-web",
@@ -2701,7 +2730,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:novelneko-light",
@@ -2722,7 +2751,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:oceanofpdf",
@@ -2743,7 +2772,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:librivox",
@@ -2764,7 +2793,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:goldenaudiobooks",
@@ -2785,7 +2814,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:hot-audiobooks",
@@ -2806,7 +2835,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:audioaz",
@@ -2827,7 +2856,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:chikari",
@@ -2848,7 +2877,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:colorizedmanga",
@@ -2869,7 +2898,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:mangadex-es",
@@ -2890,7 +2919,7 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "synthetiq-manga:inkora",
@@ -2911,28 +2940,28 @@
       "releaseNotes": null,
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:anikoto",
       "id": "anikoto",
       "name": "AniKoto",
-      "version": "0.3.12",
+      "version": "0.3.13",
       "contentType": "video",
       "status": "active",
       "releaseTrack": "beta",
       "format": "aroki-signed-json",
       "upstream": "kas021/AROKI-Connectors",
       "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
-      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/anikoto/releases/dbfe00dcbd9c1841e26ebf76e120c99ee02306402b8f327d01855214f9aac25e/connector.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/anikoto/releases/4291e995260d78531c4f2546242cfd4fa74e6a2abdd92ae11e013be4d1e26279/connector.json",
       "standaloneURL": null,
       "upstreamMinAppVersion": "2.1.36",
-      "upstreamSHA256": "dbfe00dcbd9c1841e26ebf76e120c99ee02306402b8f327d01855214f9aac25e",
+      "upstreamSHA256": "4291e995260d78531c4f2546242cfd4fa74e6a2abdd92ae11e013be4d1e26279",
       "packageURL": null,
-      "releaseNotes": "0.3.12 candidate: uses the visible AniKoto heading as the primary AniKage browse title and falls back to data-jp only when the heading is unavailable. The existing AniList banner ID (when present), exact year and format remain selection constraints; duplicate or conflicting matches fail closed. The existing title, episode and koto source routes are unchanged. This candidate has not established broad live reliability, playback recovery or spoken-language verification.",
+      "releaseNotes": "0.3.13: follows the source's move to anikototv.bz. Adds the new address to the allowed hosts and accepts saved title links from either address. Routes, title matching and audio handling are unchanged from 0.3.12. Measured on 14 Nov 2026 at 36 of 47 available titles (middle episode); spoken language and device playback were not verified.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:anikage",
@@ -2953,7 +2982,7 @@
       "releaseNotes": "Handles both opaque source tokens and absolute HTTPS source URLs from the source-owned Anikage response using existing bounded URL transforms. Preserves the existing minimum app version, Koto provider, Sub/Dub mapping, subtitles, headers, and host allowlist. Pending live confirmation; no broad reliability claim.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:animegg",
@@ -2974,7 +3003,7 @@
       "releaseNotes": "Declares honest per-episode Sub and Dub availability so unavailable audio is disabled before playback.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:update-flow-test",
@@ -2995,7 +3024,7 @@
       "releaseNotes": "Version 1.0.0 for validating Aroki's signed source-update flow.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:onepace",
@@ -3016,7 +3045,7 @@
       "releaseNotes": "M25: Consolidates One Pace into a single stable title on discovery and search. Increases concurrency to 4 workers and raises timeout to 30s so all 485+ episodes across all arcs load smoothly.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:synthetiq-one",
@@ -3037,49 +3066,49 @@
       "releaseNotes": "Retired from new installation because current playback is unreliable. Existing saved data and historical connector releases are retained. Choose another active source; this retirement does not delete downloads or library entries.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:synthetiq-anime-testing",
       "id": "synthetiq-anime-testing",
       "name": "Synthetiq Anime",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "contentType": "video",
       "status": "active",
       "releaseTrack": "beta",
       "format": "aroki-signed-json",
       "upstream": "kas021/AROKI-Connectors",
       "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
-      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/synthetiq-anime-testing/releases/67d5232e210d90873fb3dc04fdab4b576dfa2958fd4693e5476b0ac7821dd021/connector.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/synthetiq-anime-testing/releases/a8f250f5fde24744d451ca8d93e1bcf920b8756935e48212e61bf545db50c6eb/connector.json",
       "standaloneURL": null,
       "upstreamMinAppVersion": "2.1.36",
-      "upstreamSHA256": "67d5232e210d90873fb3dc04fdab4b576dfa2958fd4693e5476b0ac7821dd021",
+      "upstreamSHA256": "a8f250f5fde24744d451ca8d93e1bcf920b8756935e48212e61bf545db50c6eb",
       "packageURL": null,
-      "releaseNotes": "Owner-authorized public availability for Aroki 2.1.36+. Existing MAL title IDs, episode IDs, catalogue fallback, and AniKage koto source route are preserved. Version 0.1.3 adds a typed graph selector that requires a unique AniKage row matching the canonical AniList ID plus exact normalized title, year and format before resolving the requested episode/audio. Missing, conflicting or duplicate identity fails closed. Broad live reliability, provider-advertised audio agreement, and spoken-language verification remain pending.",
+      "releaseNotes": "0.1.4 adds genres, year and status to Home, Browse and search cards so Find a niche can filter this source. Title identity, episode, Sub/Dub and playback routes are unchanged from 0.1.3. Measured on 15 Nov 2026 on a Mac test run: 49 of 50 sampled titles reached playable video. The Niche screen and spoken language were not checked on a device. Requires Aroki 2.1.36 or newer.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:synthetiq-anime-direct",
       "id": "synthetiq-anime-direct",
       "name": "Synthetiq Flux",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "contentType": "video",
       "status": "active",
       "releaseTrack": "beta",
       "format": "aroki-signed-json",
       "upstream": "kas021/AROKI-Connectors",
       "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
-      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/synthetiq-anime-direct/releases/2a3a8ab6dedb955e3b348c8c03558f00591c341d653305fff6b99865eb84800b/connector.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/synthetiq-anime-direct/releases/71db638ec3b050502c2c7728d33fc17c98319e530a728ff41c2f77c3e4bb1981/connector.json",
       "standaloneURL": null,
       "upstreamMinAppVersion": "2.1.36",
-      "upstreamSHA256": "2a3a8ab6dedb955e3b348c8c03558f00591c341d653305fff6b99865eb84800b",
+      "upstreamSHA256": "71db638ec3b050502c2c7728d33fc17c98319e530a728ff41c2f77c3e4bb1981",
       "packageURL": null,
-      "releaseNotes": "Playback through AniPM/Settlar proceeds only when the provider declares the requested Sub or Dub availability and matching effective language for the episode. Missing or conflicting declarations fail before session creation. Existing AniList and MyAnimeList identity mapping, saved titles, episode mapping, request headers, supplied captions, and session-expiry handling are preserved. Downloads remain disabled. Requires Aroki 2.1.36 or newer.",
+      "releaseNotes": "0.1.6 adds genres, year and status to Home, Browse and search cards so Find a niche can filter this source. Title identity, episode, Sub/Dub and playback routes are unchanged from 0.1.5. Measured on 15 Nov 2026 on a Mac test run: 49 of 50 sampled titles reached playable video. The Niche screen and spoken language were not checked on a device. Requires Aroki 2.1.36 or newer.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:aniworld-expansion",
@@ -3100,7 +3129,7 @@
       "releaseNotes": "Owner-approved public availability for Aroki 2.0.36+. Home/Browse discovery and native playback resolver are unchanged. Sub-only: German-subtitle mirror first, English-subtitle fallback; German Dub is not included. Visible captions, spoken language and offline remain unverified.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:anime-sama-expansion",
@@ -3121,7 +3150,7 @@
       "releaseNotes": "0.3.3-r2 preserves the 2.1.36+ legacy panel-comment opt-in and all identity/stream mappings; repairs Catalogue discovery to use the current source-owned as-carte cards and title/link fields already used by Search.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki:anipm",
@@ -3142,7 +3171,91 @@
       "releaseNotes": "Playback proceeds only when AniPM declares the requested Sub or Dub availability and matching effective language for the episode. Missing or conflicting declarations fail before session creation. Existing saved titles, episode mapping, request headers, supplied captions, and session-expiry handling are preserved. Requires Aroki 2.1.36 or newer.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "aroki:kickassanime",
+      "id": "kickassanime",
+      "name": "KickAssAnime",
+      "version": "0.1.1",
+      "contentType": "video",
+      "status": "active",
+      "releaseTrack": "beta",
+      "format": "aroki-signed-json",
+      "upstream": "kas021/AROKI-Connectors",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/kickassanime/releases/450ae9145c424a7f2a5318e8668e2216dfaeb65cc41e177dad290e96371f626d/connector.json",
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "2.1.36",
+      "upstreamSHA256": "450ae9145c424a7f2a5318e8668e2216dfaeb65cc41e177dad290e96371f626d",
+      "packageURL": null,
+      "releaseNotes": "Beta conversion of the KickAssAnime Player source (kaa.lt JSON catalogue, krussdomi player). Sub only: the site's HLS master carries several audio tracks (Japanese default plus English and others) and Aroki 2.1.36 cannot choose a track per request, so Dub is not offered. Measured: search, details, episodes and stream resolution against the live site and a corpus run. Not verified: playback on a device, which audio track the device plays, and subtitle timing.",
+      "installability": "metadata-only",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "aroki:animeworld-it",
+      "id": "animeworld-it",
+      "name": "AnimeWorld (SUB ITA)",
+      "version": "0.1.0",
+      "contentType": "video",
+      "status": "active",
+      "releaseTrack": "beta",
+      "format": "aroki-signed-json",
+      "upstream": "kas021/AROKI-Connectors",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/animeworld-it/releases/c4835a61ecb9653013aa932ed20c24ba7f5c2a4a64636bdbaf21ad48a9fe9b15/connector.json",
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "2.1.36",
+      "upstreamSHA256": "c4835a61ecb9653013aa932ed20c24ba7f5c2a4a64636bdbaf21ad48a9fe9b15",
+      "packageURL": null,
+      "releaseNotes": "0.1.0 beta: AnimeWorld entries the site lists as SUB ITA (Japanese audio with Italian subtitles) only. ITA dub entries are a separate site entry and are excluded from search; an ITA page lists no episodes, and Dub requests return no stream. Measured 21 Nov 2026 with the 2.1.36 engine tool: in a 50-title sample, all 37 titles the source has reached a valid video file; 13 were not found under their sample names. The site uses Italian, English or romaji titles, so some names are not found. Device playback, subtitle presence and spoken language were not verified.",
+      "installability": "metadata-only",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "aroki:toontales",
+      "id": "toontales",
+      "name": "ToonTales (Classic Cartoons)",
+      "version": "0.1.0",
+      "contentType": "video",
+      "status": "active",
+      "releaseTrack": "beta",
+      "format": "aroki-signed-json",
+      "upstream": "kas021/AROKI-Connectors",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/toontales/releases/7c8c0121abfbe5104aa4845cf677b2c365a7c58617e42a394aac3c8563a9eea3/connector.json",
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "2.1.36",
+      "upstreamSHA256": "7c8c0121abfbe5104aa4845cf677b2c365a7c58617e42a394aac3c8563a9eea3",
+      "packageURL": null,
+      "releaseNotes": "0.1.0 beta: classic theatrical cartoon shorts from ToonTales (Looney Tunes, Merrie Melodies, Tom and Jerry, Disney, Pink Panther and others). Each short is one title with one video: a single MP4 with its original English soundtrack. There is no Dub option and no subtitles. Measured 22 Nov 2026 with the 2.1.36 engine tool on 30 well-known shorts: all 23 that search found passed the search, details and MP4 file check; 7 were not found by search (mostly MGM Tex Avery, Fleischer and UPA titles). Search shows only the site's first page of results and uses the site's own short titles. Device playback, picture quality and sound were not verified.",
+      "installability": "metadata-only",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "aroki:animeunity-it",
+      "id": "animeunity-it",
+      "name": "AnimeUnity (ITA)",
+      "version": "0.1.0",
+      "contentType": "video",
+      "status": "active",
+      "releaseTrack": "beta",
+      "format": "aroki-signed-json",
+      "upstream": "kas021/AROKI-Connectors",
+      "upstreamIndex": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/index.json",
+      "manifestURL": "https://raw.githubusercontent.com/kas021/AROKI-Connectors/main/connectors/animeunity-it/releases/b3357da92a9e36964e0c2a0490ec933c9250e2f3919f35dee6a5e9d82acb5072/connector.json",
+      "standaloneURL": null,
+      "upstreamMinAppVersion": "2.1.36",
+      "upstreamSHA256": "b3357da92a9e36964e0c2a0490ec933c9250e2f3919f35dee6a5e9d82acb5072",
+      "packageURL": null,
+      "releaseNotes": "0.1.0 beta: AnimeUnity Italian anime catalogue. Sub plays the site's JPN version (Japanese audio, normally with Italian subtitles); Dub plays the site's ITA version (Italian audio). The audio version is picked from the site's own per-episode language list and checked again on the episode page, so a Dub request never returns the Japanese version and a Sub request never returns the Italian dub. If the requested version does not exist for an episode, no stream is offered. Only the JPN version is offered as Sub. Video is HLS from VixCloud. Measured 22 Nov 2026 with the 2.1.36 engine tool: search, details, episode lists, Sub and Dub stream resolution on sample titles, and a 50-title anime corpus run. Search uses the site's own titles and returns the first 30 matches, so some English names are not found. Genres are not shown. Device playback, subtitle presence and spoken language were not verified.",
+      "installability": "metadata-only",
+      "selectedForKinetiq": false,
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki-testing:synthetiq-anime-direct",
@@ -3163,7 +3276,7 @@
       "releaseNotes": "Testing port of Player Flux 1.0.0 for Aroki 2.0.38+. Catalogue-derived episodes are not provider-verified. Earlier macOS playback/seek passed; provider Dub labels, visible captions and iPhone playback need testing. Downloads disabled pending certification. Not compatible with Aroki 1.2.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki-testing:synthetiq-anime-testing",
@@ -3184,7 +3297,7 @@
       "releaseNotes": "Restored for owner testing: short iPhone playback/seek passed. Known provider Dub/audio mismatch and missing captions on some titles remain; not full language/offline certification.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki-testing:aniworld-expansion",
@@ -3205,7 +3318,7 @@
       "releaseNotes": "0.3.1 adds the missing Home/Browse discovery feed using existing native HTML mappings, with lazy-loaded posters and series-only identities. Playback resolver unchanged. SUB testing; visible captions, spoken language and offline remain unverified.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "aroki-testing:anime-sama-expansion",
@@ -3226,7 +3339,7 @@
       "releaseNotes": "Restored for owner testing: native playback/seek previously demonstrated; Black Torch middle-episode timeout remains while Naruto works. Not fully certified.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
       "key": "anygo:synthetiq-one",
@@ -3247,8 +3360,29 @@
       "releaseNotes": "Anime catalogue and stream resolver.",
       "installability": "metadata-only",
       "selectedForKinetiq": false,
-      "limitations": "This source format is not executable by the current Kinetiq video ZIP runtime."
+      "limitations": "Catalogue metadata is not runtime or playback certification."
+    },
+    {
+      "key": "retained:synthetiq-one-v1",
+      "id": "synthetiq-one-v1",
+      "name": "SP-VID-100-SYNTHETIQ-ONE",
+      "version": "1.3.0",
+      "contentType": "video",
+      "status": "retained-unverified",
+      "releaseTrack": null,
+      "format": "retained-previous-index",
+      "upstream": null,
+      "upstreamIndex": "repository.json (previous publication)",
+      "manifestURL": null,
+      "standaloneURL": null,
+      "upstreamMinAppVersion": null,
+      "upstreamSHA256": "55e643d626811e328ef87d40d67a2e0d3434f750aaff6659f8685c5bddb5f5c3",
+      "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-synthetiq-one-v1-v1.3.0/Synthetiq-One-1.3.0.zip",
+      "releaseNotes": null,
+      "installability": "candidate-zip",
+      "selectedForKinetiq": true,
+      "limitations": "Previous package reference retained; upstream availability must be reviewed."
     }
   ],
-  "sourceSnapshotSHA256": "8eb09d78ac81330214c1d17f3a656053e7fde960909260e54f7441c806d94441"
+  "sourceSnapshotSHA256": "a1923648251f3739c78ea76c863da4b7ead7190d204b3a6915744cb52d06a817"
 }

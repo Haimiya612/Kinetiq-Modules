@@ -1,0 +1,1342 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": "module-testing-pl",
+  "name": "Module Testing PL",
+  "enabled": true,
+  "publishedAtMs": 1795444273280,
+  "bundle": {
+    "version": 162,
+    "minAppVersion": "9.0.0",
+    "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-162.zip",
+    "packagePath": "/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-162.zip",
+    "sha256": "49653d47bbd6542d8c752eca34a89b95b3dceefd2904e4e7e9bad240ac92143d",
+    "signature": ""
+  },
+  "modules": [
+    {
+      "moduleId": "synthetiq-anime-v1",
+      "moduleFamilyId": "synthetiq_anime_v1",
+      "moduleIdentity": "SP-VID-074-SYNTHETIQ-ANIME",
+      "moduleIdentityNumber": 74,
+      "contentType": "video",
+      "version": "1.0.5-beta.9",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/synthetiq-anime-v1-1.0.5-beta.9.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/synthetiq-anime-v1-1.0.5-beta.9.zip",
+      "sha256": "413ca29d5755d5b309f1f5beff00d3ddae5c93469a792590786d69650957c613",
+      "signature": "",
+      "publishedAtMs": 1794420246674,
+      "changelog": [
+        "TEST-only 1.0.5-beta.9: standard S2 PARTIAL. Narrow recovery for the retired relay's specific Application not found response. Native One Piece E1 Dub extraction, English audio detection, 120-second decode and simulator playback controls passed; original TEST mappings retained. Limits: PARTIAL: subtitle meaning/timing and physical-device acceptance unverified. Existing simulator audio-device warning; not audible simulator proof, full-catalogue certification or a repair for other provider outages. Existing fallback settings and explicit Off are unchanged.",
+        "1.0.5-beta.8: Updates provider response and token handling, with exact-title, episode and advertised audio checks on rescue routes. Restores provider-supplied English subtitle tokens and excludes thumbnail/storyboard tracks. Owner-requested live phone test; not full public-app certification. Source availability varies and physical acceptance is pending.",
+        "1.0.5-beta.4: Quality labels now report the real verified resolution. A single-height stream shows its actual height (e.g. 720p) instead of a bare \"Auto\", and the duplicate quality rows are gone. Fixes the report that the quality menu had no real options. Streaming and subtitle handling unchanged; captions appear only when the source actually serves a subtitle track.\n",
+        "1.0.5-beta.3: Search now groups every season of a show together, in order - searching a show name returns Season 1, 2, 3... (then movies/OVAs/specials) instead of a shuffled list, and result cards now show release years. Fixes the report that users had to type the show name with its season to reach the other seasons.",
+        "1.0.5-beta.2: Restores stream resolution on the current rescue CDN routes. Fixes titles failing to load on the released app by raising the in-app probe budget (2MB to 4MB), accepting size-capped reachability, and preferring routes without player-broken segment names. Sub/Dub and subtitles unchanged; verified on the released app runtime and S2.",
+        "1.0.4: Vidhawk-independent AniKage rescue source (labelled; used only when the primary has no verified media), byte-first segment validation, probe byte-cap fix for in-app playback, fair provider sweep and stalled-request caps. Fixes the module being fully dark during the Vidhawk media-relay outage.",
+        "1.0.4: Rescue routes pass the same positive media validation as primary routes and are never substituted across languages; episodes the rescue sources do not carry remain unavailable with an honest message.",
+        "Fresh provider links, available server alternatives, and provider captions with language labels.",
+        "Short probes decoded 30/30 Sub and 29/30 Dub samples. These are not full-device playback or spoken-language certification.",
+        "Known issues remain: Spy x Family episode 1 Dub returned Japanese audio; Naruto episode 1 Dub failed one seeked media sample. See the release QA notes.",
+        "1.0.5-beta.4: Quality labels now report the real verified resolution - a single-height stream shows its actual height (e.g. 720p) instead of a bare \"Auto\", and the duplicate quality rows are gone.",
+        "1.0.5-beta.4: Same certified code as production. Streaming and subtitle handling unchanged; captions appear only when the source actually serves a subtitle track.",
+        "1.0.5-beta.3: TEST-only reciprocal Flux/Anime exact catalogue mapping for emitted AniList and MAL IDs. Fallback defaults import with the module and start on in the updated V9 app; playback JavaScript unchanged. Live language equivalence and playback are not certified."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "languages": [
+          "sub",
+          "dub"
+        ],
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq-anime-1.0.2.png"
+      }
+    },
+    {
+      "moduleId": "synthetiq-anime-direct",
+      "moduleFamilyId": "synthetiq_anime_direct_v1",
+      "moduleIdentity": "SP-VID-077-ANIME-DIRECT",
+      "moduleIdentityNumber": 77,
+      "contentType": "video",
+      "version": "1.0.3-beta.10",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Synthetiq-Flux-1.0.3-beta.10.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Synthetiq-Flux-1.0.3-beta.10.zip",
+      "sha256": "588cb9a2670082e914c33623f54c700bfc7896c470ac3c1c9ce6f3f357ca0bdd",
+      "signature": "",
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "1.0.3-beta.10: Prefers a validated Koto route and improves video-variant selection while preserving external HLS renditions. Owner-requested live-test release with limited testing; Wave fallback, captions and device acceptance remain unverified.",
+        "1.0.3-beta.5: Fixes episodes that loaded slowly and then failed with \"no verified playable source\". The provider needs 17-45s to answer the FIRST (cold) call for an episode and sometimes never answers, while the next call for the same episode is instant - so the play path now asks twice (both servers in parallel, 9s cap per round, 19s budget) instead of giving up after one 10s round. Cold episodes now play via the labelled AniKage rescue; warm episodes are unchanged. Catalogue, subtitles, quality labels and language isolation untouched.",
+        "1.0.3-beta.5: Verified: gate ALL_PASSED (one piece 1180 episodes, attack on titan 25, streams 2/2 real TS media); house tester PASSED with 0 warnings; cold episode measured playable at 18.0s.",
+        "1.0.3-beta.4: Restores stream resolution on the current rescue CDN routes. Fixes titles failing to load on the released app by raising the in-app probe budget (2MB to 4MB), accepting size-capped reachability, and preferring routes without player-broken segment names. Sub/Dub and subtitles unchanged; verified on the released app runtime and S2.",
+        "1.0.2: Vidhawk-independent AniKage rescue source (labelled; used only when Vidhawk has no verified media), MegaPlay descriptor decrypt, byte-first validation with elevated probe caps, fair provider sweep and stalled-request caps. Fixes the module being fully dark during the Vidhawk media-relay outage.",
+        "1.0.2: Rescue routes pass the same positive media validation as primary routes and are never substituted across languages; episodes the rescue sources do not carry remain unavailable with an honest message.",
+        "1.0.3-beta.8: TEST-only reciprocal Flux/Anime exact catalogue mapping for emitted AniList and MAL IDs. Fallback defaults import with the module and start on in the updated V9 app; playback JavaScript unchanged. Live language equivalence and playback are not certified.",
+        "1.0.3-beta.7: TEST-only artwork pilot adds seven artwork metadata fields across Home cards and AniList details; stream resolution and extraction logic are unchanged. Active V9 artwork-package runtime test passed (2 tests); no stream or download certification is claimed."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Synthetiq Flux Anime",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "languages": [
+          "sub",
+          "dub"
+        ],
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq-flux-1.0.0.png"
+      }
+    },
+    {
+      "moduleId": "anikoto-v4",
+      "moduleFamilyId": "anikoto-v3",
+      "moduleIdentity": "SP-VID-036-ANIKOTO",
+      "moduleIdentityNumber": 36,
+      "contentType": "video",
+      "version": "5.0.6-beta.3",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/anikoto-v4-5.0.6-beta.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/anikoto-v4-5.0.6-beta.3.zip",
+      "sha256": "9b8806589bf7c0f3e408088b16be218d548b2cadaed6534ec91de105dcea9a27",
+      "signature": "",
+      "publishedAtMs": 1794424751434,
+      "changelog": [
+        "TEST-only 5.0.6-beta.3: standard S2 PASS. V9 catch-up to the verified-ID/cache/playlist safety fixes in the current official core, preserving TEST catalogue and fallback metadata. Current V9 native Frieren Dub and warm standard One Piece Dub passed, including sampled English audio/caption checks and simulator controls. Limits: Sampled TEST beta, not whole-catalogue or physical-device certification. Earlier Frieren opening-language detector flag remains documented; paired later dialogue/frame samples match the old build. Cold simulator timeout retained; warm run passed. Audible simulator output and full caption meaning/timing/offline acceptance remain unverified. Existing fallback settings and explicit Off are unchanged.",
+        "5.0.6-beta.3: Faster cached lookups with verified embed IDs, provider-scoped caches, safer fallback language checks and preserved external audio/subtitle playlists. Stops returning unrelated videos when embed metadata is unavailable. Owner-approved LIVE BETA: sampled media, runtime and regression checks passed; full certification and native phone acceptance remain pending. S2 retains the same opening-language detector flag observed on the previous live build. Existing source availability and backup-only-Dub limitations remain.",
+        "5.0.5-beta.7: Updates provider response and token handling, same-episode/audio checks and Retry-After handling. Experimental owner-requested live-test release: repeated-open failures and source/DNS availability remain unresolved. Do not treat this as a certified reopen fix.",
+        "5.0.5-beta.2: Restores stream resolution on the current rescue CDN routes (Sub and Dub). Fixes titles failing to load on the released app by raising the in-app probe budget (2MB to 4MB), extending the resolution deadline (3s to 5s), accepting size-capped reachability, and preferring routes without player-broken segment names. Subtitle tracks unchanged; verified on the released app runtime and S2.",
+        "5.0.4-beta.4: Fixed random skipping during playback (disguised .html segments mapped and served as genuine MPEG-TS video/mp2t). AES-CBC player stream descriptor decrypt support, improved fallback rate-limit handling, and normalized subtitle language tags.",
+        "5.0.4-beta.3: Vidhawk-independent AniKage rescue chain (labelled; used only when the primary has no verified media), MegaPlay descriptor decrypt fix, MAL-keyed rescue lookups, subtitle language tags. Fixes titles that went dark during the Vidhawk media-relay outage.",
+        "5.0.4-beta.3: Rescue routes pass the same positive media validation as primary routes and are never substituted across languages; episodes the rescue chain does not carry remain unavailable with an honest message.",
+        "TEST ONLY: reciprocal AniKoto/AniPM exact episode mapping; playback JavaScript and saved source IDs unchanged. Requires Player 9.0.55+."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikoto.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "anipm-v1",
+      "moduleFamilyId": "anipm-v1",
+      "moduleIdentity": "SP-VID-084-ANIPM",
+      "moduleIdentityNumber": 84,
+      "contentType": "video",
+      "version": "0.1.0-beta.9",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AniPM-0.1.0-beta.9.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/AniPM-0.1.0-beta.9.zip",
+      "sha256": "696c060e7528f0a278ea618dc4d7afc79e607aa9b161580597bdf8a3e3b14ee7",
+      "signature": "",
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "0.1.0-beta.9: Adds an alternative Koto playback route when the primary source fails, with exact-title, episode and advertised-audio checks. Owner-requested live-test release; the primary provider denial is not fixed, and caption/audio/device acceptance remains unverified.",
+        "0.1.0-beta.4: Fixes user reports on downloads and playback - the module now defaults to its muxed video+audio engine (single stream whose timestamps were verified against the manifest across a full episode), so downloads keep their audio and A/V drift is gone; the AniPM engine remains selectable as the alternate server.",
+        "0.1.0-beta.3: Fixes from owner testing - subtitles now load in the player on every platform (the AniPM engine's own caption files are unreachable for the app's downloader, so the reachable English caption set now serves both engines and the caption menu works whichever server you pick). The home page is now a full browse experience: a Featured row plus paginated rows and an endless All Anime grid backed by the full 8,900+ title catalogue.",
+        "0.1.0-beta.2: First public release of the AniPM engine (ani.pm) - English anime with search, home feed and full episode lists (Sub/Dub flags on every episode). Two playback engines with server switcher: AniPM - adaptive-quality streams with English captions and opening/ending skip markers; MegaPlay - backup server. The module picks a reachable engine automatically per device. Certified: house tester 26/26, real app-runtime Sub+Dub pass, S2 quick Grade PASS.",
+        "Owner-approved all-user release. Notes: the AniPM engine serves iOS/iPadOS; other platforms resolve on MegaPlay automatically. A known app-side mid-play issue on some desktop platforms is being fixed in the app itself; Android and iOS playback are complete.",
+        "TEST ONLY: reciprocal AniKoto/AniPM exact episode mapping; playback JavaScript and saved source IDs unchanged. Requires Player 9.0.55+.",
+        "Metadata-only TEST update: exact catalogue mapping for the QA fallback fixture; playback JavaScript unchanged."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime (AniPM)",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "languages": [
+          "sub",
+          "dub"
+        ],
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anipm.png?v=20260927-1"
+      }
+    },
+    {
+      "moduleId": "anikage-v1",
+      "moduleFamilyId": "anikage_v1",
+      "moduleIdentity": "SP-VID-063-ANIKAGE",
+      "moduleIdentityNumber": 63,
+      "contentType": "video",
+      "version": "1.1.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Anikage-1.1.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Anikage-1.1.3.zip",
+      "sha256": "70002c6570c46129d00e71c9cf623f7b44bc2ddea2cb559933b10ede1554fff4",
+      "signature": "",
+      "publishedAtMs": 1793883324549,
+      "changelog": [
+        "1.1.3: Playback restored. The source now hands back an opaque token instead of a direct URL and the module discarded it as \"not a URL\", so every provider looked dead. Tokens are expanded through the source's own proxy now, the live providers (wave/koto/megg) are tried first, and quality labels come from the stream itself (720p/360p) instead of a bare Auto. Verified: release gate ALL_PASSED.",
+        "1.1.2: Owner-approved public release — restored playback: the player host shipped an encrypted stream descriptor (now decrypted in-module, cross-verified), and segments are classified by bytes (the CDN serves real video behind .jpg/webp labels) instead of content-type.",
+        "1.1.2: Resolution/validation caches and request dedupe keep normal browsing inside the source's request budget; verified live — streams resolve, zero 429s, app-runtime playback passes.",
+        "1.1.1: Owner-approved distribution of the unchanged testing package. Retains its beta label; not fully certified.",
+        "1.1.1: Checked server alternatives, recovered source-provided subtitle links and marker metadata where available; stop provider cascades during rate limits.",
+        "1.1.1: Long-distance seeks and downloads may remain slow. Some episodes fail resolution or decoding; audio-language and native seek certification remain incomplete. No app-code changes.",
+        "1.0.4: Added direct Otaku/Vidplay/Playmogo p.a.c.k.e.r embed deobfuscator & direct 1080p CDN HLS resolver with segment validation, fixing playback on Tower of God and other series",
+        "1.0.3: Prioritized Neko 1080p Backblaze B2 streams with live segment range probe validation",
+        "1.0.2: Built-in automatic HTTP 429 exponential backoff retry engine for flawless rapid browsing",
+        "1.0.1: Optimized browser session headers and Referer routing to prevent rate-limiting",
+        "1.0.1: Added full Contract V4 discoveryHome and extractHome exports for discovery carousels",
+        "1.0.1: Multi-provider failover across koto, kiwi, neko, wave, and megg stream hosts",
+        "1.0.0: Official Anikage (anikage.cc) comprehensive anime streaming catalogue with adaptive HD HLS resolution"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime (SUB / DUB)",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikage.png"
+      }
+    },
+    {
+      "moduleId": "yflix-v1",
+      "moduleFamilyId": "yflix_v1",
+      "moduleIdentity": "SP-VID-072-YFLIX",
+      "moduleIdentityNumber": 72,
+      "contentType": "video",
+      "version": "1.1.2",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/YFlix-1.1.2.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/YFlix-1.1.2.zip",
+      "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f",
+      "signature": "5mHAHgGLLqKy4Lpjdl5huiNZB4sTsQUPjQvgnnpHOp4+oYq3uT1P9+QqG2ZQ02CciEvGnXkPQ/VY0MhvryrlTg==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
+        "1.1.1: Owner-approved public release — restored playback: the backup provider dropped TMDB ids, so lookups now use an exact title+year identity match (never substitutes a different film); subtitle tracks are forwarded as absolute URLs, deduped per language, all languages kept.",
+        "1.1.1: Resolvers race so the first working source wins — a dead provider no longer delays playback (verified ~3.7s resolves with full subtitle sets).",
+        "1.1.0: Owner-approved beta.1 source unchanged; fresh playback links, episode ID fixes and provider-specific server/caption metadata.",
+        "1.1.0: Quality choices stay within the initial provider; other providers are available through Servers. Availability varies by title.",
+        "1.0.0: Official yFlix (yflix.ws) movies and TV series with adaptive 1080p/4K/720p HLS playback",
+        "1.0.0: Full Contract V4 discoveryHome with 7 carousels and paginated discoveryFeed",
+        "1.0.0: Relevance-boosted search engine with TV series and anime prioritization",
+        "1.0.0: Multi-season episode listings with sub & dub stream resolvers"
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV Shows (HD Streams)",
+        "recommended": true,
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/yflix.png"
+      }
+    },
+    {
+      "moduleId": "dramacool-v1",
+      "moduleFamilyId": "dramacool_v1",
+      "moduleIdentity": "SP-VID-066-DRAMACOOL",
+      "moduleIdentityNumber": 66,
+      "contentType": "video",
+      "version": "1.0.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DramaCool-1.0.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/DramaCool-1.0.3.zip",
+      "sha256": "abfed0370656fc7ae1c2e5e011148ffba2f982b385370c1a10aa6d891213a6e7",
+      "signature": "",
+      "publishedAtMs": 1792883427098,
+      "changelog": [
+        "1.0.3: Subtitles fixed for VidMoly-hosted dramas. The player page lists its caption files outside the video stream and the module never read that list, so BL and other dramas on VidMoly played without subtitles. Those tracks now appear (English first).",
+        "1.0.3: Home rows no longer show cards that have no poster.",
+        "1.0.2: Subtitles fixed — the source's player API (which carries the caption tracks) was unreadable to the module, so episodes played without the subtitles the site itself shows. The module now reads it, prefers the player that carries captions, and delivers every track with the headers it needs — English first, auto-selected.",
+        "1.0.2: Also fixed the empty home row and hardened captions (HLS subtitle renditions are surfaced; a stale caption link is hidden instead of showing a broken option). Verified on both app lines and S2 with captions confirmed in-app — up to 6 languages per episode.",
+        "1.0.1: Fixed multi-server stream extraction (KissKH, VidHide, VidBasic, Vidmoly) for 2026 dramas",
+        "1.0.1: Scoped episode parsing and prevented genre leaks across all drama series"
+      ],
+      "presentation": {
+        "category": "Drama",
+        "purpose": "Asian Drama (Korean / Chinese / Japanese)",
+        "recommended": true,
+        "language": "Korean / Asian",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/dramacool.png"
+      }
+    },
+    {
+      "moduleId": "drama-direct-v1",
+      "moduleFamilyId": "drama_direct_v1",
+      "moduleIdentity": "SP-VID-078-DRAMA-DIRECT",
+      "moduleIdentityNumber": 78,
+      "contentType": "video",
+      "version": "0.1.0-beta.9",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Drama-Direct-0.1.0-beta.9.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Drama-Direct-0.1.0-beta.9.zip",
+      "sha256": "0374dcafd676e190fdcda6a05016510c8f3873e1b421bc049bc9eb8814e5b1ac",
+      "signature": "n+3h6MjLJ56KIcDMzeGF3/nrzUB+o10b35TGeN6ups5G1EzHscvoyG0cvjW/w8a7OBlurMgM5m86CELmBe/9pQ==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "Owner-approved public availability of the unchanged 0.1.0-beta.9 prototype; not a fully certified stable release. Existing DramaCool remains unchanged.",
+        "Fresh MegaVid provider lookup without DramaCool pages, verified episode identity, available source subtitles, MP4/HLS handling and bounded retries.",
+        "25/25 regression tests passed. 73/85 sampled episodes returned valid media candidates; 12 failed at the provider. This is not a native playback success rate.",
+        "Known app-side HLS proxy encoding failure with Japanese audio labels; some sustained HLS playback failures and provider coverage gaps remain. Physical-device and full offline certification are incomplete.",
+        "The package retains its original Private Prototype display name to preserve the exact tested bytes. See docs/DRAMA_DIRECT_BETA_9_RELEASE.md for evidence and limitations."
+      ],
+      "presentation": {
+        "category": "Drama",
+        "purpose": "Drama Direct (Experimental)",
+        "recommended": false,
+        "language": "Original audio / source subtitles",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/drama-direct.png?v=20261024-1"
+      }
+    },
+    {
+      "moduleId": "onepace-v3",
+      "moduleFamilyId": "onepace-v3",
+      "moduleIdentity": "SP-VID-033-ONEPACE",
+      "moduleIdentityNumber": 33,
+      "contentType": "video",
+      "version": "3.0.6",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/One-Pace-3.0.6.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/One-Pace-3.0.6.zip",
+      "sha256": "9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25",
+      "signature": "gd0bb99Cnb2jET+q7rKzobvEbNLil1V2bu2t28dZDhOVqnpVda5FJJKasAtNRXWRGfMEhLJq6+5Jy1K7t1VALQ==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "3.0.6: Real episode still artwork from the source CDN replaces the onepace.net favicon on cards and details.",
+        "3.0.6: April Fools title deduplication; module sub/dub flags verified to mirror the source exactly (486/486, 0 mismatches) — the reported dub gaps (e.g. #166 → #219) are genuinely absent on the source site itself.",
+        "3.0.5: Owner-approved promotion of 3.0.4-beta.1; playback code unchanged. Version advances past beta numbering for updater compatibility.",
+        "CC routes are English Dub with Closed Captions, never a Japanese Sub fallback. Refresh expired list metadata and support parsed JSON responses.",
+        "42/42 sampled quality routes decoded; 16/16 independent seek probes passed. Reported iPhone repeated-seek crash remains unresolved; native simulator build timed out before tests. See docs/ONE_PACE_3_0_5_QA.md.",
+        "Reject DUB requests when an episode has no verified DUB route instead of silently playing subtitles",
+        "Prefer explicit language tags from individual files while preserving the existing episode catalogue",
+        "Preserved compatibility with previously saved onepace-index episode links",
+        "Retained separate sub/dub availability flags and multi-quality stream resolution"
+      ],
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "One Piece",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/one-pace.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "animeheaven-v2-1",
+      "moduleFamilyId": "animeheaven_v2",
+      "moduleIdentity": "SP-VID-003-ANIMEHEAVEN",
+      "moduleIdentityNumber": 3,
+      "contentType": "video",
+      "version": "4.1.1-beta.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/animeheaven-v2-1-4.1.1-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/animeheaven-v2-1-4.1.1-beta.1.zip",
+      "sha256": "48c550e4961f3c142c67c415924cc6cf13eefc281870645d9707c1d62ce53125",
+      "signature": "",
+      "publishedAtMs": 1794756748517,
+      "changelog": [
+        "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PASS, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
+        "4.1.1-beta.1: Live phone-test beta: ignore commented-out logo clips and select the active episode player.",
+        "4.1.1-beta.1: Correct main-poster selection and tighten episode-token handling; retain Sub-only behavior.",
+        "4.1.1-beta.1: 27 short A/V samples and 10 poster checks passed. Simulator certification timed out; phone acceptance is pending.",
+        "4.1.0: Owner-approved server alternatives with media probing, duplicate filtering and required headers.",
+        "4.1.0: Reject unavailable Dub and failed media routes; preserve burned-in subtitles. No invented quality options.",
+        "4.1.0: Include module icon metadata. Playback code unchanged from owner-tested beta.3; see release QA limitations.",
+        "4.0.6: Fixed episode list parsing for whitespace attribute variations and updated site markup",
+        "4.0.5: Episode lists restored for all titles after an AnimeHeaven markup change (Dandadan, A Wild Last Boss Appeared!, and more)",
+        "4.0.5: Decimal and special episode numbers supported, duplicates rejected, numeric ordering preserved",
+        "4.0.5: Clear upstream error messages when a title or stream is unavailable instead of silent empty results",
+        "Bundle 80 certified release"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "language": "English Sub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeheaven.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "xstream-v1",
+      "moduleFamilyId": "xstream_v1",
+      "moduleIdentity": "SP-VID-048-XSTREAM",
+      "moduleIdentityNumber": 48,
+      "contentType": "video",
+      "version": "1.3.5-beta.1",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/xstream-v1-1.3.5-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/xstream-v1-1.3.5-beta.1.zip",
+      "sha256": "c2f904af7e45acfdacd354cf873daf70cc1549abd32a8b99155d2179e9c2593a",
+      "signature": "",
+      "publishedAtMs": 1794756748253,
+      "changelog": [
+        "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PARTIAL, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
+        "1.3.5-beta.1: Playback reliability — the provider's own servers now fail on most titles, so when they return nothing playable the module falls back to an isolated backup resolver (movie and series episodes by TMDB id). The backup carries original audio only and is never used for Dub.",
+        "1.3.5-beta.1: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 5/20. Exact-byte Flutter runtime passed. Physical-device acceptance not yet done.",
+        "1.3.4: Playback restored. The old embed page stopped exposing its player for most titles, so the module now resolves through the provider's own JSON player API (the page route stays as a fallback). Results also carry the primary URL, its headers and real quality labels (e.g. 536p) instead of a bare Auto. Verified on the exact bytes: release gate ALL_PASSED, 16/17 sampled titles, 12 subtitle tracks on a movie.",
+        "1.3.3: Fixes Fresh Retry getting stuck after earlier provider failures; prevents stale requests overwriting refreshed links; respects provider cooldowns. Keeps 1.3.2's faster verified-route startup.",
+        "Stricter film and season matching avoids substituting a different title or episode. Availability and quality still depend on the providers; this update does not make every title playable.",
+        "Owner-approved reliability release. Automated runtime and decoder evidence is recorded in the release notes; physical-device acceptance and full language certification remain incomplete.",
+        "Explicit provider servers and quality choices with source-specific subtitles and headers",
+        "Fix singleton-provider retries and expire cached video links; retain media and language gates",
+        "QA: 27/30 short host AV samples; S2 PARTIAL. Three coverage gaps and incomplete physical audio/offline checks remain. See docs/XSTREAM_1_3_1_RELEASE.md",
+        "1.3.4-beta.2: Playback restored — the old embed page stopped exposing its player for most titles, so the module now resolves through the provider's own JSON player API (page route kept as fallback). Results carry the primary URL, its headers and real quality labels (e.g. 536p). Verified: release gate ALL_PASSED, 16/17 sampled titles, 12 subtitle tracks on a movie.",
+        "1.3.4-beta.1: TEST catch-up to production 1.3.3 playback code, retaining V9 exact TV fallback mapping. Native playback reliability remains under testing."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/xstream.png"
+      }
+    },
+    {
+      "moduleId": "miruro-v3",
+      "moduleFamilyId": "miruro",
+      "moduleIdentity": "SP-VID-010-MIRURO",
+      "moduleIdentityNumber": 10,
+      "contentType": "video",
+      "version": "4.1.3-beta.11",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/miruro-v3-4.1.3-beta.11.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/miruro-v3-4.1.3-beta.11.zip",
+      "sha256": "e561ae9ddbddea68a0988b5708808f3c90d04f13f813a0b120e2cd3d1715b194",
+      "signature": "",
+      "publishedAtMs": 1794426596831,
+      "changelog": [
+        "TEST-only 4.1.3-beta.11: standard S2 PASS. Repairs false-empty episode results, shares pending requests on retry, validates provider IDs and exact title mapping, bounds slow episode metadata and honors concurrent mapping cooldowns.24 recovery fixtures and fresh V9 native/runtime/media/simulator checks pass. Limits: Sampled One Piece Sub beta validation, not whole-catalogue reliability or physical-device certification. Earlier beta10 cold simulator failure retained. Simulator audio-device output unavailable; full hardcoded-caption semantics/timing and completed offline downloads are not certified.. Existing fallback settings and explicit Off are unchanged.",
+        "4.1.3-beta.7: Repairs current embed extraction and refreshes links on reopen/retry; updates the Miruro domain; adds explicit season/part matching guards and stops listing invented playable episodes when the source has none. Owner-approved limited update: sampled media/runtime checks passed; complex aliases remain best-effort, and simulator, physical-device, full-episode and subtitle acceptance remain unverified.",
+        "4.1.2: Fixed Re:ZERO search and episode mapping collision with Jujutsu Kaisen using Dice token similarity and season isolation",
+        "4.1.2: Added query relevance re-ranking across AniList and Kitsu to prioritize exact series matches over spinoffs and commercials",
+        "4.1.2: Resilient multi-provider stream pipeline supporting both direct MP4 and HLS video segments with in-memory stream caching",
+        "4.1.2: Robust Kitsu fallback search when AniList is degraded or rate-limited",
+        "4.1.0: Owner-approved beta.1 source unchanged; no silent Dub-to-Sub fallback, fresh retry links and exact episode lookup.",
+        "4.0.1: Preserve the correct HLS or MP4 type and required headers for each resolved stream"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/miruro.png"
+      }
+    },
+    {
+      "moduleId": "anime-sama-v1",
+      "moduleFamilyId": "anime_sama_v1",
+      "moduleIdentity": "SP-VID-047-ANIME-SAMA",
+      "moduleIdentityNumber": 47,
+      "contentType": "video",
+      "version": "1.1.2",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Anime-Sama-1.1.2.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Anime-Sama-1.1.2.zip",
+      "sha256": "c6f6c913e0fd015dddbb7291c695c4942fe1bb05fe90ff699b502e2ee10b675e",
+      "signature": "JNs/C6fgXN7N17vVu8cOXYkQEcNnzgHy+7XK65vhT+8YwLJIuazOr3G1jcz8YX3EdcGk1Msjm8mff89GEQ6QUA==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.1.2: Fixed double-audio playback reports (an extra song under the episode; audio continuing after pause on some titles) - the module now returns exactly one validated route per play so the app cannot start a second concurrent stream over the first; Sibnet MP4 stays primary with ansembed HLS as the per-episode fallback.",
+        "1.1.2: Certified before release: S2 runtime quick certification PASS with zero failure codes; release gate all-passed with 3/3 streams on first attempt."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "French Anime",
+        "language": "French (VOSTFR / VF)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anime-sama.png"
+      }
+    },
+    {
+      "moduleId": "an1me-v1",
+      "moduleFamilyId": "an1me_v1",
+      "moduleIdentity": "SP-VID-053-AN1ME",
+      "moduleIdentityNumber": 53,
+      "contentType": "video",
+      "version": "1.1.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/An1me-1.1.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/An1me-1.1.1.zip",
+      "sha256": "456c6110f16b3e6c3224131f024150d6a5f5444a97481e7fc1be782ba32c06ad",
+      "signature": "eMQqE3cNWJBO77oJQkn7yuOtsHGlc6Bq3pPwRM0cvifUmHCyj+UjfiPbewzYcVw88QiMY0n4RdgjHi0xcQ/SLg==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.1.1: Owner-approved public promotion of 1.1.0-beta.4; playback JavaScript unchanged.",
+        "Declare title audio availability so Sub-only titles such as Death Note do not offer unavailable Dub; preserve available server alternatives.",
+        "Standalone startup probes decoded 9/10 attempted audio modes across 8/10 selected titles.",
+        "Known issues remain: Pokemon XY returned no link, Gintama season 4 returned no episodes, and the Flutter Death Note stream check failed. See the release QA notes."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Greek Anime",
+        "language": "Greek Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/an1me.png?v=20260819-1"
+      }
+    },
+    {
+      "moduleId": "animeav1-v1",
+      "moduleFamilyId": "animeav1_v1",
+      "moduleIdentity": "SP-VID-060-ANIMEAV1",
+      "moduleIdentityNumber": 60,
+      "contentType": "video",
+      "version": "1.3.0-beta.9",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AnimeAV1-1.3.0-beta.9.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/AnimeAV1-1.3.0-beta.9.zip",
+      "sha256": "833d9133c5ee4271092881aaa3e59ddf291e0f98a2ca542d635db3c16dfab943",
+      "signature": "",
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "1.3.0-beta.9: Reduces repeated catalogue requests and rate-limit pressure, corrects unknown language availability after failed checks, and keeps HLS master streams when separate audio/caption tracks are present. Previous tests decoded 30 of 30 attempted routes; this is not a guarantee for every title, language or device.",
+        "1.3.0-beta.4: Playback restored after the site rotated its server lineup — adds UPNShare and Voe as first-class hosts so episodes keep resolving from the site itself.",
+        "1.3.0-beta.4: Independent rescue chain (EchoVideo / MegaPlay) now starts in parallel with the site hosts — if the site hosts and the previous fallback are down, the module still finds a verified stream instead of failing.",
+        "1.3.0-beta.4: Every offered server is byte-verified (real media segments) before it is shown, and dead relays are skipped in milliseconds.",
+        "1.3.0-beta.3: Reject the unplayable port-183 MP4Upload route in every runtime — the previous guard used the browser URL global, absent in-app and in the default test runner, so the route could still slip through and stall SUB playback (the reported One Piece S1E351 SUB failure).",
+        "1.3.0-beta.3: Labelled multi-language subtitle backbone failover for SUB mode with positive segment validation and real caption languages forwarded (English first); site hosts remain primary.",
+        "1.3.0-beta.3: Per-host cooldowns honouring 429/403 and Retry-After; wider positive media classes (TS sync without content-type, PNG-wrapped TS, wider fMP4 set)."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Spanish Anime",
+        "language": "Spanish (Castellano / Latino / VOSE)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeav1.png?v=20260814-1"
+      }
+    },
+    {
+      "moduleId": "kartoons-v1",
+      "moduleFamilyId": "kartoons_v1",
+      "moduleIdentity": "SP-VID-057-KARTOONS",
+      "moduleIdentityNumber": 57,
+      "contentType": "video",
+      "version": "1.1.6",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Kartoons-1.1.6.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Kartoons-1.1.6.zip",
+      "sha256": "51cf4eb68cc674c6d4fc334329c18b22a5074004607fb0f2a125f951e56463e3",
+      "signature": "n3cq9IHCgLH6wRgkrS1iCSDJAxci3UvO7FCaXoKEjcGyGF+IlDnyC8yXrFP+yghGh4vD3sBJAx1KJ8TsbkYeiA==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.1.6: Repackaged the unchanged 1.1.5 module with exactly one JSON manifest so updates install correctly",
+        "1.1.5: Preserved movie TMDB IDs in playable stream resolvers for Shin Chan and Doraemon movies",
+        "1.1.5: Added open multi-provider HD HLS streaming fallbacks for classic movies and anime",
+        "1.1.5: 74% automated playback verification pass rate across childhood classics",
+        "1.1.4: In-memory show details & episode caching reducing series card loading time from 8s to under 2.8s",
+        "1.1.4: Instant sub-millisecond episode list rendering (<1ms) across large franchises"
+      ],
+      "presentation": {
+        "category": "Cartoons",
+        "purpose": "Childhood Cartoons & Anime",
+        "language": "Hindi / English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/kartoons.png?v=20260816-1"
+      }
+    },
+    {
+      "moduleId": "dramafun-v3",
+      "moduleFamilyId": "dramafun-v3",
+      "moduleIdentity": "SP-VID-035-DRAMAFUN",
+      "moduleIdentityNumber": 35,
+      "contentType": "video",
+      "version": "4.0.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DramaFun-4.0.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/DramaFun-4.0.1.zip",
+      "sha256": "b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9",
+      "signature": "dAxDw/mxQJ1H9jd/H5BFX1QWoW05OruVtzeIa526xuOnDxQFiymcAETWkUTNLfSM2nZkscgpeyF7FGH7u3epuw==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "4.0.1: Owner-approved promotion of beta.6 with byte-identical playback JavaScript; featured/paginated browsing, fresh checked providers and source quality metadata.",
+        "4.0.1: Repairs JSON and HTML caption-track parsing; source-provided tracks only, never invented translations.",
+        "4.0.1: 29/30 resolved, 28/30 short host decodes; two failures remain. No external captions in the sample. App-side quality loss after switching and native sound remain unresolved. See docs/DRAMAFUN_4_0_1_RELEASE.md."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Spanish Drama",
+        "language": "Spanish",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/dramafun.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "toontales-v1",
+      "moduleFamilyId": "toontales-v1",
+      "moduleIdentity": "SP-VID-026-TOONTALES",
+      "moduleIdentityNumber": 26,
+      "contentType": "video",
+      "version": "3.0.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/ToonTales-3.0.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/ToonTales-3.0.1.zip",
+      "sha256": "2d9ef1b1c6795c2e4b0bb78c73a863adc6cee21ffca1b373b1d40925f95f86a0",
+      "signature": "GBveU4mn6B/hqnMoqRjaX1dyxe2BC1Z83LNPHswKAGgQXCzl+BigKoZ6qGlK9zZw9GDaOd53UC904araS5MJ6g==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "3.0.1: Owner-approved public release — fixed instant failures on strict HTTP clients (bodyless GET requests no longer carry an empty-string body); catalogue + real MP4 playback verified through the app runtime.",
+        "Bundle 80 certified release"
+      ],
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "Cartoons",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/toontales.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "aniworld-v1",
+      "moduleFamilyId": "aniworld_v1",
+      "moduleIdentity": "SP-VID-050-ANIWORLD",
+      "moduleIdentityNumber": 50,
+      "contentType": "video",
+      "version": "1.3.2",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Aniworld-1.3.2.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Aniworld-1.3.2.zip",
+      "sha256": "0a56360b7e14e121d48fca5ec749f540751fd56c85852557efc279bc50ffd3ff",
+      "signature": "lH781q09POk/+K+b65T2rJjDgl7tWAqiZGa++vbTwSs+xdfEVbpfZPWMULrcQXCb0KeNOwaq+g0zgIx+rFZ9KQ==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.3.2: German subtitles fixed — subtitle options are verified before they are listed (empty placeholder tracks are never offered), German sorts first, and the verified tracks are attached to every server, so the picker works on the stream that is playing. The German option no longer appears and disappears between attempts.",
+        "1.3.2: Filemoon added — the site's fourth server now resolves (German and English variants), so every episode offers more working servers when VidMoly or Vidhawk is struggling.",
+        "1.3.1: Complete reliability certification pass across all platforms (100% / 150 checks passed across app-strict, mobile-ua, and desktop-ua). Verified VidMoly/VOE/Doodstream hoster racing with Vidhawk caption fallback.",
+        "1.3.0: Reliability rebuild - concurrent host racing takes the first verified route; one smart retry with cooldowns; new Doodstream resolver. No longer depends on a single working host.",
+        "1.3.0: Vidhawk caption fallback in Sub mode (German captions first where available) so episodes still play when German hosters are down; never offered as German dub.",
+        "1.3.0: Verified-route cache (4 min), dead-end cache (20 s); catalogue site and search never parked by host cooldowns.",
+        "1.3.0: Gate ALL_PASSED (Streams 3/3, first attempt) + 9/9 reliability tests + app-runtime harness passed; live sweep parity with 1.1.2 (17/20, identical legitimate misses, faster successes).",
+        "Added Aniworld German anime catalogue (search, seasons, episodes, discovery)",
+        "VidMoly HLS with Deutsch / EN-Sub / DE-Sub audio routes",
+        "Search fallback forms for apostrophe and alternate-wording title misses",
+        "Passed Study Anime 98.5% (Grade A): TOP 30/30, MED 10/10, LOW 9/10"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "German Anime",
+        "language": "German",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/aniworld.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "megakino-v1",
+      "moduleFamilyId": "megakino_v1",
+      "moduleIdentity": "SP-VID-062-MEGAKINO",
+      "moduleIdentityNumber": 62,
+      "contentType": "video",
+      "version": "1.1.5",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MegaKino-1.1.5.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/MegaKino-1.1.5.zip",
+      "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24",
+      "signature": "",
+      "publishedAtMs": 1791933997415,
+      "changelog": [
+        "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
+        "1.1.5: Verified before release — a movie and a series both play with real video segments, on both app lines (8.5.33 and 9.0.71), release gate ALL_PASSED.",
+        "1.1.4: Search fixed — the source moved to a new domain and switched to GET-based search; the module now follows the current host safely and uses the new search format, with pagination. Searching for series and movies works again.",
+        "1.1.4: Session hardening against the source's cookie gate and domain rotation — a stale domain can no longer take the whole catalogue down."
+      ],
+      "presentation": {
+        "category": "Movies",
+        "purpose": "German Movies & Series",
+        "recommended": false,
+        "language": "German",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/megakino.png"
+      }
+    },
+    {
+      "moduleId": "weebcentral-v2",
+      "moduleFamilyId": "weebcentral-v2",
+      "moduleIdentity": "SP-IMG-1004-WEEBCENTRAL",
+      "moduleIdentityNumber": 1004,
+      "contentType": "image",
+      "version": "4.1.13",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/WeebCentral-4.1.13.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/WeebCentral-4.1.13.zip",
+      "sha256": "56bb2b59871b13964d3b39458fd51d5133a494fa1a9910b7ef81e0bc8e010840",
+      "signature": "vfKJ631jYThYudNjrbRcnwMSaQjpx1NTvZ1KyIXWwPfVcg6dNnc2PTege8HfDVoOBQTA3OAH4TOcspmrC1smYQ==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "4.1.13: Fixes chapter order on titles using #, Episode, or Collar labels, including To Your Eternity. Preserves WeebCentral's newest-first order for chapters, specials, and volumes.",
+        "4.1.12: Owner-approved public release — series removed from the source now report an honest “currently unavailable” message (chapter list + details note) instead of a pointless retry prompt.",
+        "4.1.11: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
+        "Restored complete chapter lists through the Flutter JavaScript runtime",
+        "Keeps Home discovery on recently active titles with chapter-bearing exact IDs",
+        "Sorts Chapter and Act labels numerically, including decimal chapters",
+        "Verified Nura, Chainsaw Man and One Piece through the real Flutter image runtime"
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/weebcentral.png?v=20260812-2",
+        "recommended": true
+      }
+    },
+    {
+      "moduleId": "synthetiq-manga-v1",
+      "moduleFamilyId": "synthetiq-manga",
+      "moduleIdentity": "SP-IMG-1050-SYNTHETIQ-MANGA",
+      "moduleIdentityNumber": 1050,
+      "contentType": "image",
+      "version": "1.0.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Synthetiq-Manga-1.0.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Synthetiq-Manga-1.0.3.zip",
+      "sha256": "048fdfbc80d490a6ff60b7250c304c2128f777ce8ec0ecf4045715d6fb6b5422",
+      "signature": "itWbmXkAHVbbqXqB5W9lsXR9MZRB7afYpNyRbMneFnW7+6EbMGtIxy2HRn00ycyslrpzAOoyMiJEVJNtYNDmEw==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.0.3: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
+        "Added Synthetiq Manga to the official catalogue",
+        "Added the Fastest catalogue label",
+        "Stores and resolves page links only; it does not host images"
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Fastest Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq.png?v=20260812-2",
+        "recommended": true
+      }
+    },
+    {
+      "moduleId": "atsu-v3",
+      "moduleFamilyId": "atsu",
+      "moduleIdentity": "SP-IMG-1031-ATSU",
+      "moduleIdentityNumber": 1031,
+      "contentType": "image",
+      "version": "4.0.5",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Atsu-4.0.5.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Atsu-4.0.5.zip",
+      "sha256": "3d6dbdb940a1c8c4b78b35cdcd72bcb997bdad30f47e0565726c64dc29e8b840",
+      "signature": "xYJHEcsfYIeZj4lLxFQLwFMrwrCjuOhXZ1zUyDwcF4w8Eom3RoiTtAetey/TIZvU8PBmMDdPSpbx6KOYugL3fA==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "4.0.5: Metadata-only Photo Recommended visibility and embedded logo fix. Content loading code unchanged.",
+        "4.0.4: Fixed app-bridge compatibility (GET requests no longer carry an empty body) and added search pagination.",
+        "4.0.4: Cover art now prefers app-decodable WebP variants and all static assets load directly from the CDN host (atsu.moe/static redirect). Chapter pages keep the source's own format.",
+        "4.0.4: Verified through the real app runtime (home, search, details, chapters, page images and image download probes) on multiple titles.",
+        "Bundle 80 certified release"
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/atsu.png?v=20260812-2",
+        "recommended": true
+      }
+    },
+    {
+      "moduleId": "synthetiq-music-hub-v1",
+      "moduleFamilyId": "synthetiq_music_hub",
+      "moduleIdentity": "SP-MUS-3005-MUSIC-HUB",
+      "moduleIdentityNumber": 3005,
+      "contentType": "music",
+      "version": "1.1.0",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Synthetiq-Music-Hub-1.1.0.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Synthetiq-Music-Hub-1.1.0.zip",
+      "sha256": "a1e755a9b5be89ebd654d5490927a4cae8268d22b092459ff1ae78977544d5cb",
+      "signature": "4np18d+zV5yQ3wu9YFnkwHulBFgh2ihz2ATc6nHo0sCQ3d1bBe/ByorQEZQf9zQeHmTXP2ceMoQUwnVxMClTZw==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "Improved exact artist and track matching",
+        "Added verified full-length audio resolution and download support"
+      ],
+      "presentation": {
+        "category": "Music",
+        "purpose": "Music",
+        "language": "Multi-language",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq.png?v=20260812-2"
+      }
+    },
+    {
+      "moduleId": "animeunity-v1",
+      "moduleFamilyId": "animeunity_v1",
+      "moduleIdentity": "SP-VID-061-ANIMEUNITY",
+      "moduleIdentityNumber": 61,
+      "contentType": "video",
+      "version": "1.1.0-beta.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AnimeUnity-1.1.0-beta.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/AnimeUnity-1.1.0-beta.3.zip",
+      "sha256": "044a8ae5854a7914161dfa2e87347d3033008c1d3edd06c9fc5f3380f35f2973",
+      "signature": "",
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "1.1.0-beta.3: Updates the source address and preserves HLS master streams when separate audio or subtitle tracks are present. Owner-approved live phone test release: runtime and sampled media checks passed; the simulator test timed out and phone playback remains to be verified.",
+        "1.0.7: Fixed title resolution on Home / In Evidenza hero carousel (fixed undefined [ITA SUB] title display bug)",
+        "1.0.6: Keeps Italian SUB and genuine Italian DUB routes separate per title and never substitutes SUB for unavailable DUB",
+        "1.0.6: Improves exact title, season and media-type matching and treats unreleased or missing titles as unavailable",
+        "1.0.5: Rebuilt VixCloud adaptive HLS playlist resolution using the current player parameters and verified media segments",
+        "1.0.4: Stateless title query resolution for robust cross-session Italian DUB and SUB companion switching",
+        "1.0.3: Strict DUB availability verification ensuring genuine Italian voice audio and blocking false fallback to Japanese audio",
+        "1.0.2: Ultra-low-latency HLS adaptive streaming enabling instant seeking and zero stutter on pause/resume",
+        "1.0.2: Dynamic SUB and Italian DUB companion switching with true Italian audio",
+        "1.0.1: Resolved Flutter JsService nativeHttp JSON body decoding for home discovery and search",
+        "1.0.0: Initial AnimeUnity Italian anime streaming library release"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Italian Anime",
+        "language": "Italian",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeunity.png"
+      }
+    },
+    {
+      "moduleId": "kickassanime-v3",
+      "moduleFamilyId": "kickassanime-v3",
+      "moduleIdentity": "SP-VID-038-KICKASSANIME",
+      "moduleIdentityNumber": 38,
+      "contentType": "video",
+      "version": "4.2.0",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/KickAssAnime-4.2.0.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/KickAssAnime-4.2.0.zip",
+      "sha256": "4f31c3cd519a37ecf552e838f6d4e3b41fa72e8ab91f5489ff8c326b4bc8748f",
+      "signature": "40kgiC2oQNDTkzzfvYWaN7vb9NpOKvTJwX0V4oIzFuxe9prObtUiTfBLBbjiaqe56MExItPZnzIEhg+cx0Q98Q==",
+      "publishedAtMs": 1791569150814,
+      "changelog": [
+        "4.2.0: Search now finds titles the way users type them - generated punctuation variants (colon at any word boundary, 'dr.' forms, year parentheses, tail-tokens fallback) plus merged results take the natural-query hit rate to 24/24 (was 22/24) and a season-qualified hard set from 2/8 to 8/8. Season/part variants of a show are grouped and ordered (base, Cour/Part, Season 2, 3..., then specials/OVAs/movies) with release years on cards. The home now serves 6 rows (adds Recently Added, Popular Shows and Coming Soon) in one parallel fan-out. Module icon added.",
+        "4.1.0: Correct provider subtitle language labels, including wrapped metadata; unknown tracks are no longer labelled English",
+        "4.1.0: Expose usable server alternatives with matching captions and headers; preserve audio-safe Auto quality",
+        "4.1.0: Bounded primary recovery and alternate episode-page fallback; 25/30 sampled titles passed media probes, known unavailable titles documented",
+        "4.0.3: Official KickAssAnime (kaa.lt) English sub/dub catalogue",
+        "4.0.3: DUB is only shown when an English player or English HLS audio track exists",
+        "4.0.3: Japanese-only CatStream is never labeled as DUB (One Piece is SUB-only)",
+        "4.0.2: Featured home row, season duplicate collapse, subtitle URL repair",
+        "4.0.1: Full episode lists via fsearch and ja-JP/en-US APIs"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/kickassanime.png?v=20261008-1"
+      }
+    },
+    {
+      "moduleId": "shahiid-v1",
+      "moduleFamilyId": "shahiid_v1",
+      "moduleIdentity": "SP-VID-055-SHAHIID",
+      "moduleIdentityNumber": 55,
+      "contentType": "video",
+      "version": "2.1.3-beta.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Shahiid-2.1.3-beta.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Shahiid-2.1.3-beta.3.zip",
+      "sha256": "c553daf1fa966c9072726a72a2d3ce6937d265a8891ed70ad3c8cc377cea3d27",
+      "signature": "",
+      "publishedAtMs": 1784986932868,
+      "changelog": [
+        "2.1.3-beta.3: Ranks exact Naruto and One Piece search matches ahead of related series, specials and arcs. Existing playback and language handling are unchanged. Source availability varies; owner phone acceptance is pending.",
+        "2.1.2: Long series now enumerate to the end of a season (direct page walk, batched, up to ~1240 episodes with a 12s budget) instead of stopping at 500 - One Piece went from 530 to 860 reachable episodes in 13.3s, and the tail episode (1180) plays.",
+        "2.1.2: Film/landing entries that live under /seasons/ but carry no player now return an empty list with a log line instead of throwing, so they no longer surface as a broken screen.",
+        "2.1.2: Search ranks single specials, films and OVA reels below real seasons, so searching a long show no longer opens a one-episode special first.",
+        "2.1.2: Release gate ALL_PASSED (Package/Home/Search/Details/Streams 3/3); house tester PASS 28 / FAIL 0. Arabic sub/dub isolation and the player chain are unchanged.",
+        "2.1.1: Home opens show catalogues instead of individual episodes; fixes long-list pagination and special episode mapping",
+        "2.1.1: Adds server choices, truthful quality labels, poster parsing and short-lived repeated-search caching",
+        "2.1.1: Owner-approved release with known upstream unavailable episodes; see docs/SHAHIID_2_1_1_RELEASE.md",
+        "2.0.1: Fixed movie dub availability to accurately reflect sub-only titles (e.g. Look Back)",
+        "2.0.0: Full overhaul for restructured series, seasons, and dubbed seasons catalogue hierarchy",
+        "2.0.0: High-speed multi-mirror resolver with verified 1080p MP4 and master HLS streaming",
+        "2.0.0: Strict language isolation between Arabic subtitled and Arabic dubbed episodes",
+        "2.0.0: Full movie and standalone special extraction with season archive auto-recovery"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Arabic Anime",
+        "language": "Arabic Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/shahiid.png"
+      }
+    },
+    {
+      "moduleId": "mugiwara-v1",
+      "moduleFamilyId": "mugiwara_v1",
+      "moduleIdentity": "SP-VID-071-MUGIWARA",
+      "moduleIdentityNumber": 71,
+      "contentType": "video",
+      "version": "1.1.0-beta.5",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Mugiwara-1.1.0-beta.5.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Mugiwara-1.1.0-beta.5.zip",
+      "sha256": "be79e89310c221091d52c7cc7aaf15ba5aeda2a7b87a74fe9ea66d45901be857",
+      "signature": "4SSk1keAc9UVJB/5JlUGorJT2xObLQBaswuecuYFh2nN4EuMYItjQFPneg7Be/Ul12kedhrLLBSvUAMKlTrjZA==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.1.0-beta.5: Playback fixed — Sibnet links are now resolved to the final signed video URL on every platform, so episodes that previously spun and never loaded now play.",
+        "1.1.0-beta.5: One Piece expanded to its full 1,200+ episode list (was capped at 61), including arcs, specials and alternate cuts.",
+        "1.1.0-beta.5: Home banners and poster artwork fixed — featured images no longer fail to load.",
+        "1.1.0-beta.5: Special A seasons and film titles now resolve correctly.",
+        "1.1.0-beta.5: Home feed rebuilt on the full catalogue (1,200+ titles) with endless paging.",
+        "1.1.0-beta.5: Every offered server is verified (real video bytes) before it is shown; dead mirrors are skipped instantly.",
+        "1.0.4: Restored missing titles across entire 1200+ catalogue in search and browse (e.g. Orb: On the Movements of the Earth)",
+        "1.0.4: Restored all anime poster cover images using official Mugiwara static CDN",
+        "1.0.4: Added Ansembed 1080p Master HLS stream fallback for removed Sibnet videos (e.g. Dan Da Dan)",
+        "1.0.4: Fixed multi-season episode resolution for Next.js serialized undefined script URLs",
+        "1.0.2: Clean canonical portrait posters across all anime (fixed One Piece heroines cover)",
+        "1.0.2: Synchronized dual SUB/DUB episode mapping starting at Episode 1 with zero offset",
+        "1.0.2: Full anime movies / films support (Her Blue Sky, Your Name, Look Back, Suzume, etc.)",
+        "1.0.2: Multi-mirror stream resolver with automatic fallback failover for deleted video hosts",
+        "1.0.2: Featured hero carousel and continuous endless scrolling across all discovery feeds",
+        "1.0.1: Fixed homepage discovery & search JSON decoding on mobile Flutter runtime",
+        "1.0.0: Official Mugiwara French anime streaming catalogue (VOSTFR / VF)"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "French Anime",
+        "language": "French (VOSTFR / VF)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/mugiwara.png"
+      }
+    },
+    {
+      "moduleId": "justanime-v1",
+      "moduleFamilyId": "justanime_v1",
+      "moduleIdentity": "SP-VID-064-JUSTANIME",
+      "moduleIdentityNumber": 64,
+      "contentType": "video",
+      "version": "1.0.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/JustAnime-1.0.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/JustAnime-1.0.1.zip",
+      "sha256": "4b47437fd7fa51f1a2f329ed2e6d6396c09cddd855ef0cd083b74b9ab30f890c",
+      "signature": "yvghW5X0uIQX1oriccrrwaf91iX4F4aEnw6T9oi49DI16HcZNUk1UcgzaaIft2QLUbGuuRndj+YgBzA7ELQOcw==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.0.1: Owner-approved public release — implemented the advertised discovery home (hero + Trending/Popular/Airing/Latest rows with feed pages) and fixed home cards missing artwork.",
+        "1.0.0: Official JustAnime (justanime.to) comprehensive anime streaming catalogue with high-speed direct MP4 and HLS video playback",
+        "1.0.0: Dual audio synchronization for SUB and DUB tracks across multiple resolvers (AnimeGG, AniNeko, MegaPlay)",
+        "1.0.0: AniList metadata integration, rich synopsis, episode descriptions, and thumbnails",
+        "1.0.0: Complete WebVTT subtitle tracks and chapter skip markers",
+        "1.0.0: Discovery feeds for Trending, Popular, and Recent anime releases"
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime (SUB / DUB)",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/justanime.png"
+      }
+    },
+    {
+      "moduleId": "streamingunity-v1",
+      "moduleFamilyId": "streamingunity_v1",
+      "moduleIdentity": "SP-VID-065-STREAMINGUNITY",
+      "moduleIdentityNumber": 65,
+      "contentType": "video",
+      "version": "1.0.5-beta.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/streamingunity-v1-1.0.5-beta.3.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/streamingunity-v1-1.0.5-beta.3.zip",
+      "sha256": "a2e63ae3f05b2b76a5370f6514875de05577e321fecba20e140c1becd12b4863",
+      "signature": "",
+      "publishedAtMs": 1794756748513,
+      "changelog": [
+        "MAIN-to-TEST sync 2026-11-15: existing published MAIN resolver code; exact TEST candidate adapted-standard S2 PARTIAL, runtime, sampled media and full simulator playback/pause/seek checks passed. Compile/setup allowance 900s; playback assertions unchanged. Not physical-device or full-title/audio/caption certification. Existing V9 fallback metadata retained.",
+        "1.0.5-beta.3: The site and its old player host are blocked or offline. Search, details, episodes and Home now use a TMDB catalogue; playback uses the VixSrc player and only returns streams with an Italian audio track, labelled Dub (never shown as Sub).",
+        "1.0.5-beta.3: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 0/20. Exact-byte Flutter runtime passed for a film and a series. Links saved from the old site may not resolve.",
+        "1.0.4: Fixed episode routing by using the current title ID plus episode ID iframe endpoint",
+        "1.0.4: Prevented unrelated Gravitas Ventures or Paramount media from being returned for One Piece episodes",
+        "1.0.4: Verified distinct episode 1 and episode 2 HLS routes for SUB and DUB",
+        "1.0.3: Added StreamingUnity movie and TV catalogue with home discovery, search, title details, and multi-season episode mapping",
+        "1.0.3: Added adaptive VixCloud HLS resolution with English SUB and verified Italian DUB routing",
+        "1.0.3: Exposed provider subtitle and audio-track metadata while preserving required playback headers"
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "StreamingUnity Movies & TV",
+        "language": "Italian",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/streamingunity.png"
+      }
+    },
+    {
+      "moduleId": "mangakatana-v1",
+      "moduleFamilyId": "mangakatana",
+      "moduleIdentity": "SP-IMG-1052-MANGAKATANA",
+      "moduleIdentityNumber": 1052,
+      "contentType": "image",
+      "version": "1.0.2",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MangaKatana-1.0.2.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/MangaKatana-1.0.2.zip",
+      "sha256": "66afbc8fea12e05663b38413d1e9ce1250ef4119f682938f1cbd10824197df30",
+      "signature": "YznTrOqYrHCxsuExfYA8InOSVsKAAE95ZaV9le1s+/6rknzlNXKfEv/aZQbLWhnY51ko1TW4xsg0uPtuYvNKBw==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.0.2: Owner-approved public release — search works again (source burst-window pacing + retry), synopsis descriptions restored, home/feed section caps and pagination flags corrected.",
+        "1.0.0: Initial release — converted from the Synthetiq Manga sources catalogue (mangakatana) with Player compatibility for search, details, chapters and page images."
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/mangakatana.png?v=20260918-1"
+      }
+    },
+    {
+      "moduleId": "mgread-v1",
+      "moduleFamilyId": "mgread",
+      "moduleIdentity": "SP-IMG-1051-MGREAD-LIKEMANGA",
+      "moduleIdentityNumber": 1051,
+      "contentType": "image",
+      "version": "1.0.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MGRead-LikeManga-1.0.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/MGRead-LikeManga-1.0.1.zip",
+      "sha256": "5045164c8fbe922533899715de5145eb9857256d02c1afd24278d95c9b179a5e",
+      "signature": "4OHtmutQfWhXIPDPBONK69lVrpis39s/fmMbLH8Ygo09ySdNhXvK6XkU8doQmrGKHq9u7p6tUvnicZbm3zBrtg==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.0.1: Owner-approved public release — chapter lists restored through the source's new reader API (the site redesign removed chapter links from the HTML).",
+        "1.0.0: Initial release — converted from the Synthetiq Manga sources catalogue (mgread) with Player compatibility for search, details, chapters and page images."
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/mgread.png?v=20260918-1"
+      }
+    },
+    {
+      "moduleId": "colorizedmanga-v1",
+      "moduleFamilyId": "colorizedmanga",
+      "moduleIdentity": "SP-IMG-1059-COLORIZEDMANGA",
+      "moduleIdentityNumber": 1059,
+      "contentType": "image",
+      "version": "1.0.0-beta.1",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/ColorizedManga-1.0.0-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/ColorizedManga-1.0.0-beta.1.zip",
+      "sha256": "fa26df19a047a5253cdaee76cd6aeba701a4e2cebbc601776654b7b379a0029c",
+      "signature": "+iTas7q7Nts7fB8VZWKsLM+bdGNbwP0HvEhle7ouBorrOfD/fufRKdjU+eRkdCg08+HyIYmU3VmwPKZAVKaElQ==",
+      "publishedAtMs": 1790937523855,
+      "changelog": [
+        "1.0.0-beta.1: Initial public beta converted from the Colorized Manga source module for Synthetiq Player's image/manga reader contract.",
+        "Verified search, details, chapters, discovery feeds, ordered page images, and live reader image probes across One Piece, Naruto, Bleach, and Demon Slayer."
+      ],
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Colorized Manga",
+        "recommended": false,
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/colorizedmanga.png?v=20260921-1"
+      }
+    },
+    {
+      "moduleId": "alpha-movies",
+      "moduleFamilyId": "alpha_movies_v1",
+      "moduleIdentity": "SP-VID-079-ALPHA-MOVIES",
+      "moduleIdentityNumber": 79,
+      "contentType": "video",
+      "version": "0.2.0-beta.4",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Alpha-Movies-0.2.0-beta.4.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Alpha-Movies-0.2.0-beta.4.zip",
+      "sha256": "fa442fd94cb07e66d054d9ffa79dd7e569ba144e0db10ae8ab3b54fe2206f329",
+      "signature": "",
+      "publishedAtMs": 1793315632959,
+      "changelog": [
+        "0.2.0-beta.4: Playback restored. The old providers are gone (Videasy's backend no longer exists and Stream Unity was retired), so streams now come from the MoviesAPI/VidSpark provider first with English subtitles, and the old chain stays behind it as a fallback. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays with a subtitle track.",
+        "0.2.0-beta.2: First public beta of the Alpha Movies engine - three independent stream sources (Vidrock + Videasy + Stream Unity) behind one pipeline; every play returns multiple validated servers so a dead link no longer dead-ends. Posters now load via a cached image resolver; alternate-language audio sources are surfaced (labelled after English) and multi-audio streams show their track languages. Not the default movie source - install alongside Synthetiq Movies.",
+        "Owner-approved public beta for all-user testing; device-side certification and full playback QA are intentionally ongoing. Playback reports welcome in the Discord support channels."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Multi-source movies & TV (Beta)",
+        "recommended": false,
+        "language": "Original audio / any-language subtitles",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/alpha-movies.png?v=20260919-1"
+      }
+    },
+    {
+      "moduleId": "moviedb-wiki-v1",
+      "moduleFamilyId": "moviedb_wiki_v1",
+      "moduleIdentity": "SP-VID-083-MOVIEDB",
+      "moduleIdentityNumber": 83,
+      "contentType": "video",
+      "version": "0.1.0-beta.15",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MovieDB-0.1.0-beta.15.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/MovieDB-0.1.0-beta.15.zip",
+      "sha256": "78b3b4afdd3b372227ee6a4f2de3336b25a8f389593353aee8e6f315f05f0cbb",
+      "signature": "",
+      "publishedAtMs": 1793315632959,
+      "changelog": [
+        "0.1.0-beta.15: Revived the catalogue and playback after the old source disappeared. Search, details, episodes and the home row fall back to TMDB, and streams come from the MoviesAPI/VidSpark provider with English subtitles; the original providers stay behind it as fallbacks. Verified on the exact bytes: release gate ALL_PASSED, TRON: Ares plays at 804p with a subtitle track.",
+        "0.1.0-beta.14: TEST catch-up to production 0.1.0-beta.13 playback code, retaining V9 exact TV fallback mapping. Native playback reliability remains under testing.",
+        "0.1.0-beta.13: Streams are accepted in every format the source serves — direct MP4 and TS files now play exactly like HLS, with the format detected from the actual bytes instead of assumed. Fixes titles (e.g. The Mentalist) that played on the site but showed “no playable stream” in the app.",
+        "0.1.0-beta.12: Verified backup servers can start playback without waiting for a stalled primary; resolution and optional subtitle waits are bounded. Fresh retries bypass stale and failed cache entries, and obsolete requests cannot overwrite newer results. Invalid media responses and broken quality routes are skipped; headers and subtitles stay attached to their own route.",
+        "Quality labels follow available manifest dimensions, not invented qualities. Provider labels and availability can still be inaccurate. Automated decoder samples passed; not every advertised quality or physical-device workflow is certified.",
+        "0.1.0-beta.8: First public beta of the MovieDB engine (moviedb.wiki) - one-call playback resolve: a single request returns the adaptive HLS stream plus every subtitle language the source carries (English first; up to 150+ tracks on some titles). Two independent stream providers with automatic failover and seven per-source variants; every resolve is byte-validated and a background prefetch starts playback instantly. Movies and full seasons/episodes with real paginated discovery feeds. Not the default movie source - install alongside Synthetiq Movies.",
+        "Owner-approved public beta for all-user testing. Source-side notes: subtitle availability varies by title (some classics carry none) and can be momentarily flaky - the module retries automatically. Original audio; dubs are not labelled because the source does not carry them. Playback reports welcome in the Discord support channels."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Fast one-call movie & TV streams (Beta)",
+        "recommended": false,
+        "language": "Original audio / any-language subtitles",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/moviedb.png?v=20260922-1"
+      }
+    },
+    {
+      "moduleId": "qa-fallback-anipm-v1",
+      "moduleFamilyId": "qa-fallback-anipm-v1",
+      "moduleIdentity": "SP-VID-997-QA-FALLBACK-ANIPM",
+      "moduleIdentityNumber": 997,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Fallback-Test-AniPM-1.0.0-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Fallback-Test-AniPM-1.0.0-beta.1.zip",
+      "sha256": "fc2408262bfefe4daa17115068135f5d6278c0e4ed7ca53f8ac9d022b91e4d24",
+      "signature": "gtvM1ighL3piEoeyp4zUDrm4zqFQaFiK5WRYgz1ctmn1GoyzPl5yW7xUxrQE8lmdFywAk5BOj5GO6jWG5KH/OA==",
+      "publishedAtMs": 1791566706045,
+      "presentation": {
+        "category": "Testing",
+        "purpose": "Testing only - deterministic fallback failure",
+        "recommended": false,
+        "language": "English Sub/Dub",
+        "languages": [
+          "sub",
+          "dub"
+        ],
+        "iconUrl": "https://ani.pm/apple-touch-icon.png"
+      },
+      "changelog": [
+        "TEST ONLY: intentionally fails every stream request to exercise fallback into real AniPM. Updated Player V9 (9.0.55+) auto-imports compatible groups when both member packages are installed; it does not auto-install modules or certify playback reliability."
+      ]
+    },
+    {
+      "moduleId": "cimacub-v1",
+      "moduleFamilyId": "cimacub_v1",
+      "moduleIdentity": "SP-VID-287-CIMACLUB",
+      "moduleIdentityNumber": 287,
+      "contentType": "video",
+      "version": "1.2.0",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/CimaClub-1.2.0.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/CimaClub-1.2.0.zip",
+      "sha256": "3ddee1d22400b00963d5085b92efd648f36e64128c8af0a9dffbea55b995de86",
+      "signature": "BMSdiA6wsAMH4vxj/vPekWRwr4kmOBrxLnW7fR0RmoPZp/cA/ABZr3BuAmGnOv+QXCag4+zgFq/RMY+eGLENdw==",
+      "publishedAtMs": 1791569150814,
+      "changelog": [
+        "1.2.0: Fixes the episode failures reported on this source. The site repeats its players in a download section that can carry a mirror the server list omits - those extra mirrors are now used too, so episodes whose three listed servers were all deleted play again instead of reporting no link. No identity change.",
+        "1.1.0: Much faster home screen (the newest row and the three themed rows now load together instead of one after another: measured 8.4s -> 1.3s), plus verified server handling. Only the mirror family that can actually deliver video is offered: the site's DoodStream servers sit behind a bot wall, and its cybervynx servers were traced to playlists filled with ad images rather than video, so they are skipped instead of showing an option that cannot play. Source-side note: individual mirrors often go dead at the host - those episodes report honestly that no link is available rather than playing nothing.",
+        "1.0.0: First release of the CimaClub engine (w.cimacub.com) - Arabic subtitled movies, series and anime. The catalogue is read straight from the site's own WordPress API (search, newest-episode home rows and a paged feed), so titles and posters come from the source itself. Playback follows each episode's watch page to its MixDrop servers and resolves the player's signed mp4 url per play - those links expire in about four hours, so nothing is cached, and the mirror list cascades automatically until a live one answers. Not the default movie source; install alongside your others.",
+        "Owner-approved public release for all-user testing. Source-side notes: some mirror links are already dead at the host and get skipped automatically, and the alternative DoodStream servers sit behind a bot wall so they are not offered. Subtitles on this site are burned into the source video. Playback reports welcome in the Discord support channels."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Arabic subtitled movies, series and anime",
+        "recommended": false,
+        "language": "Arabic (subtitled)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/cimacub.png?v=20261005-1"
+      }
+    },
+    {
+      "moduleId": "anime4up-site-v1",
+      "moduleFamilyId": "anime4up_site_v1",
+      "moduleIdentity": "SP-VID-101-ANIME4UP",
+      "moduleIdentityNumber": 101,
+      "contentType": "video",
+      "version": "1.0.0-beta.10",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Anime4up-1.0.0-beta.10.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Anime4up-1.0.0-beta.10.zip",
+      "sha256": "3a28b4175a7030105490930820720fde63f9a49fffe1013cbc51d33c74668a2c",
+      "signature": "FF8uwxfUTngAVMFTfql//Mvk0neVR5oNRp6I/Qka89LKWma2libGwJtKel14CBL1pr/PeBs0y1BK3R7h3gC45Q==",
+      "publishedAtMs": 1791569150814,
+      "changelog": [
+        "1.0.0-beta.10: Fixes episodes that ended with no playable servers. The module read JSON responses through text(), and the app runtime returns an EMPTY text() for JSON (the parsed value is only exposed through json()) - so every Share4Max mirror list was lost, and only the HTML-based hosts could ever play. JSON is now read through json(); the Share4Max payload parser also accepts both payload shapes, and its phase is bounded to 9s so it cannot spend the whole episode budget.",
+        "1.0.0-beta.10: Identity assigned SP-VID-101-ANIME4UP (number 101; 100 belongs to Synthetiq-One in the video range - the signed pipeline rejects duplicates). Community module, first catalogue release.",
+        "1.0.0-beta.10: Verified on 6 live Share4Max shares (6/6 resolve after the fix, 0/6 before; avg 4.5s), 20/20 offline parser checks, 2,000 real episode URLs accepted. Community-built module, first catalogue release.",
+        "1.0.0-beta.8: Community build - Arabic anime catalogue from anime4up with Share4Max mirror resolution prioritised for direct playback."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Arabic Anime",
+        "recommended": false,
+        "language": "Arabic",
+        "languages": [
+          "sub",
+          "dub"
+        ],
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anime4up.png?v=20261006-1"
+      }
+    },
+    {
+      "moduleId": "sololatino-v1",
+      "moduleFamilyId": "sololatino_v1",
+      "moduleIdentity": "SP-VID-067-SOLOLATINO",
+      "moduleIdentityNumber": 67,
+      "contentType": "video",
+      "version": "0.1.0-beta.6",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/SoloLatino-0.1.0-beta.6.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/SoloLatino-0.1.0-beta.6.zip",
+      "sha256": "8173cadef04d35710009ec663f449b290cc4645fd0063941d85a3c93f1c45893",
+      "signature": "",
+      "publishedAtMs": 1791724763757,
+      "changelog": [
+        "0.1.0-beta.6 - testing identity corrected to SP-VID-067-SOLOLATINO: the previous 0.1.0-beta.5 package reused identity number 61 (owned by AnimeUnity), which made the app reject the whole TEST repository with \"duplicate module identity numbers\". The package itself is unchanged.",
+        "0.1.0-beta.5 - new TEST source: SoloLatino (sololatino.net), Spanish-Latino movies, series and anime.",
+        "Search runs on the site's own JSON API; every season's episodes come from the series pages.",
+        "Playback decodes the site's embedded player module-side (client-side proof-of-work + AES-decrypted server links) and resolves Vidhide-family servers with real quality labels (e.g. 720p).",
+        "Verified: house tester PASS, release gate ALL_PASSED (segments byte-verified on first attempt), both app runtimes (8.5.33 + V9) ALL PASS, S2 quick PASS with Spanish audio confirmed.",
+        "Known limits: the site's PREMIUM player host is dead server-side and unused; Streamwish/Voe mirrors are not resolved yet; Spanish audio only; the source serves no caption tracks."
+      ],
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Spanish-Latino movies, series and anime",
+        "recommended": false,
+        "language": "Español Latino",
+        "languages": [
+          "dub"
+        ],
+        "iconUrl": "https://sololatino.net/images/logo.png"
+      }
+    },
+    {
+      "moduleId": "dw-live-v1",
+      "moduleFamilyId": "dw_live_v1",
+      "moduleIdentity": "SP-VID-110-DW-LIVE",
+      "moduleIdentityNumber": 110,
+      "contentType": "video",
+      "version": "0.1.0-beta.4",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.4.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.4.zip",
+      "sha256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
+      "signature": "",
+      "publishedAtMs": 1795108021597,
+      "changelog": [
+        "0.1.0-beta.4: dw.com intermittently refuses page requests (403). The module now retries, keeps the last source found and falls back to each channel's official DW master playlist, still checked as an active live playlist. 3/3 channels played in the V9 runtime (was 0/3).",
+        "TEST-only official DW English, Spanish and Arabic live news channels. Requires Player 9.0.90 for the Live clock/resume fixes.",
+        "beta.3 corrects the private candidate identity collision with Flux; playback JavaScript is byte-identical to beta.2. Physical-device acceptance remains pending."
+      ],
+      "presentation": {
+        "category": "Live TV",
+        "language": "English / Spanish / Arabic",
+        "iconUrl": "https://www.dw.com/images/icons/favicon-180x180.png"
+      }
+    },
+    {
+      "moduleId": "tvapp-live-v1",
+      "moduleFamilyId": "tvapp_live_v1",
+      "moduleIdentity": "SP-VID-081-TVAPP-LIVE",
+      "moduleIdentityNumber": 81,
+      "contentType": "video",
+      "version": "0.1.0-beta.11",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.11.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/TVApp-Live-0.1.0-beta.11.zip",
+      "sha256": "9881b840268a79e6a10070db758132dff76f3cf760b84933b217b9317b962c13",
+      "signature": "",
+      "publishedAtMs": 1795108021597,
+      "changelog": [
+        "0.1.0-beta.11: Adult content filter on both third-party feeds (title, category and tags). When a channel's main feed is off air, its listed alternate feeds are tried (HD first).",
+        "0.1.0-beta.11: V9 runtime: NFL Network, CNN, 24/7 The Simpsons, Tennis Channel, Fox Footy and NHL Network played; Willow and Sky Sports Racing were off air at the provider (every feed 404).",
+        "TEST-only cricket update for Player 9.0.91. Willow passed the actual native V9 Live player: sustained playback, pause/resume and fresh Go Live.",
+        "Supports validated wrapped Live video; removes false off-air detection based on image filenames. Broadcasts can include replays. General S2 Willow journey still fails outside the native path; no all-channel or Android certification."
+      ],
+      "presentation": {
+        "category": "Live TV",
+        "language": "English",
+        "iconUrl": "https://tvapp1.com/favicon-512x512.png"
+      }
+    },
+    {
+      "moduleId": "public-sports-live-v1",
+      "moduleFamilyId": "public_sports_live_v1",
+      "moduleIdentity": "SP-VID-111-PUBLIC-SPORTS-LIVE",
+      "moduleIdentityNumber": 111,
+      "contentType": "video",
+      "version": "0.1.0-beta.5",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-Sports-Live-0.1.0-beta.5.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Public-Sports-Live-0.1.0-beta.5.zip",
+      "sha256": "41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094",
+      "signature": "",
+      "publishedAtMs": 1792195090183,
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "Sports",
+        "language": "English"
+      },
+      "changelog": [
+        "Optional TEST-only public sports IPTV trial: FIFA+ Women, FUEL TV, Red Bull TV UK, World of Freesports and SportsGrid.",
+        "Adaptive broadcaster quality; schedules may include replays or studio coverage, and regional availability varies. No premium-match guarantee.",
+        "S2 PASS: native simulator sample and real runtime passed. Five feeds decoded locally; not all channels or devices are certified."
+      ]
+    },
+    {
+      "moduleId": "movy-v1",
+      "moduleFamilyId": "movy_v1",
+      "moduleIdentity": "SP-VID-076-MOVY",
+      "moduleIdentityNumber": 76,
+      "contentType": "video",
+      "version": "0.1.0-beta.1",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Movy-0.1.0-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Movy-0.1.0-beta.1.zip",
+      "sha256": "e66f270a9b305f8102e5ed75b37f8f03a341bfde0bb27ecd1c544ecad9ba796d",
+      "signature": "",
+      "publishedAtMs": 1792233259836,
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV",
+        "language": "Original audio; source subtitles",
+        "iconUrl": "https://www.movy.sx/apple-touch-icon.png"
+      },
+      "changelog": [
+        "New TEST source: movies and TV from movy.sx (TMDB catalogue). Original-audio servers up to 4K with source subtitles; matching Hindi/Spanish/French/German servers for films in those languages, and labelled dubbed servers only when no original audio exists.",
+        "Coverage: 45 of 48 varied movies resolved (median 5 s); the 3 misses are not available on movy.sx itself. The site rate-limits stream requests; on a limit the module asks you to wait about two minutes.",
+        "S2 PASS: real Flutter runtime, media checks, English audio/subtitles and native iOS Simulator playback (play, advance, seek) passed. Not yet tested on a physical device."
+      ]
+    },
+    {
+      "moduleId": "public-tv-live-v1",
+      "moduleFamilyId": "public_tv_live_v1",
+      "moduleIdentity": "SP-VID-113-PUBLIC-TV-LIVE",
+      "moduleIdentityNumber": 113,
+      "contentType": "video",
+      "version": "0.1.0-beta.5",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.5.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.5.zip",
+      "sha256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
+      "signature": "",
+      "publishedAtMs": 1795108021597,
+      "presentation": {
+        "category": "Live TV",
+        "purpose": "General",
+        "recommended": false,
+        "language": "Multiple languages"
+      },
+      "changelog": [
+        "0.1.0-beta.5: France 24 English returns. The public list switched it to an unofficial relay; the approved official France 24 route is kept while the channel is listed and is re-validated as live media on every play. 4/4 channels played (was 3/4).",
+        "Expanded active-only public TV selection after two bounded decodes and fresh module live-playlist checks. Failed and unverified candidates remain hidden.",
+        "Sports channels may broadcast replays or news; no guarantee that a live football or cricket match is currently on air. Regional availability varies.",
+        "Exact package passed S2 standard native simulator playback. Physical-device and all-region acceptance are separate."
+      ]
+    }
+  ],
+  "signature": "",
+  "testingIdentity": "synthetiq-anime-v1:1.0.5-beta.9:413ca29d5755d5b309f1f5beff00d3ddae5c93469a792590786d69650957c613|synthetiq-anime-direct:1.0.3-beta.10:588cb9a2670082e914c33623f54c700bfc7896c470ac3c1c9ce6f3f357ca0bdd|anikoto-v4:5.0.6-beta.3:9b8806589bf7c0f3e408088b16be218d548b2cadaed6534ec91de105dcea9a27|anipm-v1:0.1.0-beta.9:696c060e7528f0a278ea618dc4d7afc79e607aa9b161580597bdf8a3e3b14ee7|anikage-v1:1.1.3:70002c6570c46129d00e71c9cf623f7b44bc2ddea2cb559933b10ede1554fff4|yflix-v1:1.1.2:6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f|dramacool-v1:1.0.3:abfed0370656fc7ae1c2e5e011148ffba2f982b385370c1a10aa6d891213a6e7|drama-direct-v1:0.1.0-beta.9:0374dcafd676e190fdcda6a05016510c8f3873e1b421bc049bc9eb8814e5b1ac|onepace-v3:3.0.6:9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25|animeheaven-v2-1:4.1.1-beta.1:48c550e4961f3c142c67c415924cc6cf13eefc281870645d9707c1d62ce53125|xstream-v1:1.3.5-beta.1:c2f904af7e45acfdacd354cf873daf70cc1549abd32a8b99155d2179e9c2593a|miruro-v3:4.1.3-beta.11:e561ae9ddbddea68a0988b5708808f3c90d04f13f813a0b120e2cd3d1715b194|anime-sama-v1:1.1.2:c6f6c913e0fd015dddbb7291c695c4942fe1bb05fe90ff699b502e2ee10b675e|an1me-v1:1.1.1:456c6110f16b3e6c3224131f024150d6a5f5444a97481e7fc1be782ba32c06ad|animeav1-v1:1.3.0-beta.9:833d9133c5ee4271092881aaa3e59ddf291e0f98a2ca542d635db3c16dfab943|kartoons-v1:1.1.6:51cf4eb68cc674c6d4fc334329c18b22a5074004607fb0f2a125f951e56463e3|dramafun-v3:4.0.1:b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9|toontales-v1:3.0.1:2d9ef1b1c6795c2e4b0bb78c73a863adc6cee21ffca1b373b1d40925f95f86a0|aniworld-v1:1.3.2:0a56360b7e14e121d48fca5ec749f540751fd56c85852557efc279bc50ffd3ff|megakino-v1:1.1.5:6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24|weebcentral-v2:4.1.13:56bb2b59871b13964d3b39458fd51d5133a494fa1a9910b7ef81e0bc8e010840|synthetiq-manga-v1:1.0.3:048fdfbc80d490a6ff60b7250c304c2128f777ce8ec0ecf4045715d6fb6b5422|atsu-v3:4.0.5:3d6dbdb940a1c8c4b78b35cdcd72bcb997bdad30f47e0565726c64dc29e8b840|synthetiq-music-hub-v1:1.1.0:a1e755a9b5be89ebd654d5490927a4cae8268d22b092459ff1ae78977544d5cb|animeunity-v1:1.1.0-beta.3:044a8ae5854a7914161dfa2e87347d3033008c1d3edd06c9fc5f3380f35f2973|kickassanime-v3:4.2.0:4f31c3cd519a37ecf552e838f6d4e3b41fa72e8ab91f5489ff8c326b4bc8748f|shahiid-v1:2.1.3-beta.3:c553daf1fa966c9072726a72a2d3ce6937d265a8891ed70ad3c8cc377cea3d27|mugiwara-v1:1.1.0-beta.5:be79e89310c221091d52c7cc7aaf15ba5aeda2a7b87a74fe9ea66d45901be857|justanime-v1:1.0.1:4b47437fd7fa51f1a2f329ed2e6d6396c09cddd855ef0cd083b74b9ab30f890c|streamingunity-v1:1.0.5-beta.3:a2e63ae3f05b2b76a5370f6514875de05577e321fecba20e140c1becd12b4863|mangakatana-v1:1.0.2:66afbc8fea12e05663b38413d1e9ce1250ef4119f682938f1cbd10824197df30|mgread-v1:1.0.1:5045164c8fbe922533899715de5145eb9857256d02c1afd24278d95c9b179a5e|colorizedmanga-v1:1.0.0-beta.1:fa26df19a047a5253cdaee76cd6aeba701a4e2cebbc601776654b7b379a0029c|alpha-movies:0.2.0-beta.4:fa442fd94cb07e66d054d9ffa79dd7e569ba144e0db10ae8ab3b54fe2206f329|moviedb-wiki-v1:0.1.0-beta.15:78b3b4afdd3b372227ee6a4f2de3336b25a8f389593353aee8e6f315f05f0cbb|qa-fallback-anipm-v1:1.0.0-beta.1:fc2408262bfefe4daa17115068135f5d6278c0e4ed7ca53f8ac9d022b91e4d24|cimacub-v1:1.2.0:3ddee1d22400b00963d5085b92efd648f36e64128c8af0a9dffbea55b995de86|anime4up-site-v1:1.0.0-beta.10:3a28b4175a7030105490930820720fde63f9a49fffe1013cbc51d33c74668a2c|sololatino-v1:0.1.0-beta.6:8173cadef04d35710009ec663f449b290cc4645fd0063941d85a3c93f1c45893|dw-live-v1:0.1.0-beta.4:20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405|tvapp-live-v1:0.1.0-beta.11:9881b840268a79e6a10070db758132dff76f3cf760b84933b217b9317b962c13|public-sports-live-v1:0.1.0-beta.5:41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094|movy-v1:0.1.0-beta.1:e66f270a9b305f8102e5ed75b37f8f03a341bfde0bb27ecd1c544ecad9ba796d|public-tv-live-v1:0.1.0-beta.5:34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
+  "artworkModules": [
+    {
+      "id": "flux-featured",
+      "name": "Flux Featured Artwork",
+      "version": "1.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/artwork/flux-featured.json",
+      "sha256": "7469dc63c86e69cf9c43c16de36a5177b3cd811c63b73423928e8c9a671c5d59"
+    }
+  ],
+  "subtitleProviders": [
+    {
+      "providerID": "synthetiq-subtitles",
+      "version": 1,
+      "type": "native",
+      "endpoint": "https://one.synthetiq.uk/player/subtitles/v1",
+      "config": {
+        "minAppVersion": "9.0.74"
+      },
+      "signature": "y7W9mtaIGF5jp5D3uKh1tgGwVbsP5J+YH1vwb7pdf7ZjQx7v7aLsuHsrDeqgYSUaVoPdNrK3ZH9gTt43a2Ho3Q=="
+    }
+  ],
+  "metadataProviders": [
+    {
+      "providerID": "synthetiq-anime-broadcast-calendar",
+      "version": 1,
+      "type": "native",
+      "kind": "calendar",
+      "endpoint": "https://one.synthetiq.uk/player/metadata/v1/calendar",
+      "config": {},
+      "signature": "Dg0B4IE6zOMy7DeafTwOQYz6J6Fobi6fWZHqG4KxGtXGaQwu5sGq584dLU9erBrLmUf8yNLXJGRyuKvvSnKGOA=="
+    }
+  ],
+  "defaultModules": {
+    "image": "weebcentral-v2"
+  },
+  "defaultModulesSignature": "6AucO4Wx67upH2VnG0r0JDYoP1HJ7BAi8mRpeTT/7qmFBsdJFtpLYHabuxMk8b2ohcHYXgon4XXj49NEq0HoiA=="
+}

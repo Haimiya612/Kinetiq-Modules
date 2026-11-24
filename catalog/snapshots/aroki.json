@@ -1,0 +1,281 @@
+{
+  "connectors": [
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "anikoto",
+      "id": "anikoto",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/anikoto/releases/4291e995260d78531c4f2546242cfd4fa74e6a2abdd92ae11e013be4d1e26279/connector.json",
+        "sha256": "4291e995260d78531c4f2546242cfd4fa74e6a2abdd92ae11e013be4d1e26279",
+        "signature": "NwjVI7wtLnnZLqrotL2CNi4MtM2GnCUc1SeBwk9hgT2+edvsTgF6l4DBRQOf12OjsCrqQJetT3EX7a2UvjWfCA=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "AniKoto",
+      "releaseNotes": "0.3.13: follows the source's move to anikototv.bz. Adds the new address to the allowed hosts and accepts saved title links from either address. Routes, title matching and audio handling are unchanged from 0.3.12. Measured on 14 Nov 2026 at 36 of 47 available titles (middle episode); spoken language and device playback were not verified.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.3.13"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "anikage",
+      "id": "anikage",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/anikage/releases/11efcc77ff1e85383b55d776f9aaf9580554ba3c7b96d8fbd3c7eea4fe6406cd/connector.json",
+        "sha256": "11efcc77ff1e85383b55d776f9aaf9580554ba3c7b96d8fbd3c7eea4fe6406cd",
+        "signature": "lU/MEHrr5BVHQWuw9fLyoTdwVVEdr/XjrSM75YMgbalvuDyc07P4b+6TIZ0S7jnQLyRD5L7qMI2eUqkHDDslCA=="
+      },
+      "minimumAppVersion": "0.1.0",
+      "name": "AniKage (BETA)",
+      "releaseNotes": "Handles both opaque source tokens and absolute HTTPS source URLs from the source-owned Anikage response using existing bounded URL transforms. Preserves the existing minimum app version, Koto provider, Sub/Dub mapping, subtitles, headers, and host allowlist. Pending live confirmation; no broad reliability claim.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.3.6"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "animegg",
+      "id": "animegg",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/animegg/connector.json",
+        "sha256": "fba5860444a3e3bf42f9712e515634a228a0975d1df9433421bcff9a578a6dee",
+        "signature": "0Xs0UAb5U3c392VSgbF526Vjcsg45EBwJVV5YRJh6DbzRrWV4lAq+iUR08/a5bHMHPBsl/gdzbwHuXPrxM5oAA=="
+      },
+      "minimumAppVersion": "0.1.0",
+      "name": "AnimeGG",
+      "releaseNotes": "Declares honest per-episode Sub and Dub availability so unavailable audio is disabled before playback.",
+      "releaseTrack": "stable",
+      "status": "active",
+      "version": "1.1.1"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "update-flow-test",
+      "id": "update-flow-test",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/update-flow-test/connector.json",
+        "sha256": "d5147401029b3bbd1bcdc5e7b50c3cc074ea66952eeaf5eca3f565fffbc1a5d6",
+        "signature": "hJcQnoYyBFGJTFIwbyxLcZPFZo74cYjnXIYCXJaq0JqTyMHW+QA6A+thgAzltQtAK3vLG3/kuSQR3pgRcEQ/Ag=="
+      },
+      "minimumAppVersion": "0.1.0",
+      "name": "Update Flow Test",
+      "releaseNotes": "Version 1.0.0 for validating Aroki's signed source-update flow.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "onepace",
+      "id": "onepace",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/onepace/connector.json",
+        "sha256": "97c91e3f297dfdf3c39bed23209da241149eabfe98f12d52b23ea69a01fa4238",
+        "signature": "nMucuSENeFN+nfS4/UtsxMZ7V8NyxrJKkKviItwLIRYmLCqfNsquzs0hIfbtol8ZNrYSw+/tgELbeCLCBJEYDw=="
+      },
+      "minimumAppVersion": "0.1.0",
+      "name": "One Pace",
+      "releaseNotes": "M25: Consolidates One Pace into a single stable title on discovery and search. Increases concurrency to 4 workers and raises timeout to 30s so all 485+ episodes across all arcs load smoothly.",
+      "releaseTrack": "stable",
+      "status": "active",
+      "version": "2.2.1"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "synthetiq-one",
+      "id": "synthetiq-one",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/synthetiq-one/releases/1541c90971a4923959d6fa052fa17d68e6f9dcbcc0ef7a0f4b5606ef5d251a5f/connector.json",
+        "sha256": "1541c90971a4923959d6fa052fa17d68e6f9dcbcc0ef7a0f4b5606ef5d251a5f",
+        "signature": "U4bn8y2CCE5a17smlwwDFenfxj/x+FC3Oyv10wN0O5WOb1QrYFlZUYiFlo4GiDGRLpMcSv0hWlzRK1w1oAZyBQ=="
+      },
+      "minimumAppVersion": "0.1.0",
+      "name": "Synthetiq One",
+      "releaseNotes": "Retired from new installation because current playback is unreliable. Existing saved data and historical connector releases are retained. Choose another active source; this retirement does not delete downloads or library entries.",
+      "releaseTrack": "beta",
+      "status": "retired",
+      "version": "1.2.12"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "synthetiq-anime-testing",
+      "id": "synthetiq-anime-testing",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/synthetiq-anime-testing/releases/a8f250f5fde24744d451ca8d93e1bcf920b8756935e48212e61bf545db50c6eb/connector.json",
+        "sha256": "a8f250f5fde24744d451ca8d93e1bcf920b8756935e48212e61bf545db50c6eb",
+        "signature": "tRx0NvdE45wuKtLhzKN5rstPhAj9Uhf0NjYFBFSN4Q0tV3jARsvy+n+ZtwawbdeKAdSGGv0jX4DJzIkRSJYTAw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "Synthetiq Anime",
+      "releaseNotes": "0.1.4 adds genres, year and status to Home, Browse and search cards so Find a niche can filter this source. Title identity, episode, Sub/Dub and playback routes are unchanged from 0.1.3. Measured on 15 Nov 2026 on a Mac test run: 49 of 50 sampled titles reached playable video. The Niche screen and spoken language were not checked on a device. Requires Aroki 2.1.36 or newer.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.4"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "synthetiq-anime-direct",
+      "id": "synthetiq-anime-direct",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/synthetiq-anime-direct/releases/71db638ec3b050502c2c7728d33fc17c98319e530a728ff41c2f77c3e4bb1981/connector.json",
+        "sha256": "71db638ec3b050502c2c7728d33fc17c98319e530a728ff41c2f77c3e4bb1981",
+        "signature": "oeFnLeiwo4IE9leIDSopMeyHhxcdMuPAHGUewqulsMax3880SzHIWcGEJvxHet41RiG+66Yyb2iW6DoxDH8TBA=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "Synthetiq Flux",
+      "releaseNotes": "0.1.6 adds genres, year and status to Home, Browse and search cards so Find a niche can filter this source. Title identity, episode, Sub/Dub and playback routes are unchanged from 0.1.5. Measured on 15 Nov 2026 on a Mac test run: 49 of 50 sampled titles reached playable video. The Niche screen and spoken language were not checked on a device. Requires Aroki 2.1.36 or newer.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.6"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "aniworld-expansion",
+      "id": "aniworld-expansion",
+      "language": "mul",
+      "manifest": {
+        "path": "connectors/aniworld-expansion/releases/29452d11051e21263d4cf344b8020099aecb000976120ce730f31326fe5c0e66/connector.json",
+        "sha256": "29452d11051e21263d4cf344b8020099aecb000976120ce730f31326fe5c0e66",
+        "signature": "iHBrd7RIiZONnmoQmHLMN9YZztBMXWAyBy0Tvy6m9omcq94m6dO/9ybMPm4f1CvLEEWAvrHAVDCPNPO3xUxMCw=="
+      },
+      "minimumAppVersion": "2.0.36",
+      "name": "AniWorld",
+      "releaseNotes": "Owner-approved public availability for Aroki 2.0.36+. Home/Browse discovery and native playback resolver are unchanged. Sub-only: German-subtitle mirror first, English-subtitle fallback; German Dub is not included. Visible captions, spoken language and offline remain unverified.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.3.2"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "anime-sama-expansion",
+      "id": "anime-sama-expansion",
+      "language": "fr",
+      "manifest": {
+        "path": "connectors/anime-sama-expansion/releases/3f4fd2b5b53454716f14438e60f47773189917bf048b5b66ea176032d6bd164b/connector.json",
+        "sha256": "3f4fd2b5b53454716f14438e60f47773189917bf048b5b66ea176032d6bd164b",
+        "signature": "zffOz5qtJ3l2WI1xu8F5+wf8iw1WHIk7TAugBQ9iWWjuma+tTsoWuBtEfQkLJoLNvRhz1aXeh6xvK2Lkc1qNCw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "Anime-Sama",
+      "releaseNotes": "0.3.3-r2 preserves the 2.1.36+ legacy panel-comment opt-in and all identity/stream mappings; repairs Catalogue discovery to use the current source-owned as-carte cards and title/link fields already used by Search.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.3.3"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "anipm",
+      "id": "anipm",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/anipm/releases/49ee962133d6963439c75a896a49c28b6acad1a4c4aaa0ecec332b8a5c88245d/connector.json",
+        "sha256": "49ee962133d6963439c75a896a49c28b6acad1a4c4aaa0ecec332b8a5c88245d",
+        "signature": "ICv1CbB8zFN45JHyCaZBHIJsqDten3EyRYRAcb8M1fWYK9AckzdRkXlCSoTikrH70qg7P14nOnsAMbda9pWqCw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "AniPM (BETA)",
+      "releaseNotes": "Playback proceeds only when AniPM declares the requested Sub or Dub availability and matching effective language for the episode. Missing or conflicting declarations fail before session creation. Existing saved titles, episode mapping, request headers, supplied captions, and session-expiry handling are preserved. Requires Aroki 2.1.36 or newer.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.3"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "kickassanime",
+      "id": "kickassanime",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/kickassanime/releases/450ae9145c424a7f2a5318e8668e2216dfaeb65cc41e177dad290e96371f626d/connector.json",
+        "sha256": "450ae9145c424a7f2a5318e8668e2216dfaeb65cc41e177dad290e96371f626d",
+        "signature": "1QKi+kkYhIHx9FC78vJNPobTEvWZ6X6hpenyblmbj7FORI46lU7CGXz/JwVPhbZi7NZ2XTRl32Os6x3Ngk8dAw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "KickAssAnime",
+      "releaseNotes": "Beta conversion of the KickAssAnime Player source (kaa.lt JSON catalogue, krussdomi player). Sub only: the site's HLS master carries several audio tracks (Japanese default plus English and others) and Aroki 2.1.36 cannot choose a track per request, so Dub is not offered. Measured: search, details, episodes and stream resolution against the live site and a corpus run. Not verified: playback on a device, which audio track the device plays, and subtitle timing.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.1"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "animeworld-it",
+      "id": "animeworld-it",
+      "language": "it",
+      "manifest": {
+        "path": "connectors/animeworld-it/releases/c4835a61ecb9653013aa932ed20c24ba7f5c2a4a64636bdbaf21ad48a9fe9b15/connector.json",
+        "sha256": "c4835a61ecb9653013aa932ed20c24ba7f5c2a4a64636bdbaf21ad48a9fe9b15",
+        "signature": "BCUHaO/JJYPcCXomNAIIiXswkRcHNPIoM+zDd+isEiD0/4hXYLZdDkXIWZLaZCkETWb6eP6iAqas4zCbqFMAAw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "AnimeWorld (SUB ITA)",
+      "releaseNotes": "0.1.0 beta: AnimeWorld entries the site lists as SUB ITA (Japanese audio with Italian subtitles) only. ITA dub entries are a separate site entry and are excluded from search; an ITA page lists no episodes, and Dub requests return no stream. Measured 21 Nov 2026 with the 2.1.36 engine tool: in a 50-title sample, all 37 titles the source has reached a valid video file; 13 were not found under their sample names. The site uses Italian, English or romaji titles, so some names are not found. Device playback, subtitle presence and spoken language were not verified.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "toontales",
+      "id": "toontales",
+      "language": "en",
+      "manifest": {
+        "path": "connectors/toontales/releases/7c8c0121abfbe5104aa4845cf677b2c365a7c58617e42a394aac3c8563a9eea3/connector.json",
+        "sha256": "7c8c0121abfbe5104aa4845cf677b2c365a7c58617e42a394aac3c8563a9eea3",
+        "signature": "vnePjaTRyzsPrmPknC7jRmUi/47ki5TIVjFvZ+LWcYL85IGAnoRwhfttg617Xdp2hmru8o0tYyGs0oCqPImvBw=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "ToonTales (Classic Cartoons)",
+      "releaseNotes": "0.1.0 beta: classic theatrical cartoon shorts from ToonTales (Looney Tunes, Merrie Melodies, Tom and Jerry, Disney, Pink Panther and others). Each short is one title with one video: a single MP4 with its original English soundtrack. There is no Dub option and no subtitles. Measured 22 Nov 2026 with the 2.1.36 engine tool on 30 well-known shorts: all 23 that search found passed the search, details and MP4 file check; 7 were not found by search (mostly MGM Tex Avery, Fleischer and UPA titles). Search shows only the site's first page of results and uses the site's own short titles. Device playback, picture quality and sound were not verified.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "contentRating": "unknown",
+      "contentType": "video",
+      "familyID": "animeunity-it",
+      "id": "animeunity-it",
+      "language": "it",
+      "manifest": {
+        "path": "connectors/animeunity-it/releases/b3357da92a9e36964e0c2a0490ec933c9250e2f3919f35dee6a5e9d82acb5072/connector.json",
+        "sha256": "b3357da92a9e36964e0c2a0490ec933c9250e2f3919f35dee6a5e9d82acb5072",
+        "signature": "hloc0Opo1f5NR01LH8UsCiry9PkCHfRuUB8h21F988BfwKQM8AUfb9oLySOhQviuDsq0hyjrLIkGDGSSENn0CA=="
+      },
+      "minimumAppVersion": "2.1.36",
+      "name": "AnimeUnity (ITA)",
+      "releaseNotes": "0.1.0 beta: AnimeUnity Italian anime catalogue. Sub plays the site's JPN version (Japanese audio, normally with Italian subtitles); Dub plays the site's ITA version (Italian audio). The audio version is picked from the site's own per-episode language list and checked again on the episode page, so a Dub request never returns the Japanese version and a Sub request never returns the Italian dub. If the requested version does not exist for an episode, no stream is offered. Only the JPN version is offered as Sub. Video is HLS from VixCloud. Measured 22 Nov 2026 with the 2.1.36 engine tool: search, details, episode lists, Sub and Dub stream resolution on sample titles, and a 50-title anime corpus run. Search uses the site's own titles and returns the first 30 matches, so some English names are not found. Genres are not shown. Device playback, subtitle presence and spoken language were not verified.",
+      "releaseTrack": "beta",
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "enabled": true,
+  "generatedAt": 1795360897,
+  "name": "AROKI Connectors",
+  "publicKey": "BYKainAr2pxVfWxSSQJHG79Xl/mnkTuIl1ujEmR+1V4=",
+  "repositoryID": "aroki-connectors",
+  "schemaVersion": 1,
+  "signature": "ueKzSpeTNr7cJG6wPWkXk5oyxtZTB/Bcd8iSg13uLHQuC9vyD4+Ns9BF+TfESOy91gNjIC6shP/s6OK+i9v4Cg=="
+}
