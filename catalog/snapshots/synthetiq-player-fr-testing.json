@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": "synthetiq-testing-modules-1234",
+  "name": "Testing Modules 1 2 3 4",
+  "enabled": true,
+  "publishedAtMs": 1789668169868,
+  "bundle": {
+    "version": 4,
+    "minAppVersion": "8.0.0",
+    "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/bundle-4/Testing-Modules-1-2-3-4-Bundle-4.zip",
+    "packagePath": "/kas021/Testing-Modules-1-2-3-4/releases/download/bundle-4/Testing-Modules-1-2-3-4-Bundle-4.zip",
+    "sha256": "8465c30e4099dda5293ed09f2a43e4d8d49eb6faa77be670e391a8bf0a151c7c",
+    "signature": ""
+  },
+  "modules": [
+    {
+      "moduleId": "franime-v1",
+      "moduleFamilyId": "franime_v1",
+      "moduleIdentity": "SP-VID-9002-FRANIME-CODEX-TEST",
+      "moduleIdentityNumber": 9002,
+      "contentType": "video",
+      "version": "1.0.0-beta.5",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-v1-v1.0.0-beta.5/FRAnimeCodex-1.0.0-beta.5.zip",
+      "packagePath": "/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-v1-v1.0.0-beta.5/FRAnimeCodex-1.0.0-beta.5.zip",
+      "sha256": "8e9dbcdb653e26a8403c040355bc4a8b473d8319d172245b40c739e053d93913",
+      "signature": "",
+      "publishedAtMs": 1789668169868,
+      "changelog": [
+        "Fix Flutter response-shape handling for parsed JSON and string-valued text/body responses",
+        "Resolve temporary media redirects before returning streams and keep the required headers paired",
+        "Exclude FRAnime seasons explicitly labeled Live Action so One Piece starts at the real anime S1E1",
+        "Package verified with the workshop kit checker, live source checks and flat ZIP inspection"
+      ]
+    },
+    {
+      "moduleId": "franime-hermes-v1",
+      "moduleFamilyId": "franime_hermes_v1",
+      "moduleIdentity": "SP-VID-9003-FRANIME-HERMES-TEST",
+      "moduleIdentityNumber": 9003,
+      "contentType": "video",
+      "version": "1.0.0-beta.3",
+      "minAppVersion": "8.0.0",
+      "packageUrl": "https://github.com/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-hermes-v1-v1.0.0-beta.3/FRAnimeHermes-1.0.0-beta.3.zip",
+      "packagePath": "/kas021/Testing-Modules-1-2-3-4/releases/download/module-franime-hermes-v1-v1.0.0-beta.3/FRAnimeHermes-1.0.0-beta.3.zip",
+      "sha256": "22de7e30f1b4a6709bf55445b031a0cf57b90dd64373f333c81e6715ea185b5d",
+      "signature": "",
+      "publishedAtMs": 1789668169868,
+      "changelog": [
+        "Fix Flutter response-shape handling for parsed JSON and string-valued text/body responses",
+        "Resolve Sibnet and other temporary media redirects before returning streams",
+        "Exclude FRAnime seasons explicitly labeled Live Action so One Piece starts at the real anime S1E1",
+        "Package verified with the workshop kit checker, live source checks and flat ZIP inspection"
+      ]
+    }
+  ],
+  "signature": ""
+}

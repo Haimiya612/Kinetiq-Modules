@@ -1,0 +1,10 @@
+{
+  "sources": [
+    {
+      "id": "synthetiq-one",
+      "name": "Synthetiq ONE",
+      "description": "Anime catalogue and stream resolver.",
+      "url": "https://raw.githubusercontent.com/kas021/AnyGo-Sources/main/sources/synthetiq-one.json"
+    }
+  ]
+}
