@@ -738,10 +738,6 @@
       "reason": "Highest eligible version in latest channel"
     },
     {
-      "moduleId": "hdfilmcehennemi-v1",
-      "reason": "Owner-approved removal"
-    },
-    {
       "moduleId": "justanime-v1",
       "selected": "synthetiq-player:justanime-v1",
       "reason": "Highest eligible version in latest channel"
@@ -802,10 +798,6 @@
       "reason": "Highest eligible version in latest channel"
     },
     {
-      "moduleId": "reanime-v1",
-      "reason": "Owner-approved removal"
-    },
-    {
       "moduleId": "shahiid-v1",
       "selected": "synthetiq-player:shahiid-v1",
       "reason": "Highest eligible version in latest channel"
@@ -839,10 +831,6 @@
       "moduleId": "toontales-v1",
       "selected": "synthetiq-player:toontales-v1",
       "reason": "Highest eligible version in latest channel"
-    },
-    {
-      "moduleId": "trfilm-v1",
-      "reason": "Owner-approved removal"
     },
     {
       "moduleId": "tvapp-live-v1",
