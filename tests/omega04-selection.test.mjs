@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {aggregate,compareVersions} from '../scripts/sync-unified.mjs';
+const repos=Array.from({length:8},(_,i)=>({key:`r${i}`,repository:i===0?'owner/local':i<4?`publisher/r${i}`:`other/r${i}`,scope:i===0?'local':'remote',priority:i,kind:'videoZip',format:'zip',indexPath:'repository.json',installPolicy:i===2||i===4?'unique-only':'production'}));
+const config={repositories:repos};
+const module=(id,version,sha='a',identity=id)=>({moduleId:id,moduleFamilyId:id,moduleIdentity:identity,moduleIdentityNumber:1,contentType:'video',version,sha256:sha.repeat(64),packageUrl:`https://example.org/${id}-${version}.zip`});
+const input=(map={})=>Object.fromEntries(repos.map(r=>[r.key,{modules:map[r.key]??[]}]));
+const select=(map,options={})=>aggregate(config,input(map),options);
+test('numeric beta ordering and release precedence',()=>{assert.equal(compareVersions('1.0.0-beta.11','1.0.0-beta.7'),1);assert.equal(compareVersions('1.1.0-beta.1','1.0.0'),1);assert.equal(compareVersions('1.1.0','1.1.0-beta.1'),1)});
+test('newest same-publisher testing beta wins over older stable',()=>{const result=select({r1:[module('a','1.0.0')],r2:[module('a','1.1.0-beta.11')]});assert.equal(result.repository.modules[0].version,'1.1.0-beta.11');assert.equal(result.catalogue.entries.length,2)});
+test('stable preference is optional',()=>{const result=select({r1:[module('a','1.0.0')],r2:[module('a','1.1.0-beta.11')]},{policy:{releaseSelection:'stable'}});assert.equal(result.repository.modules[0].version,'1.0.0')});
+test('unrelated testing publisher cannot supersede production',()=>{assert.equal(select({r1:[module('a','1.0.0')],r4:[module('a','9.0.0')]}).repository.modules[0].version,'1.0.0')});
+test('different identities cannot supersede prior version',()=>{const previous=module('a','1.0.0');assert.equal(select({r1:[module('a','9.0.0','a','other')]},{previous:[previous]}).repository.modules[0].version,'1.0.0')});
+test('removed modules never reappear in catalogue or retained index',()=>{const removed=module('reanime-v1','1.0.0');const out=select({r0:[removed],r1:[removed]},{previous:[removed],policy:{removeModuleIds:['reanime-v1']},stale:['r1']});assert.equal(out.repository.modules.length,0);assert.equal(out.catalogue.entries.length,0)});
+test('checksum conflict blocks new ambiguous version',()=>{const out=select({r1:[module('a','2.0.0','a')],r2:[module('a','2.0.0','b')]});assert.equal(out.repository.modules.length,0);assert.equal(out.diagnostics.checksumConflicts.length,1)});
+test('checksum conflict preserves identical prior release',()=>{const previous=module('a','2.0.0','b');const out=select({r1:[module('a','2.0.0','a')],r2:[previous]},{previous:[previous]});assert.equal(out.repository.modules[0].sha256,previous.sha256)});
+test('older upstream release retains last known version',()=>{const previous=module('a','2.0.0');const out=select({r1:[module('a','1.0.0')]},{previous:[previous],stale:['r1']});assert.equal(out.repository.modules[0].version,'2.0.0');assert.equal(out.catalogue.entries.some(e=>e.format==='retained-previous-index'),true)});
