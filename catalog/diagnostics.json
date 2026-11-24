@@ -345,7 +345,7 @@
     },
     {
       "moduleId": "megakino-v1",
-      "selected": "synthetiq-player-testing:megakino-v1",
+      "selected": "synthetiq-player:megakino-v1",
       "alternatives": [
         {
           "key": "synthetiq-player:megakino-v1",
@@ -561,7 +561,7 @@
     },
     {
       "moduleId": "yflix-v1",
-      "selected": "synthetiq-player-testing:yflix-v1",
+      "selected": "synthetiq-player:yflix-v1",
       "alternatives": [
         {
           "key": "synthetiq-player:yflix-v1",
@@ -640,197 +640,195 @@
     {
       "moduleId": "alpha-movies",
       "selected": "synthetiq-player:alpha-movies",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "an1me-v1",
       "selected": "synthetiq-player:an1me-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "anikage-v1",
       "selected": "synthetiq-player:anikage-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "anikoto-v4",
       "selected": "synthetiq-player:anikoto-v4",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "anime-sama-v1",
       "selected": "synthetiq-player:anime-sama-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "anime4up-site-v1",
       "selected": "synthetiq-player:anime4up-site-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "animeav1-v1",
       "selected": "synthetiq-player:animeav1-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "animeheaven-v2-1",
       "selected": "synthetiq-player:animeheaven-v2-1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "animeunity-v1",
       "selected": "synthetiq-player:animeunity-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "animeworld-v1",
       "selected": "synthetiq-player:animeworld-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "anipm-v1",
       "selected": "synthetiq-player:anipm-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "aniworld-v1",
       "selected": "synthetiq-player:aniworld-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "cimacub-v1",
       "selected": "synthetiq-player:cimacub-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "documentaryarea-v1",
       "selected": "synthetiq-player:documentaryarea-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "drama-direct-v1",
       "selected": "synthetiq-player:drama-direct-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "dramacool-v1",
       "selected": "synthetiq-player:dramacool-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "dramafun-v3",
       "selected": "synthetiq-player:dramafun-v3",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "dw-live-v1",
       "selected": "synthetiq-player-testing:dw-live-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "franime-hermes-v1",
       "selected": "synthetiq-player-fr-testing:franime-hermes-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "franime-v1",
       "selected": "synthetiq-player-fr-testing:franime-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "hdfilmcehennemi-v1",
-      "selected": "kinetiq:hdfilmcehennemi-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Owner-approved removal"
     },
     {
       "moduleId": "justanime-v1",
       "selected": "synthetiq-player:justanime-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "kartoons-v1",
       "selected": "synthetiq-player:kartoons-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "kickassanime-v3",
       "selected": "synthetiq-player:kickassanime-v3",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "megakino-v1",
-      "selected": "synthetiq-player-testing:megakino-v1",
-      "reason": "Highest eligible version in selected channel"
+      "selected": "synthetiq-player:megakino-v1",
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "miruro-v3",
       "selected": "synthetiq-player-testing:miruro-v3",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "moviedb-wiki-v1",
       "selected": "synthetiq-player:moviedb-wiki-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "movy-v1",
       "selected": "synthetiq-player:movy-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "mugiwara-v1",
       "selected": "synthetiq-player:mugiwara-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "onepace-v3",
       "selected": "synthetiq-player:onepace-v3",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "public-sports-live-v1",
       "selected": "synthetiq-player-testing:public-sports-live-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "public-tv-live-v1",
       "selected": "synthetiq-player-testing:public-tv-live-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "qa-fallback-anipm-v1",
       "selected": "synthetiq-player-testing:qa-fallback-anipm-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "reanime-v1",
-      "selected": "kinetiq:reanime-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Owner-approved removal"
     },
     {
       "moduleId": "shahiid-v1",
       "selected": "synthetiq-player:shahiid-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "sololatino-v1",
       "selected": "synthetiq-player-testing:sololatino-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "streamingunity-v1",
       "selected": "synthetiq-player:streamingunity-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "synthetiq-anime-direct",
       "selected": "synthetiq-player:synthetiq-anime-direct",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "synthetiq-anime-v1",
       "selected": "synthetiq-player-testing:synthetiq-anime-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "synthetiq-one-v1",
@@ -840,27 +838,49 @@
     {
       "moduleId": "toontales-v1",
       "selected": "synthetiq-player:toontales-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "trfilm-v1",
-      "selected": "kinetiq:trfilm-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Owner-approved removal"
     },
     {
       "moduleId": "tvapp-live-v1",
       "selected": "synthetiq-player-testing:tvapp-live-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "xstream-v1",
       "selected": "synthetiq-player:xstream-v1",
-      "reason": "Highest eligible version in selected channel"
+      "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "yflix-v1",
-      "selected": "synthetiq-player-testing:yflix-v1",
-      "reason": "Highest eligible version in selected channel"
+      "selected": "synthetiq-player:yflix-v1",
+      "reason": "Highest eligible version in latest channel"
+    }
+  ],
+  "checksumConflicts": [
+    {
+      "moduleId": "anikoto-v4",
+      "entries": [
+        "synthetiq-player-testing:anikoto-v4",
+        "synthetiq-player:anikoto-v4"
+      ]
+    },
+    {
+      "moduleId": "anipm-v1",
+      "entries": [
+        "synthetiq-player-testing:anipm-v1",
+        "synthetiq-player:anipm-v1"
+      ]
+    },
+    {
+      "moduleId": "synthetiq-anime-direct",
+      "entries": [
+        "synthetiq-player-testing:synthetiq-anime-direct",
+        "synthetiq-player:synthetiq-anime-direct"
+      ]
     }
   ],
   "staleUpstreams": []

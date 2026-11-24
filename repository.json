@@ -477,24 +477,6 @@
       ]
     },
     {
-      "moduleId": "hdfilmcehennemi-v1",
-      "moduleFamilyId": "hdfilmcehennemi-v1",
-      "moduleIdentity": "HDFilmCehennemi Library",
-      "moduleIdentityNumber": 1,
-      "contentType": "video",
-      "version": "1.0.0",
-      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/hdfilmcehennemi-v1.0.0.zip",
-      "sha256": "d7c0dcd56b6f546e78d129b4ca3bd0b1bfe34cb306d524eeaed4dd26e4f8a0a9",
-      "presentation": {
-        "category": "Movies & Series",
-        "purpose": "HD Film Cehennemi source adapter",
-        "language": "Turkish"
-      },
-      "changelog": [
-        "1.0.0: Imported existing V3 module, completed required Kinetiq manifest identity fields. Live source playback is unverified."
-      ]
-    },
-    {
       "moduleId": "justanime-v1",
       "moduleFamilyId": "justanime_v1",
       "moduleIdentity": "SP-VID-064-JUSTANIME",
@@ -575,9 +557,9 @@
       "moduleIdentity": "SP-VID-062-MEGAKINO",
       "moduleIdentityNumber": 62,
       "contentType": "video",
-      "version": "1.1.5",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MegaKino-1.1.5.zip",
-      "sha256": "6dd028c503a9b95e94293308cb907be6467092a523cd7480696fb54bb1647f24",
+      "version": "1.1.6-beta.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.6-beta.2/MegaKino-1.1.6-beta.2.zip",
+      "sha256": "e34aed6a9b9b212b553644f43f8ce45216d0f9ccef87831c1789c3d12130bbb6",
       "presentation": {
         "category": "Movies",
         "purpose": "German Movies & Series",
@@ -585,8 +567,10 @@
         "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/megakino.png",
         "recommended": false
       },
-      "publishedAtMs": 1791933997415,
+      "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.1.6-beta.2: The source moved again (megakino28). The resolver now follows longer redirect chains and probes the next numbered hosts, so further moves are followed automatically. German dub is still never returned for a Sub request.",
+        "1.1.6-beta.2: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 16/20, up from 0/20. Exact-byte Flutter runtime passed.",
         "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
         "1.1.5: Verified before release — a movie and a series both play with real video segments, on both app lines (8.5.33 and 9.0.71), release gate ALL_PASSED.",
         "1.1.4: Search fixed — the source moved to a new domain and switched to GET-based search; the module now follows the current host safely and uses the new search format, with pagination. Searching for series and movies works again.",
@@ -786,24 +770,6 @@
       ]
     },
     {
-      "moduleId": "reanime-v1",
-      "moduleFamilyId": "reanime-v1",
-      "moduleIdentity": "ReAnime Library",
-      "moduleIdentityNumber": 1,
-      "contentType": "video",
-      "version": "1.0.1",
-      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/reanime-v1.0.1.zip",
-      "sha256": "bf4423b2eb05d4e993256d3a84decb3695d26ba5807107b6cd59092b41eaa5bd",
-      "presentation": {
-        "category": "Anime",
-        "purpose": "Experimental ReAnime source adapter",
-        "language": "English"
-      },
-      "changelog": [
-        "1.0.1: Expanded FlixCloud SvelteKit data region decoding, robust response-body handling, and redacted media-probe diagnostics. Not yet confirmed with live iPhone playback."
-      ]
-    },
-    {
       "moduleId": "shahiid-v1",
       "moduleFamilyId": "shahiid_v1",
       "moduleIdentity": "SP-VID-055-SHAHIID",
@@ -986,24 +952,6 @@
       ]
     },
     {
-      "moduleId": "trfilm-v1",
-      "moduleFamilyId": "trfilm-v1",
-      "moduleIdentity": "TRfilm.Net Library",
-      "moduleIdentityNumber": 1,
-      "contentType": "video",
-      "version": "1.0.0-beta.1",
-      "packageUrl": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/TRfilm.Net-v1.0.0-beta.1.zip",
-      "sha256": "35b20afed9cfc9624c92ab6f2689195bbc31b7d43226864f029367dbfcce0b97",
-      "presentation": {
-        "category": "Movies & Series",
-        "purpose": "TRfilm.Net catalogue, posters, search and discovery; full-film playback unverified",
-        "language": "Turkish"
-      },
-      "changelog": [
-        "1.0.0-beta.1: Search, movie details, poster shelves and site genres. Sampled films exposed trailers rather than verified full-film streams."
-      ]
-    },
-    {
       "moduleId": "tvapp-live-v1",
       "moduleFamilyId": "tvapp_live_v1",
       "moduleIdentity": "SP-VID-081-TVAPP-LIVE",
@@ -1056,9 +1004,9 @@
       "moduleIdentity": "SP-VID-072-YFLIX",
       "moduleIdentityNumber": 72,
       "contentType": "video",
-      "version": "1.1.2",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/YFlix-1.1.2.zip",
-      "sha256": "6e772e78b4124f9443f89577fab90b524bf0d63ebf7af089441bed81ea05ca6f",
+      "version": "1.1.3-beta.2",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.3-beta.2/YFlix-1.1.3-beta.2.zip",
+      "sha256": "9054a75b9f2700f567468c8e50091638a048810d788b1df5d3444fa6cd02b683",
       "presentation": {
         "category": "Movies & TV",
         "purpose": "Movies & TV Shows (HD Streams)",
@@ -1066,14 +1014,14 @@
         "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/yflix.png",
         "recommended": true
       },
-      "publishedAtMs": 1790937523855,
+      "publishedAtMs": 1784986932868,
       "changelog": [
+        "1.1.3-beta.2: yflix.ws is legally blocked in some regions (HTTP 451 in the UK). Search, details, episodes and Home now fall back to a TMDB catalogue, and playback resolves by IMDb id through a working HLS provider. The dead Videasy route is disabled.",
+        "1.1.3-beta.2: 20-title test (12 films + first episode of 8 series; playlist and first media segment must load): 20/20, up from 0/20. Exact-byte Flutter runtime passed for a film and a series. Links saved from the old site may not resolve where the site is blocked.",
         "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
         "1.1.1: Owner-approved public release — restored playback: the backup provider dropped TMDB ids, so lookups now use an exact title+year identity match (never substitutes a different film); subtitle tracks are forwarded as absolute URLs, deduped per language, all languages kept.",
         "1.1.1: Resolvers race so the first working source wins — a dead provider no longer delays playback (verified ~3.7s resolves with full subtitle sets).",
-        "1.1.0: Owner-approved beta.1 source unchanged; fresh playback links, episode ID fixes and provider-specific server/caption metadata.",
-        "1.1.0: Quality choices stay within the initial provider; other providers are available through Servers. Availability varies by title.",
-        "1.0.0: Official yFlix (yflix.ws) movies and TV series with adaptive 1080p/4K/720p HLS playback"
+        "1.1.0: Owner-approved beta.1 source unchanged; fresh playback links, episode ID fixes and provider-specific server/caption metadata."
       ]
     }
   ]

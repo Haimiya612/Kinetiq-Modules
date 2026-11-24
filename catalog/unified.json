@@ -3,15 +3,15 @@
   "repositoryId": "kinetiq-custom-modules",
   "name": "Kinetiq Unified Catalogue",
   "sourceCount": 8,
-  "entryCount": 158,
-  "nativeZipCandidates": 45,
+  "entryCount": 155,
+  "nativeZipCandidates": 42,
   "warning": "Candidates are not certified for playback. Retained references may be stale.",
   "sources": [
     {
       "key": "kinetiq",
       "repository": "Haimiya612/Kinetiq-Modules",
       "format": "kinetiq-video-zip",
-      "entries": 3,
+      "entries": 0,
       "stale": false
     },
     {
@@ -65,69 +65,6 @@
     }
   ],
   "entries": [
-    {
-      "key": "kinetiq:reanime-v1",
-      "id": "reanime-v1",
-      "name": "ReAnime Library",
-      "version": "1.0.1",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "kinetiq-video-zip",
-      "upstream": "Haimiya612/Kinetiq-Modules",
-      "upstreamIndex": "catalog/local-modules.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": null,
-      "upstreamSHA256": "bf4423b2eb05d4e993256d3a84decb3695d26ba5807107b6cd59092b41eaa5bd",
-      "packageURL": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/reanime-v1.0.1.zip",
-      "releaseNotes": "1.0.1: Expanded FlixCloud SvelteKit data region decoding, robust response-body handling, and redacted media-probe diagnostics. Not yet confirmed with live iPhone playback.",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Catalogue metadata is not runtime or playback certification."
-    },
-    {
-      "key": "kinetiq:hdfilmcehennemi-v1",
-      "id": "hdfilmcehennemi-v1",
-      "name": "HDFilmCehennemi Library",
-      "version": "1.0.0",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "kinetiq-video-zip",
-      "upstream": "Haimiya612/Kinetiq-Modules",
-      "upstreamIndex": "catalog/local-modules.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": null,
-      "upstreamSHA256": "d7c0dcd56b6f546e78d129b4ca3bd0b1bfe34cb306d524eeaed4dd26e4f8a0a9",
-      "packageURL": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/hdfilmcehennemi-v1.0.0.zip",
-      "releaseNotes": "1.0.0: Imported existing V3 module, completed required Kinetiq manifest identity fields. Live source playback is unverified.",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Catalogue metadata is not runtime or playback certification."
-    },
-    {
-      "key": "kinetiq:trfilm-v1",
-      "id": "trfilm-v1",
-      "name": "TRfilm.Net Library",
-      "version": "1.0.0-beta.1",
-      "contentType": "video",
-      "status": "unspecified",
-      "releaseTrack": null,
-      "format": "kinetiq-video-zip",
-      "upstream": "Haimiya612/Kinetiq-Modules",
-      "upstreamIndex": "catalog/local-modules.json",
-      "manifestURL": null,
-      "standaloneURL": null,
-      "upstreamMinAppVersion": null,
-      "upstreamSHA256": "35b20afed9cfc9624c92ab6f2689195bbc31b7d43226864f029367dbfcce0b97",
-      "packageURL": "https://raw.githubusercontent.com/Haimiya612/Kinetiq-Modules/main/modules/TRfilm.Net-v1.0.0-beta.1.zip",
-      "releaseNotes": "1.0.0-beta.1: Search, movie details, poster shelves and site genres. Sampled films exposed trailers rather than verified full-film streams.",
-      "installability": "candidate-zip",
-      "selectedForKinetiq": true,
-      "limitations": "Catalogue metadata is not runtime or playback certification."
-    },
     {
       "key": "synthetiq-player:synthetiq-anime-v1",
       "id": "synthetiq-anime-v1",
@@ -251,7 +188,7 @@
       "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-yflix-v1-v1.1.3-beta.2/YFlix-1.1.3-beta.2.zip",
       "releaseNotes": "1.1.3-beta.2: yflix.ws is legally blocked in some regions (HTTP 451 in the UK). Search, details, episodes and Home now fall back to a TMDB catalogue, and playback resolves by IMDb id through a working HLS provider. The dead Videasy route is disabled.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
+      "selectedForKinetiq": true,
       "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
@@ -545,7 +482,7 @@
       "packageURL": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-megakino-v1-v1.1.6-beta.2/MegaKino-1.1.6-beta.2.zip",
       "releaseNotes": "1.1.6-beta.2: The source moved again (megakino28). The resolver now follows longer redirect chains and probes the next numbered hosts, so further moves are followed automatically. German dub is still never returned for a Sub request.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": false,
+      "selectedForKinetiq": true,
       "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
@@ -1112,7 +1049,7 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/YFlix-1.1.2.zip",
       "releaseNotes": "1.1.2: Owner-approved public release — titles that ship without artwork (e.g. upcoming 2026 films) no longer show the site's template logo; the real poster is resolved from each title's own page (cached, bounded). Playback code unchanged.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
+      "selectedForKinetiq": false,
       "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
@@ -1406,7 +1343,7 @@
       "packageURL": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/MegaKino-1.1.5.zip",
       "releaseNotes": "1.1.5: Fixed the module not working — the source moved to a new address again and the module kept calling the old one, which broke the source's login handshake. Search came back empty and nothing played. The module now asks the source where it lives and follows its own redirect on start, so the next move is followed automatically.",
       "installability": "candidate-zip",
-      "selectedForKinetiq": true,
+      "selectedForKinetiq": false,
       "limitations": "Catalogue metadata is not runtime or playback certification."
     },
     {
@@ -3384,5 +3321,5 @@
       "limitations": "Previous package reference retained; upstream availability must be reviewed."
     }
   ],
-  "sourceSnapshotSHA256": "a1923648251f3739c78ea76c863da4b7ead7190d204b3a6915744cb52d06a817"
+  "sourceSnapshotSHA256": "b54bed8d0fa3fcae94464facdebbd515bb8a7df7345a8d95b0bc7c215159895a"
 }
