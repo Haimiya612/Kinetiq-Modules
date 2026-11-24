@@ -1,93 +1,21 @@
-import { test } from 'node:test';
+import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
-import { aggregate, sync, asPublicHTTPS, upstreamAssetURL } from '../scripts/sync-unified.mjs';
-
-const base = resolve(new URL('..', import.meta.url).pathname);
-const sha = 'a'.repeat(64);
-function mod(id, version='1.0.0') {
-  return { moduleId:id, moduleFamilyId:`family-${id}`, moduleIdentity:`Test-${id}`,
-    moduleIdentityNumber:1,contentType:'video', version,
-    sha256:sha, packageUrl:`https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/modules/${id}.zip` };
-}
-const upstream = [
-  ['kinetiq', {modules:[mod('mine')] }],
-  ['synthetiq-player', {modules:[mod('shared','1.0.0'),mod('unique-official')]}],
-  ['synthetiq-player-testing', {modules:[mod('shared','9.9.9'),mod('test-unique')]}],
-  ['synthetiq-player-fr-testing', {modules:[mod('franime')]}],
-  ['synthetiq-manga',{modules:[{id:'manga',name:'Manga',contentType:'pageImages',manifest:{path:'modules/manga/manifest.json',sha256:sha}}]}],
-  ['aroki',{connectors:[{id:'shared',name:'Aroki unrelated',manifest:{path:'connectors/shared/connector.json',sha256:sha}}]}],
-  ['aroki-testing',{connectors:[{id:'other',name:'Other',manifest:{path:'connectors/other/connector.json',sha256:sha}}]}],
-  ['anygo',{sources:[{id:'any',name:'Any',url:'https://raw.githubusercontent.com/kas021/AnyGo-Sources/main/sources/any.json'}]}]
-];
-
-test('Eight catalogs federate; only ZIPs go to Kinetiq repository.json, official beats test beta', async () => {
-  const conf=JSON.parse(await readFile(join(base,'catalog/upstreams.json'),'utf8'));
-  const data=Object.fromEntries(upstream);
-  const merged=aggregate(conf,data);
-  assert.equal(merged.catalogue.sourceCount,8);
-  assert.equal(merged.catalogue.entryCount,10);
-  assert.equal(merged.repository.modules.length,5);
-  assert.equal(merged.repository.modules.find(x=>x.moduleId==='shared').version,'1.0.0');
-  assert.equal(merged.catalogue.entries.filter(x=>x.key==='aroki:shared').length,1);
-  assert.equal(merged.catalogue.entries.filter(x=>x.selectedForKinetiq).length,5);
-  assert.equal(merged.diagnostics.duplicateZipIDs.length,1);
-  assert.ok(merged.catalogue.entries.find(x=>x.key==='synthetiq-manga:manga').manifestURL);
-});
-
-test('Missing/unsafe packages remain searchable metadata but never installable', async () => {
-  const conf=JSON.parse(await readFile(join(base,'catalog/upstreams.json'),'utf8'));
-  const data=Object.fromEntries(upstream);
-  data.kinetiq = { modules: [mod('mine')] };
-  data['synthetiq-player']={modules:[{...mod('poison'),sha256:'not-a-sha'},{...mod('http'),packageUrl:'http://192.168.1.1/a.zip'}]};
-  const o=aggregate(conf,data);
-  assert.ok(o.diagnostics.skippedZipEntries.length >= 2);
-  assert.equal(o.repository.modules.some(x=>['poison','http'].includes(x.moduleId)),false);
-  assert.equal(asPublicHTTPS('https://127.0.0.1/x.zip'),null);
-  assert.equal(upstreamAssetURL(conf.repositories[5],'../bad.json'),null);
-});
-
-test('Fail closed: missing upstream cannot overwrite existing repository output', async () => {
-  const dir = await mkdtemp(join(tmpdir(),'kinetiq-unified-test-'));
-  try {
-    await mkdir(join(dir,'catalog'),{recursive:true});
-    await mkdir(join(dir,'fixtures'));
-    await writeFile(join(dir,'catalog/upstreams.json'),await readFile(join(base,'catalog/upstreams.json')));
-    await writeFile(join(dir,'catalog/local-modules.json'),JSON.stringify(upstream[0][1]));
-    await writeFile(join(dir,'repository.json'),'KEEP EXISTING CONTENT\n');
-    for (const [key, data] of upstream) if(key!=='kinetiq' && key!=='anygo') await writeFile(join(dir,'fixtures',`${key}.json`),JSON.stringify(data));
-    await assert.rejects(sync({root:dir,fixtureDir:join(dir,'fixtures')}), /ENOENT/);
-    assert.equal(await readFile(join(dir,'repository.json'),'utf8'),'KEEP EXISTING CONTENT\n');
-    await writeFile(join(dir,'fixtures','anygo.json'),JSON.stringify(upstream[7][1]));
-    const out=await sync({root:dir,fixtureDir:join(dir,'fixtures')});
-    assert.equal(out.entries,10);
-    assert.equal(out.installedCandidates,5);
-    assert.equal(JSON.parse(await readFile(join(dir,'repository.json'))).modules.length,5);
-    const hash=JSON.parse(await readFile(join(dir,'catalog/unified.json'))).sourceSnapshotSHA256;
-    await sync({root:dir,fixtureDir:join(dir,'fixtures')});
-    assert.equal(JSON.parse(await readFile(join(dir,'catalog/unified.json'))).sourceSnapshotSHA256,hash);
-  } finally { await rm(dir,{recursive:true,force:true}); }
-});
-
-test('Reject duplicate module IDs within same publisher source', async () => {
-  const conf=JSON.parse(await readFile(join(base,'catalog/upstreams.json'),'utf8'));
-  const data=Object.fromEntries(upstream);
-  data['synthetiq-player'].modules.push(mod('shared','3.0.0'));
-  assert.throws(()=>aggregate(conf,data), /Duplicate ID/);
-});
-
-test('Checked-in bootstrap repository preserves 3 local modules plus 40 upstream ZIP candidates', async () => {
-  const bootstrap=JSON.parse(await readFile(join(base,'repository.json'),'utf8'));
-  const owned=JSON.parse(await readFile(join(base,'catalog/local-modules.json'),'utf8'));
-  assert.equal(bootstrap.repositoryId, owned.repositoryId);
-  assert.equal(bootstrap.modules.length,43);
-  assert.equal(owned.modules.length,3);
-  for (const m of owned.modules) {
-    const present=bootstrap.modules.find(x=>x.moduleId===m.moduleId);
-    assert.deepEqual(present,m);
-  }
-  assert.equal(new Set(bootstrap.modules.map(x=>x.moduleId)).size,43);
-  assert.ok(bootstrap.modules.every(x=>x.contentType==='video' && /^[a-f0-9]{64}$/.test(x.sha256) && asPublicHTTPS(x.packageUrl)));
-});
+import {mkdtemp,mkdir,writeFile,readFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {aggregate,sync,compareVersions,asPublicHTTPS,upstreamAssetURL} from '../scripts/sync-unified.mjs';
+const repos=[['kinetiq','videoZip','local',0],['production','videoZip','candidate',10],['testing','videoZip','unique-only',30],['fr','videoZip','unique-only',40],['manga','mangaManifest','metadata-only',10],['aroki','connectorManifest','metadata-only',10],['aroki-test','connectorManifest','metadata-only',20],['anygo','anygoSource','metadata-only',10]].map(([key,kind,installPolicy,priority])=>({key,kind,installPolicy,priority,repository:key==='kinetiq'?'owner/local':'publisher/'+key,format:kind,scope:key==='kinetiq'?'local':'remote',indexPath:key==='kinetiq'?'catalog/local-modules.json':'index.json'}));
+const config={repositories:repos};
+const sha='a'.repeat(64),sha2='b'.repeat(64);
+const mod=(id,version='1.0.0',sha256=sha)=>({moduleId:id,moduleFamilyId:'family-'+id,moduleIdentity:'Test-'+id,moduleIdentityNumber:1,contentType:'video',version,sha256,packageUrl:`https://github.com/publisher/production/releases/download/${version}/${id}.zip`});
+const data=()=>({kinetiq:{modules:[mod('mine')]},production:{modules:[mod('shared'),mod('beta','1.0.0-beta.7')]},testing:{modules:[mod('shared','2.0.0-beta.1'),mod('beta','1.0.0-beta.11',sha2),mod('unique')]},fr:{modules:[mod('fr')]},manga:{modules:[{id:'manga',contentType:'manga',manifest:{path:'modules/manga/manifest.json'}}]},aroki:{connectors:[{id:'shared'}]},'aroki-test':{connectors:[{id:'test'}]},anygo:{sources:[{id:'any'}]}});
+const selected=(out,id)=>out.repository.modules.find(x=>x.moduleId===id);
+test('SemVer compares numeric prereleases and stable correctly',()=>{assert.equal(compareVersions('1.0.0-beta.11','1.0.0-beta.7'),1);assert.equal(compareVersions('1.0.0','1.0.0-rc.2'),1);assert.equal(compareVersions('2.0.0','10.0.0'),-1);assert.equal(compareVersions('1.0.0+abc','1.0.0+def'),0)});
+test('Eight catalogs; stable production protected; newest eligible beta; unique testing preserved',()=>{const out=aggregate(config,data());assert.equal(out.catalogue.sourceCount,8);assert.equal(out.catalogue.entryCount,11);assert.equal(out.repository.modules.length,5);assert.equal(selected(out,'shared').version,'1.0.0');assert.equal(selected(out,'beta').version,'1.0.0-beta.11');assert.ok(selected(out,'unique'));assert.ok(out.catalogue.entries.find(e=>e.key==='aroki:shared'&&!e.selectedForKinetiq));});
+test('Explicit testing opt-in selects newer beta even over stable',()=>assert.equal(selected(aggregate(config,data(),{policy:{allowTestingUpdatesFor:['shared']}}),'shared').version,'2.0.0-beta.1'));
+test('Invalid higher-priority identity does not suppress valid alternative',()=>{const d=data();d.production.modules.push({...mod('extra'),moduleIdentity:null});d.testing.modules.push(mod('extra'));assert.ok(selected(aggregate(config,d),'extra'))});
+test('Same version changed bytes retain previous checksum',()=>{const d=data();d.production.modules[0]=mod('shared','1.0.0',sha2);const out=aggregate(config,d,{previous:[mod('shared')]});assert.equal(selected(out,'shared').sha256,sha);assert.ok(out.catalogue.entries.find(e=>e.key==='retained:shared'))});
+test('Never silently downgrade or change identity',()=>{const d=data();d.production.modules[0]={...mod('shared','2.0.0'),moduleFamilyId:'other'};const out=aggregate(config,d,{previous:[mod('shared','3.0.0')]});assert.equal(selected(out,'shared').version,'3.0.0');assert.equal(selected(out,'shared').moduleFamilyId,'family-shared')});
+test('Catalogue can grow; duplicate IDs within a source rejected',()=>{const d=data();d.production.modules.push(mod('new'));assert.equal(aggregate(config,d).repository.modules.length,6);d.production.modules.push(mod('new'));assert.throws(()=>aggregate(config,d),/Duplicate ID/)});
+test('Unsafe or malformed packages excluded; explicit withdrawal and removal',()=>{const d=data();d.production.modules.push({...mod('bad'),packageUrl:'http://localhost/x'});assert.ok(!selected(aggregate(config,d),'bad'));d.production.modules[0].status='withdrawn';d.testing.modules=d.testing.modules.filter(x=>x.moduleId!=='shared');assert.ok(!selected(aggregate(config,d,{previous:[mod('shared')]}),'shared'));assert.ok(!selected(aggregate(config,d,{policy:{removeModuleIds:['mine']}}),'mine'));assert.equal(asPublicHTTPS('https://127.0.0.1/x'),null);assert.equal(upstreamAssetURL(repos[1],'../bad.json'),null)});
+test('Sync cache permits partial outage; initial outage fails without publishing; dry run nonmutating',async()=>{const root=await mkdtemp(join(tmpdir(),'kinetiq-'));try{await mkdir(join(root,'catalog'));await writeFile(join(root,'catalog/upstreams.json'),JSON.stringify(config));await writeFile(join(root,'catalog/local-modules.json'),JSON.stringify(data().kinetiq));let unavailable='anygo';const fetchImpl=async url=>{const key=new URL(url).pathname.split('/')[2];return key===unavailable?new Response('',{status:503}):new Response(JSON.stringify(data()[key]))};await assert.rejects(sync({root,fetchImpl}),/no last-known-good/);await assert.rejects(readFile(join(root,'repository.json')),/ENOENT/);unavailable='';await sync({root,fetchImpl});const initial=await readFile(join(root,'repository.json'),'utf8');unavailable='anygo';const dry=await sync({root,fetchImpl,dryRun:true});assert.deepEqual(dry.staleUpstreams,['anygo']);assert.equal(await readFile(join(root,'repository.json'),'utf8'),initial);const result=await sync({root,fetchImpl});assert.deepEqual(result.staleUpstreams,['anygo']);assert.equal(result.installedCandidates,5)}finally{await rm(root,{recursive:true,force:true})}});

@@ -1,251 +1,56 @@
 #!/usr/bin/env node
-/**
- * Kinetiq Unified Modules · Batch 07A
- * Federates 8 PUBLIC catalogues. References upstream packages in the existing
- * Kinetiq repository.json contract. NEVER rewrites a ZIP, strips a signature,
- * executes upstream JS, or presents incompatible formats as installable.
- *
- * Usage: node scripts/sync-unified.mjs [--root DIR] [--fixture-dir DIR] [--dry-run]
- * Node 22+, zero third-party dependencies.
- */
-import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
-import { resolve, dirname, join, posix } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { createHash } from 'node:crypto';
-
-const scriptRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const HASH = /^[0-9a-f]{64}$/i;
-const ID = /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,127}$/;
-const REPOSITORY = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
-const MAX_INDEX_BYTES = 8_000_000;
-const MAX_MODULES_PER_REPO = 2_000;
-const OUTPUT_REPO_ID = 'kinetiq-custom-modules'; // Keep established trusted publisher identity.
-
-export function asPublicHTTPS(input) {
-  if (typeof input !== 'string' || input.length > 2048) return null;
-  try {
-    const url = new URL(input);
-    if (url.protocol !== 'https:' || url.username || url.password || url.port || !url.hostname) return null;
-    if (url.hostname === 'localhost' || url.hostname.endsWith('.local') || url.hostname.endsWith('.internal')) return null;
-    if (/^\d+\.\d+\.\d+\.\d+$/.test(url.hostname) || url.hostname.includes(':')) return null;
-    return url.toString();
-  } catch { return null; }
+import {readFile,writeFile,mkdir,rename} from 'node:fs/promises';
+import {resolve,dirname,join,posix} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+const rootDefault=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const ID=/^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,127}$/;
+const HASH=/^[a-f0-9]{64}$/i;
+const limit=8_000_000;
+const json=x=>JSON.stringify(x,null,2)+'\n';
+const digest=x=>createHash('sha256').update(x).digest('hex');
+const str=(x,n=800)=>typeof x==='string'&&x.trim()?x.trim().slice(0,n):null;
+const hash=x=>typeof x==='string'&&HASH.test(x)?x.toLowerCase():null;
+const arrKey=r=>r.kind==='connectorManifest'?'connectors':r.kind==='anygoSource'?'sources':'modules';
+export function asPublicHTTPS(x){if(typeof x!=='string'||x.length>2048)return null;try{const u=new URL(x);return u.protocol==='https:'&&!u.username&&!u.password&&!u.port&&u.hostname!=='localhost'&&!/\.(local|internal|localhost)$/.test(u.hostname)&&!/^\d+\.\d+\.\d+\.\d+$/.test(u.hostname)&&!u.hostname.includes(':')?u.href:null}catch{return null}}
+export function upstreamIndexURL(r){if(!/^[\w.-]+\/[\w.-]+$/.test(r.repository)||!/^[\w.-]+(?:\/[\w.-]+)*\.json$/.test(r.indexPath)||r.indexPath.split('/').includes('..'))throw Error('Invalid upstream path: '+r.key);const branch=r.branch??'main';if(!/^[\w.-]+$/.test(branch)||branch==='..')throw Error('Invalid branch');return `https://raw.githubusercontent.com/${r.repository}/${branch}/${r.indexPath}`}
+export function upstreamAssetURL(r,p){if(typeof p!=='string'||!p||p.startsWith('/')||p.includes('\\')||p.split('/').includes('..')||/[?#]/.test(p))return null;return asPublicHTTPS(`https://raw.githubusercontent.com/${r.repository}/${r.branch??'main'}/${posix.normalize(p)}`)}
+function rows(r,index){const a=index?.[arrKey(r)];if(!Array.isArray(a)||a.length>2000)throw Error('Bad module array: '+r.key);const seen=new Set();return a.map(raw=>{const id=raw?.moduleId??raw?.id;if(typeof id!=='string'||!ID.test(id))throw Error('Invalid ID: '+r.key);if(seen.has(id))throw Error('Duplicate ID: '+r.key+':'+id);seen.add(id);return {raw,id}})}
+// Strict SemVer; numeric prerelease components compare numerically, not lexically.
+export function parseVersion(v){if(typeof v!=='string')return null;const m=v.match(/^v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?$/);if(!m)return null;const pre=m[4]?.split('.')??[];if(pre.some(x=>/^\d+$/.test(x)&&x.length>1&&x[0]==='0'))return null;return {core:m.slice(1,4).map(BigInt),pre}}
+export function compareVersions(a,b){a=parseVersion(a);b=parseVersion(b);if(!a||!b)throw Error('Invalid semantic version');for(let i=0;i<3;i++)if(a.core[i]!==b.core[i])return a.core[i]>b.core[i]?1:-1;if(!a.pre.length||!b.pre.length)return Number(!a.pre.length)-Number(!b.pre.length);for(let i=0;i<Math.max(a.pre.length,b.pre.length);i++){const x=a.pre[i],y=b.pre[i];if(x===y)continue;if(x===undefined)return -1;if(y===undefined)return 1;const nx=/^\d+$/.test(x),ny=/^\d+$/.test(y);if(nx&&ny)return BigInt(x)>BigInt(y)?1:-1;if(nx!==ny)return nx?-1:1;return x>y?1:-1}return 0}
+const identity=m=>JSON.stringify([m.moduleFamilyId,m.moduleIdentity,m.moduleIdentityNumber]);
+const stable=m=>!parseVersion(m.version)?.pre.length;
+const retired=e=>/^(retired|withdrawn|revoked|disabled)$/i.test(e.status);
+function item(raw,id){const m={moduleId:id,moduleFamilyId:str(raw.moduleFamilyId,128),moduleIdentity:str(raw.moduleIdentity,180),moduleIdentityNumber:raw.moduleIdentityNumber,contentType:'video',version:str(raw.version,80),packageUrl:asPublicHTTPS(raw.packageUrl),sha256:hash(raw.sha256)};if(!m.moduleFamilyId||!m.moduleIdentity||!Number.isSafeInteger(m.moduleIdentityNumber)||m.moduleIdentityNumber<1||!parseVersion(m.version)||!m.packageUrl||!m.sha256)return null;const p={};for(const k of ['category','purpose','language','iconUrl'])if(typeof raw.presentation?.[k]==='string')p[k]=raw.presentation[k].slice(0,500);if(Array.isArray(raw.presentation?.languages))p.languages=raw.presentation.languages.filter(x=>typeof x==='string').slice(0,20);if(typeof raw.presentation?.recommended==='boolean')p.recommended=raw.presentation.recommended;if(Object.keys(p).length)m.presentation=p;if(Number.isSafeInteger(raw.publishedAtMs))m.publishedAtMs=raw.publishedAtMs;if(Array.isArray(raw.changelog))m.changelog=raw.changelog.filter(x=>typeof x==='string').slice(0,6).map(x=>x.slice(0,1300));return m}
+const testing=c=>c.repo.installPolicy==='unique-only';
+const order=(a,b)=>compareVersions(b.m.version,a.m.version)||a.repo.priority-b.repo.priority||a.entry.key.localeCompare(b.entry.key);
+export function aggregate(config,indices,{previous=[],policy={},stale=[]}={}){
+ const repos=config.repositories;if(!Array.isArray(repos)||repos.length!==8||new Set(repos.map(r=>r.key)).size!==8)throw Error('Expected eight unique upstreams');
+ const entries=[],sources=[],groups=new Map(),skippedZipEntries=[],duplicateZipIDs=[],selectionDecisions=[];const old=new Map(previous.map(m=>[m.moduleId,m]));
+ for(const repo of repos){if(!ID.test(repo.key)||!Number.isFinite(repo.priority))throw Error('Invalid source configuration');const rs=rows(repo,indices[repo.key]);sources.push({key:repo.key,repository:repo.repository,format:repo.format,entries:rs.length,stale:stale.includes(repo.key)});for(const {raw,id} of rs){const isZip=repo.kind==='videoZip';const contentType=str(raw.contentType,100)??(repo.kind==='anygoSource'?'unknown':'video');const m=isZip&&contentType.toLowerCase()==='video'?item(raw,id):null;const e={key:`${repo.key}:${id}`,id,name:str(raw.name??raw.moduleIdentity??raw.moduleName??id,180)??id,version:str(raw.version,100),contentType,status:str(raw.status,60)??'unspecified',releaseTrack:str(raw.releaseTrack,30),format:repo.format,upstream:repo.repository,upstreamIndex:repo.scope==='local'?'catalog/local-modules.json':upstreamIndexURL(repo),manifestURL:upstreamAssetURL(repo,raw.manifest?.path),standaloneURL:repo.kind==='anygoSource'?asPublicHTTPS(raw.url):null,upstreamMinAppVersion:str(raw.minAppVersion??raw.minimumAppVersion,40),upstreamSHA256:isZip?hash(raw.sha256):hash(raw.manifest?.sha256),packageURL:isZip?asPublicHTTPS(raw.packageUrl):null,releaseNotes:str(raw.releaseNotes??raw.description??raw.changelog?.[0],1200),installability:m&&!retired({status:str(raw.status,60)??''})?'candidate-zip':'metadata-only',selectedForKinetiq:false,limitations:'Catalogue metadata is not runtime or playback certification.'};entries.push(e);if(isZip&&!m)skippedZipEntries.push({key:e.key,reason:'Unsupported content type or invalid version, identity, URL or SHA-256'});if(isZip){if(!groups.has(id))groups.set(id,[]);groups.get(id).push({repo,entry:e,m})}}}
+ const modules=[];const explicitRemoval=new Set(policy.removeModuleIds??[]);const betaOptIn=new Set(policy.allowTestingUpdatesFor??[]);
+ for(const id of [...new Set([...groups.keys(),...old.keys()])].sort((a,b)=>a.localeCompare(b,'en'))){const all=groups.get(id)??[];const prev=old.get(id);const prior=prev?item(prev,id):null;let eligible=all.filter(c=>c.m&&!retired(c.entry));let reason='';let winner=null;
+  if(explicitRemoval.has(id)){selectionDecisions.push({moduleId:id,reason:'Owner-approved removal'});continue}
+  if((!eligible.length&&all.some(c=>retired(c.entry)))||(all.some(c=>!testing(c)&&retired(c.entry))&&!eligible.some(c=>!testing(c)))){selectionDecisions.push({moduleId:id,reason:'Upstream retired or withdrew module'});continue}
+  const official=eligible.filter(c=>!testing(c));const local=official.filter(c=>c.repo.scope==='local');const anchor=prior??(local[0]??official[0]??eligible[0])?.m;
+  if(anchor)eligible=eligible.filter(c=>identity(c.m)===identity(anchor));
+  const trusted=eligible.filter(c=>!testing(c));const owned=trusted.filter(c=>c.repo.scope==='local');let pool=owned.length?owned:trusted.length?trusted:eligible;
+  // Testing never silently replaces a production stable module. For beta-track
+  // modules, a newer same-lineage testing beta may be selected as a candidate.
+  const hasStable=pool.some(c=>stable(c.m));if(!owned.length&&trusted.length&&(betaOptIn.has(id)||!hasStable)){pool=eligible.filter(c=>!testing(c)||trusted.some(t=>t.repo.repository.split('/')[0].toLowerCase()===c.repo.repository.split('/')[0].toLowerCase()));}
+  if(!betaOptIn.has(id)&&pool.some(c=>stable(c.m)))pool=pool.filter(c=>stable(c.m));
+  pool.sort(order);winner=pool[0]??null;reason=winner?'Highest eligible version in selected channel':'No compatible candidate';
+  if(winner&&prior){const cmp=compareVersions(winner.m.version,prior.version);if(cmp<0||cmp===0&&winner.m.sha256!==prior.sha256){const match=eligible.find(c=>compareVersions(c.m.version,prior.version)===0&&c.m.sha256===prior.sha256);winner=match??null;reason=cmp<0?'Prevented version downgrade':'Held existing version after checksum conflict';}}
+  if(!winner&&prior){const e={key:`retained:${id}`,id,name:prior.moduleIdentity,version:prior.version,contentType:'video',status:'retained-unverified',releaseTrack:null,format:'retained-previous-index',upstream:null,upstreamIndex:'repository.json (previous publication)',manifestURL:null,standaloneURL:null,upstreamMinAppVersion:null,upstreamSHA256:prior.sha256,packageURL:prior.packageUrl,releaseNotes:null,installability:'candidate-zip',selectedForKinetiq:true,limitations:'Previous package reference retained; upstream availability must be reviewed.'};entries.push(e);modules.push(prior);selectionDecisions.push({moduleId:id,selected:e.key,reason:'Retained previous package: '+reason});}
+  else if(winner){winner.entry.selectedForKinetiq=true;modules.push(winner.m);selectionDecisions.push({moduleId:id,selected:winner.entry.key,reason});}
+  const valid=all.filter(c=>c.m);if(valid.length>1)duplicateZipIDs.push({moduleId:id,selected:winner?.entry.key??(prior?`retained:${id}`:null),alternatives:valid.sort(order).map(c=>({key:c.entry.key,version:c.m.version,sha256:c.m.sha256,identityMatches:anchor?identity(c.m)===identity(anchor):true}))});
+ }
+ return {repository:{schemaVersion:1,repositoryId:'kinetiq-custom-modules',name:'Kinetiq Unified Modules',enabled:true,modules},catalogue:{schemaVersion:1,repositoryId:'kinetiq-custom-modules',name:'Kinetiq Unified Catalogue',sourceCount:repos.length,entryCount:entries.length,nativeZipCandidates:modules.length,warning:'Candidates are not certified for playback. Retained references may be stale.',sources,entries},diagnostics:{schemaVersion:1,duplicateZipIDs,skippedZipEntries,selectionDecisions,staleUpstreams:stale}};
 }
-
-export function upstreamIndexURL(repo) {
-  if (!REPOSITORY.test(repo.repository)) throw new Error(`Invalid upstream slug: ${repo.repository}`);
-  const p = repo.indexPath;
-  if (!/^[a-zA-Z0-9][a-zA-Z0-9_./-]*\.json$/.test(p) || p.split('/').includes('..')) {
-    throw new Error(`Unsafe index path: ${p}`);
-  }
-  return `https://raw.githubusercontent.com/${repo.repository}/main/${p}`;
-}
-
-export function upstreamAssetURL(repo, path) {
-  if (typeof path !== 'string' || !path || path.startsWith('/') || path.includes('\\') || path.split('/').includes('..') || path.includes('?') || path.includes('#')) return null;
-  const normalized = posix.normalize(path);
-  return asPublicHTTPS(`https://raw.githubusercontent.com/${repo.repository}/main/${normalized}`);
-}
-
-function sanitizedText(v, limit = 800) {
-  return typeof v === 'string' ? v.trim().slice(0, limit) : null;
-}
-function sha(value) { return typeof value === 'string' && HASH.test(value) ? value.toLowerCase() : null; }
-function digest(value) { return createHash('sha256').update(value).digest('hex'); }
-function canonicalJSON(value) { return JSON.stringify(value, null, 2) + '\n'; }
-
-function collectRows(repo, index) {
-  if (!index || typeof index !== 'object' || Array.isArray(index)) throw new Error(`Invalid JSON object: ${repo.key}`);
-  const rows = repo.kind === 'connectorManifest' ? index.connectors
-    : repo.kind === 'anygoSource' ? index.sources : index.modules;
-  if (!Array.isArray(rows) || rows.length > MAX_MODULES_PER_REPO) throw new Error(`Bad module array: ${repo.key}`);
-  const seen = new Set();
-  return rows.map((raw, i) => {
-    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error(`Nonobject ${repo.key}[${i}]`);
-    const moduleId = raw.moduleId ?? raw.id;
-    if (typeof moduleId !== 'string' || !ID.test(moduleId)) throw new Error(`Invalid id in ${repo.key}[${i}]`);
-    if (seen.has(moduleId)) throw new Error(`Duplicate ID within ${repo.key}: ${moduleId}`);
-    seen.add(moduleId);
-    return { raw, moduleId };
-  });
-}
-
-export function aggregate(config, indices) {
-  const repos = config.repositories;
-  if (!Array.isArray(repos) || repos.length !== 8 || new Set(repos.map(r => r.key)).size !== 8) {
-    throw new Error('This batch requires eight unique upstream repositories.');
-  }
-  const selectedByID = new Map();
-  const entries = [];
-  const invalidPackages = [];
-  const sourceTotals = [];
-  const conflicts = new Map();
-
-  for (const repo of repos) {
-    const index = indices[repo.key];
-    const rows = collectRows(repo, index);
-    sourceTotals.push({ key: repo.key, repository: repo.repository, format: repo.format, entries: rows.length });
-    for (const { raw, moduleId } of rows) {
-      const metadataURL = repo.scope === 'local' ? 'catalog/local-modules.json' : upstreamIndexURL(repo);
-      const isZip = repo.kind === 'videoZip';
-      const status = sanitizedText(raw.status, 60) ?? 'unspecified';
-      const contentType = sanitizedText(raw.contentType, 100) ?? (repo.kind === 'anygoSource' ? 'unknown' : 'video');
-      const pkgURL = asPublicHTTPS(raw.packageUrl);
-      const pkgHash = sha(raw.sha256);
-      const validZip = isZip && contentType.toLowerCase() === 'video' && pkgURL !== null && pkgHash !== null;
-      const rawManifestPath = raw.manifest?.path;
-      const manifestURL = typeof rawManifestPath === 'string' ? upstreamAssetURL(repo, rawManifestPath) : null;
-      const standaloneURL = repo.kind === 'anygoSource' ? asPublicHTTPS(raw.url) : null;
-      const entry = {
-        key: `${repo.key}:${moduleId}`,
-        id: moduleId,
-        name: sanitizedText(raw.name ?? raw.moduleIdentity ?? raw.moduleName ?? moduleId, 180) || moduleId,
-        version: sanitizedText(raw.version, 100),
-        contentType,
-        status,
-        releaseTrack: sanitizedText(raw.releaseTrack, 30),
-        format: repo.format,
-        upstream: repo.repository,
-        upstreamIndex: metadataURL,
-        manifestURL,
-        standaloneURL,
-        upstreamMinAppVersion: sanitizedText(raw.minAppVersion ?? raw.minimumAppVersion, 40),
-        upstreamSHA256: isZip ? pkgHash : sha(raw.manifest?.sha256),
-        packageURL: isZip ? pkgURL : null,
-        releaseNotes: sanitizedText(raw.releaseNotes ?? raw.description ?? raw.changelog?.[0], 1200),
-        installability: validZip ? 'candidate-zip' : 'metadata-only',
-        selectedForKinetiq: false,
-        limitations: validZip
-          ? 'Kinetiq V3 package contract and live playback must still be verified; metadata is not certification.'
-          : 'This source format is not executable by the current Kinetiq video ZIP runtime.'
-      };
-      entries.push(entry);
-      if (isZip && !validZip) invalidPackages.push({ key: entry.key, reason: 'Missing video contentType, public HTTPS packageUrl or valid SHA-256' });
-      if (!validZip || status.toLowerCase() === 'retired') continue;
-      const existing = selectedByID.get(moduleId);
-      const rank = Number(repo.priority);
-      const candidate = { repo, raw, entry, rank };
-      if (!existing || rank < existing.rank) {
-        selectedByID.set(moduleId, candidate);
-      }
-      if (!conflicts.has(moduleId)) conflicts.set(moduleId, []);
-      conflicts.get(moduleId).push(candidate);
-    }
-  }
-
-  const modules = [];
-  for (const [moduleId, selected] of [...selectedByID].sort((a, b) => a[0].localeCompare(b[0], 'en'))) {
-    const { raw, entry, repo } = selected;
-    entry.selectedForKinetiq = true;
-    const item = {
-      moduleId,
-      moduleFamilyId: sanitizedText(raw.moduleFamilyId, 128),
-      moduleIdentity: sanitizedText(raw.moduleIdentity, 180),
-      moduleIdentityNumber: Number.isSafeInteger(raw.moduleIdentityNumber) && raw.moduleIdentityNumber > 0 ? raw.moduleIdentityNumber : null,
-      contentType: 'video',
-      version: sanitizedText(raw.version, 80),
-      packageUrl: entry.packageURL,
-      sha256: entry.upstreamSHA256
-    };
-    // Preserve Kinetiq's existing identity validation. If a publisher supplies
-    // incomplete identity data, the module is retained in the catalog but NOT
-    // included in the native install list (no fake identity is invented).
-    if (!item.moduleFamilyId || !item.moduleIdentity || !item.moduleIdentityNumber || !item.version) {
-      entry.selectedForKinetiq = false;
-      entry.installability = 'metadata-only';
-      entry.limitations = 'Missing required stable publisher identity fields';
-      invalidPackages.push({ key: entry.key, reason: entry.limitations });
-      continue;
-    }
-    const presentation = {};
-    for (const k of ['category', 'purpose', 'language', 'iconUrl']) {
-      if (typeof raw.presentation?.[k] === 'string') presentation[k] = raw.presentation[k].slice(0, 500);
-    }
-    if (Array.isArray(raw.presentation?.languages)) presentation.languages = raw.presentation.languages.filter(x => typeof x === 'string').slice(0, 20);
-    if (typeof raw.presentation?.recommended === 'boolean') presentation.recommended = raw.presentation.recommended;
-    if (repo.installPolicy === 'unique-only' && !presentation.category) presentation.category = 'Testing';
-    if (Object.keys(presentation).length) item.presentation = presentation;
-    if (Number.isSafeInteger(raw.publishedAtMs)) item.publishedAtMs = raw.publishedAtMs;
-    if (Array.isArray(raw.changelog)) item.changelog = raw.changelog.filter(x => typeof x === 'string').slice(0, 6).map(x => x.slice(0, 1300));
-    // minAppVersion from upstream refers to another APP. It must NOT be copied
-    // into a Kinetiq-specific version gate; retained above in unified.json.
-    modules.push(item);
-  }
-
-  const duplicates = [...conflicts].filter(([, group]) => group.length > 1).map(([moduleId, group]) => ({
-    moduleId,
-    selected: selectedByID.get(moduleId).entry.key,
-    alternatives: group.map(c => ({ key: c.entry.key, version: c.entry.version, sha256: c.entry.upstreamSHA256 }))
-  })).sort((a, b) => a.moduleId.localeCompare(b.moduleId, 'en'));
-  const total = entries.length;
-  const repoOut = { schemaVersion: 1, repositoryId: OUTPUT_REPO_ID, name: 'Kinetiq Unified Modules', enabled: true, modules };
-  const catalogue = {
-    schemaVersion: 1,
-    repositoryId: OUTPUT_REPO_ID,
-    name: 'Kinetiq Unified Catalogue',
-    sourceCount: repos.length,
-    entryCount: total,
-    nativeZipCandidates: modules.length,
-    warning: 'A catalogue entry is not proof of package compatibility, live playback, redistribution rights or source reliability.',
-    sources: sourceTotals,
-    entries
-  };
-  const diagnostics = { schemaVersion: 1, duplicateZipIDs: duplicates, skippedZipEntries: invalidPackages };
-  return { repository: repoOut, catalogue, diagnostics };
-}
-
-async function atomicWrite(path, data) {
-  await mkdir(dirname(path), { recursive: true });
-  const temp = path + '.tmp';
-  await writeFile(temp, data, 'utf8');
-  await rename(temp, path);
-}
-
-export async function sync({ root = scriptRoot, fixtureDir = null, dryRun = false, fetchImpl = globalThis.fetch } = {}) {
-  const config = JSON.parse(await readFile(join(root, 'catalog', 'upstreams.json'), 'utf8'));
-  const indices = {};
-  const hashParts = [];
-  // Fail closed: if ANY upstream fails, no new merged output is committed.
-  const data = await Promise.all(config.repositories.map(async repo => {
-    let input;
-    if (repo.scope === 'local') {
-      input = await readFile(join(root, repo.indexPath), 'utf8');
-    } else if (fixtureDir) {
-      input = await readFile(join(fixtureDir, `${repo.key}.json`), 'utf8');
-    } else {
-      const url = upstreamIndexURL(repo);
-      const response = await fetchImpl(url, { signal: AbortSignal.timeout(25_000), headers: { 'Accept': 'application/json' }, redirect: 'follow' });
-      if (!response.ok) throw new Error(`Upstream ${repo.key}: HTTP ${response.status}`);
-      const declared = Number(response.headers.get('content-length'));
-      if (declared > MAX_INDEX_BYTES) throw new Error(`Upstream ${repo.key}: index too large`);
-      input = await response.text();
-    }
-    if (Buffer.byteLength(input, 'utf8') > MAX_INDEX_BYTES) throw new Error(`Upstream ${repo.key}: oversized JSON`);
-    return { repo, input };
-  }));
-  for (const { repo, input } of data) {
-    indices[repo.key] = JSON.parse(input);
-    hashParts.push(`${repo.key}:${digest(canonicalJSON(indices[repo.key]))}`);
-  }
-  const out = aggregate(config, indices);
-  out.catalogue.sourceSnapshotSHA256 = digest(hashParts.join('\n'));
-  if (!dryRun) {
-    await atomicWrite(join(root, 'repository.json'), canonicalJSON(out.repository));
-    await atomicWrite(join(root, 'catalog', 'unified.json'), canonicalJSON(out.catalogue));
-    await atomicWrite(join(root, 'catalog', 'diagnostics.json'), canonicalJSON(out.diagnostics));
-  }
-  return { entries: out.catalogue.entryCount, installedCandidates: out.repository.modules.length,
-    duplicateZipIDs: out.diagnostics.duplicateZipIDs.length, rejected: out.diagnostics.skippedZipEntries.length,
-    snapshot: out.catalogue.sourceSnapshotSHA256 };
-}
-
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const args = process.argv.slice(2);
-  const flag = key => { const i = args.indexOf(key); return i >= 0 ? args[i + 1] : null; };
-  const root = flag('--root') ? resolve(flag('--root')) : scriptRoot;
-  const fixtureDir = flag('--fixture-dir') ? resolve(flag('--fixture-dir')) : null;
-  sync({ root, fixtureDir, dryRun: args.includes('--dry-run') }).then(
-    result => console.log(JSON.stringify({ status: 'ok', ...result }, null, 2)),
-    error => { console.error(`Unified sync aborted (outputs preserved): ${error.stack ?? error}`); process.exitCode = 1; }
-  );
-}
+async function optional(p,def){try{return JSON.parse(await readFile(p,'utf8'))}catch(e){if(e.code==='ENOENT')return def;throw e}}
+async function atomic(p,data){await mkdir(dirname(p),{recursive:true});await writeFile(p+'.tmp',json(data));await rename(p+'.tmp',p)}
+async function readIndex(r,{root,fixtureDir,fetchImpl}){let input;if(r.scope==='local')input=await readFile(join(root,r.indexPath),'utf8');else if(fixtureDir)input=await readFile(join(fixtureDir,`${r.key}.json`),'utf8');else{const res=await fetchImpl(upstreamIndexURL(r),{signal:AbortSignal.timeout(25000),headers:{Accept:'application/json'},redirect:'error'});if(!res.ok)throw Error(`HTTP ${res.status}`);if(Number(res.headers.get('content-length'))>limit)throw Error('Oversized index');const reader=res.body.getReader();const chunks=[];let n=0;try{for(;;){const {done,value}=await reader.read();if(done)break;n+=value.byteLength;if(n>limit)throw Error('Oversized index');chunks.push(Buffer.from(value))}}finally{await reader.cancel().catch(()=>{})}input=Buffer.concat(chunks).toString('utf8')}
+ if(Buffer.byteLength(input)>limit)throw Error('Oversized index');const data=JSON.parse(input);rows(r,data);return data}
+export async function sync({root=rootDefault,fixtureDir=null,dryRun=false,fetchImpl=globalThis.fetch}={}){const config=JSON.parse(await readFile(join(root,'catalog/upstreams.json'),'utf8'));const policy=await optional(join(root,'catalog/update-policy.json'),{});const previous=(await optional(join(root,'repository.json'),{modules:[]})).modules;if(!Array.isArray(previous))throw Error('Invalid previous catalogue');const indices={},stale=[],fresh={};await Promise.all(config.repositories.map(async r=>{if(!ID.test(r.key))throw Error('Invalid key');try{const d=await readIndex(r,{root,fixtureDir,fetchImpl});const p=join(root,'catalog/snapshots',r.key+'.json');const cache=await optional(p,null);if(r.scope!=='local'&&rows(r,d).length===0&&cache&&rows(r,cache).length>0)throw Error('Unexpected empty upstream');indices[r.key]=d;if(r.scope!=='local')fresh[r.key]=d}catch(e){if(r.scope==='local'||fixtureDir)throw e;const cache=await optional(join(root,'catalog/snapshots',r.key+'.json'),null);if(!cache)throw Error(`Upstream ${r.key} unavailable; no last-known-good snapshot: ${e.message}`);rows(r,cache);indices[r.key]=cache;stale.push(r.key)}}));stale.sort();const out=aggregate(config,indices,{previous,policy,stale});out.catalogue.sourceSnapshotSHA256=digest(config.repositories.map(r=>r.key+':'+digest(json(indices[r.key]))).join('\n'));if(!dryRun){for(const [k,v] of Object.entries(fresh))await atomic(join(root,'catalog/snapshots',k+'.json'),v);await atomic(join(root,'catalog/unified.json'),out.catalogue);await atomic(join(root,'catalog/diagnostics.json'),out.diagnostics);await atomic(join(root,'repository.json'),out.repository)}return {entries:out.catalogue.entryCount,installedCandidates:out.repository.modules.length,duplicateZipIDs:out.diagnostics.duplicateZipIDs.length,rejected:out.diagnostics.skippedZipEntries.length,staleUpstreams:stale,snapshot:out.catalogue.sourceSnapshotSHA256}}
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){const a=process.argv.slice(2);const flag=k=>a.includes(k)?a[a.indexOf(k)+1]:null;sync({root:flag('--root')?resolve(flag('--root')):rootDefault,fixtureDir:flag('--fixture-dir')?resolve(flag('--fixture-dir')):null,dryRun:a.includes('--dry-run')}).then(x=>console.log(json(x)),e=>{console.error(e);process.exitCode=1})}
