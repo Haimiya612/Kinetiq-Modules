@@ -5,11 +5,11 @@
   "enabled": true,
   "publishedAtMs": 1795444273280,
   "bundle": {
-    "version": 162,
+    "version": 163,
     "minAppVersion": "9.0.0",
-    "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-162.zip",
-    "packagePath": "/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-162.zip",
-    "sha256": "49653d47bbd6542d8c752eca34a89b95b3dceefd2904e4e7e9bad240ac92143d",
+    "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-163.zip",
+    "packagePath": "/kas021/Module-Testing-PL/main/bundles/Synthetiq-Module-Bundle-163.zip",
+    "sha256": "860afdff24b58a7a1671d73b4ebf594cb3d7c97ab30aa0d7ff01439590972e3c",
     "signature": ""
   },
   "modules": [
@@ -1299,6 +1299,32 @@
         "Sports channels may broadcast replays or news; no guarantee that a live football or cricket match is currently on air. Regional availability varies.",
         "Exact package passed S2 standard native simulator playback. Physical-device and all-region acceptance are separate."
       ]
+    },
+    {
+      "moduleId": "animeworld-v1",
+      "moduleFamilyId": "animeworld_v1",
+      "moduleIdentity": "SP-VID-289-ANIMEWORLD",
+      "moduleIdentityNumber": 289,
+      "contentType": "video",
+      "version": "1.0.0-beta.1",
+      "minAppVersion": "9.0.0",
+      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/AnimeWorld-1.0.0-beta.1.zip",
+      "packagePath": "/kas021/Module-Testing-PL/main/modules/AnimeWorld-1.0.0-beta.1.zip",
+      "sha256": "f3127253ac5e1060b98b683d50142806ff6479afbf51380d03cd53e0afd667c8",
+      "signature": "qYsEpDFa57v5+mfkK+XwWd3T8xxEjwsUkwIvQmaEXo7ii6JjDr30q9FU1BtFmE66lcN2fkgkGilQYCFZms9rCA==",
+      "publishedAtMs": 1795444273280,
+      "changelog": [
+        "Exact MAIN 1.0.0-beta.1 bytes. Owner accepted 11/16 end-to-end attempts for this digest only; not a broader reliability or language certification.",
+        "MAIN-only package; preserve unchanged, do not infer TEST runtime support.",
+        "1.0.0-beta.1: New Italian anime source. SUB ITA (Japanese audio, Italian subtitles) and ITA (Italian dub) are combined into one series and never substituted for each other. English titles are searchable (e.g. Attack on Titan finds L'attacco dei Giganti).",
+        "1.0.0-beta.1: Tested on the V9 app runtime: 42/42 sampled sub and dub episodes across 11 series played; spoken language matched the label; 2-minute in-player playback and a full episode download passed."
+      ],
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Italian Anime",
+        "language": "Italian (SUB ITA / ITA)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeworld.png"
+      }
     }
   ],
   "signature": "",

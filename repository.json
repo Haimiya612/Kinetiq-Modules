@@ -428,18 +428,16 @@
       "moduleIdentityNumber": 110,
       "contentType": "video",
       "version": "0.1.0-beta.4",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/DW-Live-0.1.0-beta.4.zip",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-dw-live-v1-v0.1.0-beta.4/DW-Live-0.1.0-beta.4.zip",
       "sha256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
       "presentation": {
         "category": "Live TV",
-        "language": "English / Spanish / Arabic",
-        "iconUrl": "https://www.dw.com/images/icons/favicon-180x180.png"
+        "purpose": "DW",
+        "recommended": false
       },
-      "publishedAtMs": 1795108021597,
+      "publishedAtMs": 1784986932868,
       "changelog": [
-        "0.1.0-beta.4: dw.com intermittently refuses page requests (403). The module now retries, keeps the last source found and falls back to each channel's official DW master playlist, still checked as an active live playlist. 3/3 channels played in the V9 runtime (was 0/3).",
-        "TEST-only official DW English, Spanish and Arabic live news channels. Requires Player 9.0.90 for the Live clock/resume fixes.",
-        "beta.3 corrects the private candidate identity collision with Flux; playback JavaScript is byte-identical to beta.2. Physical-device acceptance remains pending."
+        "Available in the normal Player V9 repository. Requires Player 9.0.112 or later."
       ]
     },
     {
@@ -707,18 +705,16 @@
       "moduleIdentityNumber": 111,
       "contentType": "video",
       "version": "0.1.0-beta.5",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-Sports-Live-0.1.0-beta.5.zip",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-public-sports-live-v1-v0.1.0-beta.5/Public-Sports-Live-0.1.0-beta.5.zip",
       "sha256": "41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094",
       "presentation": {
         "category": "Live TV",
-        "purpose": "Sports",
-        "language": "English"
+        "purpose": "Public Sports",
+        "recommended": false
       },
-      "publishedAtMs": 1792195090183,
+      "publishedAtMs": 1784986932868,
       "changelog": [
-        "Optional TEST-only public sports IPTV trial: FIFA+ Women, FUEL TV, Red Bull TV UK, World of Freesports and SportsGrid.",
-        "Adaptive broadcaster quality; schedules may include replays or studio coverage, and regional availability varies. No premium-match guarantee.",
-        "S2 PASS: native simulator sample and real runtime passed. Five feeds decoded locally; not all channels or devices are certified."
+        "Available in the normal Player V9 repository. Requires Player 9.0.112 or later."
       ]
     },
     {
@@ -728,20 +724,16 @@
       "moduleIdentityNumber": 113,
       "contentType": "video",
       "version": "0.1.0-beta.5",
-      "packageUrl": "https://raw.githubusercontent.com/kas021/Module-Testing-PL/main/modules/Public-TV-Live-0.1.0-beta.5.zip",
+      "packageUrl": "https://github.com/kas021/Synthetiq-Modules/releases/download/module-public-tv-live-v1-v0.1.0-beta.5/Public-TV-Live-0.1.0-beta.5.zip",
       "sha256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
       "presentation": {
         "category": "Live TV",
-        "purpose": "General",
-        "language": "Multiple languages",
+        "purpose": "Public TV",
         "recommended": false
       },
-      "publishedAtMs": 1795108021597,
+      "publishedAtMs": 1784986932868,
       "changelog": [
-        "0.1.0-beta.5: France 24 English returns. The public list switched it to an unofficial relay; the approved official France 24 route is kept while the channel is listed and is re-validated as live media on every play. 4/4 channels played (was 3/4).",
-        "Expanded active-only public TV selection after two bounded decodes and fresh module live-playlist checks. Failed and unverified candidates remain hidden.",
-        "Sports channels may broadcast replays or news; no guarantee that a live football or cricket match is currently on air. Regional availability varies.",
-        "Exact package passed S2 standard native simulator playback. Physical-device and all-region acceptance are separate."
+        "Available in the normal Player V9 repository. Requires Player 9.0.112 or later."
       ]
     },
     {

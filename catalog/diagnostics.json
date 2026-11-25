@@ -164,6 +164,24 @@
       ]
     },
     {
+      "moduleId": "animeworld-v1",
+      "selected": "synthetiq-player:animeworld-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:animeworld-v1",
+          "version": "1.0.0-beta.1",
+          "sha256": "f3127253ac5e1060b98b683d50142806ff6479afbf51380d03cd53e0afd667c8",
+          "identityMatches": true
+        },
+        {
+          "key": "synthetiq-player-testing:animeworld-v1",
+          "version": "1.0.0-beta.1",
+          "sha256": "f3127253ac5e1060b98b683d50142806ff6479afbf51380d03cd53e0afd667c8",
+          "identityMatches": true
+        }
+      ]
+    },
+    {
       "moduleId": "anipm-v1",
       "selected": "synthetiq-player:anipm-v1",
       "alternatives": [
@@ -267,6 +285,24 @@
           "key": "synthetiq-player-testing:dramafun-v3",
           "version": "4.0.1",
           "sha256": "b66d9cfb3f3f5dc53d273c64cf23ba006c8ee9d8ad40342ea6427fba6d825fa9",
+          "identityMatches": true
+        }
+      ]
+    },
+    {
+      "moduleId": "dw-live-v1",
+      "selected": "synthetiq-player:dw-live-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:dw-live-v1",
+          "version": "0.1.0-beta.4",
+          "sha256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
+          "identityMatches": true
+        },
+        {
+          "key": "synthetiq-player-testing:dw-live-v1",
+          "version": "0.1.0-beta.4",
+          "sha256": "20a1bcee77a5e1f909547431f95912eb23f2d48cb3853d567d77acd547dd6405",
           "identityMatches": true
         }
       ]
@@ -447,6 +483,42 @@
           "key": "synthetiq-player-testing:onepace-v3",
           "version": "3.0.6",
           "sha256": "9e2199589ede6aa5aeb6ebfa6cfd29543ddb04e224695d331327b86a50f08b25",
+          "identityMatches": true
+        }
+      ]
+    },
+    {
+      "moduleId": "public-sports-live-v1",
+      "selected": "synthetiq-player:public-sports-live-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:public-sports-live-v1",
+          "version": "0.1.0-beta.5",
+          "sha256": "41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094",
+          "identityMatches": true
+        },
+        {
+          "key": "synthetiq-player-testing:public-sports-live-v1",
+          "version": "0.1.0-beta.5",
+          "sha256": "41dff901e53ba0269a04b644b7a59c675dbcab4b4b40198a4b2e4040a596d094",
+          "identityMatches": true
+        }
+      ]
+    },
+    {
+      "moduleId": "public-tv-live-v1",
+      "selected": "synthetiq-player:public-tv-live-v1",
+      "alternatives": [
+        {
+          "key": "synthetiq-player:public-tv-live-v1",
+          "version": "0.1.0-beta.5",
+          "sha256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
+          "identityMatches": true
+        },
+        {
+          "key": "synthetiq-player-testing:public-tv-live-v1",
+          "version": "0.1.0-beta.5",
+          "sha256": "34fc7e1a54aec2686935e681d2e1637ff51fe2ac4690d739510662ee9ac0898c",
           "identityMatches": true
         }
       ]
@@ -724,7 +796,7 @@
     },
     {
       "moduleId": "dw-live-v1",
-      "selected": "synthetiq-player-testing:dw-live-v1",
+      "selected": "synthetiq-player:dw-live-v1",
       "reason": "Highest eligible version in latest channel"
     },
     {
@@ -784,12 +856,12 @@
     },
     {
       "moduleId": "public-sports-live-v1",
-      "selected": "synthetiq-player-testing:public-sports-live-v1",
+      "selected": "synthetiq-player:public-sports-live-v1",
       "reason": "Highest eligible version in latest channel"
     },
     {
       "moduleId": "public-tv-live-v1",
-      "selected": "synthetiq-player-testing:public-tv-live-v1",
+      "selected": "synthetiq-player:public-tv-live-v1",
       "reason": "Highest eligible version in latest channel"
     },
     {
